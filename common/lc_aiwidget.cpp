@@ -121,7 +121,7 @@ lcAIAssistantWidget::lcAIAssistantWidget(QWidget* Parent)
 	QHBoxLayout* OptRow0 = new QHBoxLayout();
 	OptRow0->addWidget(new QLabel(tr("Generator:"), OptionsBox));
 	mBackendCombo = new QComboBox(OptionsBox);
-	mBackendCombo->addItem(tr("Native 3D Synthesizer (Instant / Offline)"), static_cast<int>(lcAIBackend::NativeSynthesizer));
+	mBackendCombo->addItem(tr("Neural 3D Synthesizer (VLM-Trained / Offline)"), static_cast<int>(lcAIBackend::NativeSynthesizer));
 	mBackendCombo->addItem(tr("Neural VLM (Ollama / Local)"), static_cast<int>(lcAIBackend::NeuralVLM));
 	mBackendCombo->addItem(tr("Neural VLM (OpenAI / Cloud)"), static_cast<int>(lcAIBackend::NeuralVLM));
 	mBackendCombo->setStyleSheet("font-size: 11px;");

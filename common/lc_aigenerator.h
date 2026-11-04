@@ -61,6 +61,23 @@ struct lcAIModelPiece
 	int Step = 1;
 };
 
+struct lcNeuralVLMOutput
+{
+	bool Valid = false;
+	float WidthStuds = 16.0f;
+	float HeightLayers = 12.0f;
+	float DepthStuds = 12.0f;
+	int StepCount = 10;
+	float Ratio2x4 = 0.2f;
+	float Ratio2x2 = 0.2f;
+	float Ratio1x2 = 0.3f;
+	float Ratio1x1 = 0.1f;
+	float RatioSlopes = 0.1f;
+	float RatioPlates = 0.1f;
+	int DominantColor = 16;
+	float Complexity = 0.2f;
+};
+
 struct lcAIModelResult
 {
 	bool Success = false;
@@ -85,6 +102,10 @@ public:
 	// 1. Native 3D Voxel & Parametric Structural Synthesizer
 	static lcAIModelResult SynthesizeFromImage(const QImage& Image, const QString& Prompt, const lcAIOptions& Options);
 	static lcAIModelResult SynthesizeParametricModel(const QString& Category, const QString& Prompt, const lcAIOptions& Options);
+
+	// Neural Vision-Language Model Weights & Forward Inference
+	static bool PredictNeuralParameters(const QImage& Image, const QString& Prompt, int TargetPieces, lcNeuralVLMOutput& Output);
+	static std::vector<float> ExtractNeuralFeatures(const QImage& Image, const QString& Prompt, int TargetPieces);
 
 	// 2. Neural Vision-Language Model Bridge (Ollama / Local / OpenAI / Claude)
 	static lcAIModelResult CallNeuralVLM(const QString& Prompt, const QImage& Image, const lcAIOptions& Options);

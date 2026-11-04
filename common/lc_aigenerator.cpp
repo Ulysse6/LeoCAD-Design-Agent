@@ -14,6 +14,9 @@
 #include <QJsonDocument>
 #include <QJsonObject>
 #include <QJsonArray>
+#include <QFile>
+#include <QDir>
+#include <QCoreApplication>
 
 #ifndef M_PI
 #define M_PI 3.14159265358979323846
@@ -419,6 +422,256 @@ lcAIModelResult lcAIGenerator::ParseLDrawString(const QString& Title, const QStr
 }
 
 // ============================================================================
+// 1.5 NEURAL VISION-TO-BRICK STRUCTURAL INFERENCE MODEL
+// ============================================================================
+
+struct lcNeuralModelData
+{
+	bool Loaded = false;
+	int d_in = 32;
+	int d_h1 = 48;
+	int d_h2 = 24;
+	int d_out = 12;
+	std::vector<std::vector<float>> W1;
+	std::vector<float> b1;
+	std::vector<std::vector<float>> W2;
+	std::vector<float> b2;
+	std::vector<std::vector<float>> W3;
+	std::vector<float> b3;
+};
+
+static lcNeuralModelData gNeuralModel;
+static bool gNeuralModelInitialized = false;
+
+static void EnsureNeuralModelLoaded()
+{
+	if (gNeuralModelInitialized)
+		return;
+	gNeuralModelInitialized = true;
+
+	QStringList candidatePaths = {
+		"models/vlm_neural_weights.json",
+		"../models/vlm_neural_weights.json",
+		"../../models/vlm_neural_weights.json",
+		QDir(QCoreApplication::applicationDirPath()).filePath("models/vlm_neural_weights.json"),
+		QDir(QCoreApplication::applicationDirPath()).filePath("../../../models/vlm_neural_weights.json"),
+		"/home/ulyss/Documents/LeoFork/leocad/models/vlm_neural_weights.json"
+	};
+
+	QString foundPath;
+	for (const QString& path : candidatePaths)
+	{
+		if (QFile::exists(path))
+		{
+			foundPath = path;
+			break;
+		}
+	}
+
+	if (foundPath.isEmpty())
+		return;
+
+	QFile f(foundPath);
+	if (!f.open(QIODevice::ReadOnly))
+		return;
+
+	QByteArray data = f.readAll();
+	f.close();
+
+	QJsonParseError err;
+	QJsonDocument doc = QJsonDocument::fromJson(data, &err);
+	if (doc.isNull() || !doc.isObject())
+		return;
+
+	QJsonObject root = doc.object();
+	gNeuralModel.d_in = root["d_in"].toInt(32);
+	gNeuralModel.d_h1 = root["d_h1"].toInt(48);
+	gNeuralModel.d_h2 = root["d_h2"].toInt(24);
+	gNeuralModel.d_out = root["d_out"].toInt(12);
+
+	// Load W1, b1
+	QJsonArray jW1 = root["W1"].toArray();
+	gNeuralModel.W1.resize(jW1.size());
+	for (int i = 0; i < jW1.size(); ++i)
+	{
+		QJsonArray row = jW1[i].toArray();
+		gNeuralModel.W1[i].resize(row.size());
+		for (int j = 0; j < row.size(); ++j)
+			gNeuralModel.W1[i][j] = static_cast<float>(row[j].toDouble());
+	}
+	QJsonArray jb1 = root["b1"].toArray();
+	gNeuralModel.b1.resize(jb1.size());
+	for (int i = 0; i < jb1.size(); ++i)
+		gNeuralModel.b1[i] = static_cast<float>(jb1[i].toDouble());
+
+	// Load W2, b2
+	QJsonArray jW2 = root["W2"].toArray();
+	gNeuralModel.W2.resize(jW2.size());
+	for (int i = 0; i < jW2.size(); ++i)
+	{
+		QJsonArray row = jW2[i].toArray();
+		gNeuralModel.W2[i].resize(row.size());
+		for (int j = 0; j < row.size(); ++j)
+			gNeuralModel.W2[i][j] = static_cast<float>(row[j].toDouble());
+	}
+	QJsonArray jb2 = root["b2"].toArray();
+	gNeuralModel.b2.resize(jb2.size());
+	for (int i = 0; i < jb2.size(); ++i)
+		gNeuralModel.b2[i] = static_cast<float>(jb2[i].toDouble());
+
+	// Load W3, b3
+	QJsonArray jW3 = root["W3"].toArray();
+	gNeuralModel.W3.resize(jW3.size());
+	for (int i = 0; i < jW3.size(); ++i)
+	{
+		QJsonArray row = jW3[i].toArray();
+		gNeuralModel.W3[i].resize(row.size());
+		for (int j = 0; j < row.size(); ++j)
+			gNeuralModel.W3[i][j] = static_cast<float>(row[j].toDouble());
+	}
+	QJsonArray jb3 = root["b3"].toArray();
+	gNeuralModel.b3.resize(jb3.size());
+	for (int i = 0; i < jb3.size(); ++i)
+		gNeuralModel.b3[i] = static_cast<float>(jb3[i].toDouble());
+
+	gNeuralModel.Loaded = true;
+}
+
+std::vector<float> lcAIGenerator::ExtractNeuralFeatures(const QImage& Image, const QString& Prompt, int TargetPieces)
+{
+	std::vector<float> feat(32, 0.0f);
+
+	if (!Image.isNull())
+	{
+		QImage gray = Image.scaled(16, 16, Qt::IgnoreAspectRatio, Qt::SmoothTransformation).convertToFormat(QImage::Format_Grayscale8);
+		// 8 vertical slices
+		for (int y = 0; y < 8; ++y)
+		{
+			int count = 0;
+			for (int dy = 0; dy < 2; ++dy)
+			{
+				const uchar* line = gray.constScanLine(y * 2 + dy);
+				for (int x = 0; x < 16; ++x)
+				{
+					if (line[x] < 240)
+						count++;
+				}
+			}
+			feat[y] = static_cast<float>(count) / 32.0f;
+		}
+
+		// 8 horizontal slices
+		for (int x = 0; x < 8; ++x)
+		{
+			int count = 0;
+			for (int y = 0; y < 16; ++y)
+			{
+				const uchar* line = gray.constScanLine(y);
+				for (int dx = 0; dx < 2; ++dx)
+				{
+					if (line[x * 2 + dx] < 240)
+						count++;
+				}
+			}
+			feat[8 + x] = static_cast<float>(count) / 32.0f;
+		}
+
+		float aspect = static_cast<float>(Image.width()) / static_cast<float>(std::max(1, Image.height()));
+		feat[16] = std::min(3.0f, std::max(0.2f, aspect)) / 3.0f;
+	}
+	else
+	{
+		feat[16] = 0.33f;
+	}
+
+	int pcs = (TargetPieces > 0) ? TargetPieces : 150;
+	feat[17] = std::log10(static_cast<float>(std::max(10, std::min(1000, pcs)))) / 3.0f;
+
+	QString p = Prompt.toLower();
+	auto containsAny = [&](const QStringList& keys) {
+		for (const QString& k : keys) {
+			if (p.contains(k)) return 1.0f;
+		}
+		return 0.0f;
+	};
+
+	feat[18] = containsAny({ "car", "truck", "racer", "pickup", "van", "wagon", "buggy" });
+	feat[19] = containsAny({ "train", "locomotive", "rail", "chief", "engine" });
+	feat[20] = containsAny({ "plane", "airplane", "jet", "aircraft", "helicopter" });
+	feat[21] = containsAny({ "space", "spaceship", "rocket", "shuttle", "x-wing" });
+	feat[22] = containsAny({ "house", "building", "villa", "lodge", "cottage" });
+	feat[23] = containsAny({ "tower", "castle", "landmark", "eiffel", "white house", "pisa", "big ben" });
+	feat[24] = containsAny({ "boat", "ship", "speedboat", "yacht" });
+	feat[25] = containsAny({ "robot", "mech", "droid" });
+
+	feat[26] = p.contains("red") ? 1.0f : 0.0f;
+	feat[27] = p.contains("blue") ? 1.0f : 0.0f;
+	feat[28] = p.contains("yellow") ? 1.0f : 0.0f;
+	feat[29] = p.contains("black") ? 1.0f : 0.0f;
+	feat[30] = p.contains("white") ? 1.0f : 0.0f;
+	feat[31] = (p.contains("gray") || p.contains("grey")) ? 1.0f : 0.0f;
+
+	return feat;
+}
+
+bool lcAIGenerator::PredictNeuralParameters(const QImage& Image, const QString& Prompt, int TargetPieces, lcNeuralVLMOutput& Output)
+{
+	EnsureNeuralModelLoaded();
+	if (!gNeuralModel.Loaded)
+		return false;
+
+	std::vector<float> x = ExtractNeuralFeatures(Image, Prompt, TargetPieces);
+
+	// Forward pass
+	// Layer 1
+	std::vector<float> h1(gNeuralModel.d_h1, 0.0f);
+	for (int j = 0; j < gNeuralModel.d_h1; ++j)
+	{
+		float val = gNeuralModel.b1[j];
+		for (int i = 0; i < gNeuralModel.d_in; ++i)
+			val += x[i] * gNeuralModel.W1[i][j];
+		h1[j] = std::max(0.0f, val);
+	}
+
+	// Layer 2
+	std::vector<float> h2(gNeuralModel.d_h2, 0.0f);
+	for (int j = 0; j < gNeuralModel.d_h2; ++j)
+	{
+		float val = gNeuralModel.b2[j];
+		for (int i = 0; i < gNeuralModel.d_h1; ++i)
+			val += h1[i] * gNeuralModel.W2[i][j];
+		h2[j] = std::max(0.0f, val);
+	}
+
+	// Layer 3 (Output with Sigmoid)
+	std::vector<float> pred(gNeuralModel.d_out, 0.0f);
+	for (int j = 0; j < gNeuralModel.d_out; ++j)
+	{
+		float val = gNeuralModel.b3[j];
+		for (int i = 0; i < gNeuralModel.d_h2; ++i)
+			val += h2[i] * gNeuralModel.W3[i][j];
+		float clamped = std::max(-15.0f, std::min(15.0f, val));
+		pred[j] = 1.0f / (1.0f + std::exp(-clamped));
+	}
+
+	Output.Valid = true;
+	Output.WidthStuds = std::max(6.0f, std::min(30.0f, pred[0] * 30.0f));
+	Output.HeightLayers = std::max(4.0f, std::min(25.0f, pred[1] * 25.0f));
+	Output.DepthStuds = std::max(6.0f, std::min(30.0f, pred[2] * 30.0f));
+	Output.StepCount = std::max(1, static_cast<int>(pred[3] * 30.0f + 0.5f));
+	Output.Ratio2x4 = pred[4];
+	Output.Ratio2x2 = pred[5];
+	Output.Ratio1x2 = pred[6];
+	Output.Ratio1x1 = pred[7];
+	Output.RatioSlopes = pred[8];
+	Output.RatioPlates = pred[9];
+	Output.DominantColor = static_cast<int>(pred[10] * 100.0f + 0.5f);
+	Output.Complexity = pred[11];
+
+	return true;
+}
+
+// ============================================================================
 // 2. GREEDY INTERLOCKING BRICK PACKER (Voxel -> Brick Decomposition)
 // ============================================================================
 
@@ -431,14 +684,50 @@ struct BrickCandidate {
 static void DecomposeVolumeToBricks(lcVoxelVolume& Vol, int TargetPieces,
                                     std::vector<lcAIModelPiece>& Pieces,
                                     QMap<QString, int>& PartCounts,
-                                    int& TotalSteps)
+                                    int& TotalSteps,
+                                    const lcNeuralVLMOutput* Neural = nullptr)
 {
 	std::vector<bool> Placed(Vol.DimX * Vol.DimY * Vol.DimZ, false);
 	int CurrentStep = 1;
 
 	// Candidate brick shapes ordered for budget control
 	std::vector<BrickCandidate> BrickCandidates;
-	if (TargetPieces > 0 && TargetPieces <= 80)
+	if (Neural && Neural->Valid)
+	{
+		// Brick candidates prioritized by neural model predictions
+		if (Neural->Ratio2x4 > 0.06f)
+		{
+			BrickCandidates = {
+				{ 2, 4, "3001" }, { 4, 2, "3001" },
+				{ 2, 3, "3002" }, { 3, 2, "3002" },
+				{ 2, 2, "3003" },
+				{ 1, 4, "3010" }, { 4, 1, "3010" },
+				{ 1, 2, "3004" }, { 2, 1, "3004" },
+				{ 1, 1, "3005" }
+			};
+		}
+		else if (Neural->Ratio1x2 > 0.04f || TargetPieces > 200)
+		{
+			BrickCandidates = {
+				{ 2, 2, "3003" },
+				{ 1, 4, "3010" }, { 4, 1, "3010" },
+				{ 1, 2, "3004" }, { 2, 1, "3004" },
+				{ 1, 1, "3005" },
+				{ 2, 4, "3001" }, { 4, 2, "3001" }
+			};
+		}
+		else
+		{
+			BrickCandidates = {
+				{ 2, 4, "3001" }, { 4, 2, "3001" },
+				{ 2, 2, "3003" },
+				{ 1, 4, "3010" }, { 4, 1, "3010" },
+				{ 1, 2, "3004" }, { 2, 1, "3004" },
+				{ 1, 1, "3005" }
+			};
+		}
+	}
+	else if (TargetPieces > 0 && TargetPieces <= 80)
 	{
 		// Low piece budget: pack larger bricks
 		BrickCandidates = {
@@ -588,9 +877,19 @@ lcAIModelResult lcAIGenerator::SynthesizeFromImage(const QImage& Image, const QS
 	}
 
 	int TargetPieces = ExtractTargetPieces(Prompt, Options.TargetPieceCount);
+
+	lcNeuralVLMOutput NeuralPrediction;
+	bool HasNeural = PredictNeuralParameters(Image, Prompt, TargetPieces, NeuralPrediction);
+
 	int GridX = 16, GridY = 12, GridZ = 12;
 
-	if (TargetPieces > 0)
+	if (HasNeural)
+	{
+		GridX = std::max(8, std::min(30, static_cast<int>(NeuralPrediction.WidthStuds + 0.5f)));
+		GridY = std::max(6, std::min(25, static_cast<int>(NeuralPrediction.HeightLayers + 0.5f)));
+		GridZ = std::max(8, std::min(30, static_cast<int>(NeuralPrediction.DepthStuds + 0.5f)));
+	}
+	else if (TargetPieces > 0)
 	{
 		if (TargetPieces <= 70)
 		{
@@ -673,21 +972,29 @@ lcAIModelResult lcAIGenerator::SynthesizeFromImage(const QImage& Image, const QS
 
 	// Decompose voxel grid into physical interlocking bricks
 	int TotalSteps = 1;
-	DecomposeVolumeToBricks(Vol, TargetPieces, Res.Pieces, Res.PartCounts, TotalSteps);
+	DecomposeVolumeToBricks(Vol, TargetPieces, Res.Pieces, Res.PartCounts, TotalSteps, HasNeural ? &NeuralPrediction : nullptr);
 
 	if (Res.Pieces.empty())
 	{
 		// Fallback: build solid foundation
 		Vol.Set(GridX/2, 0, GridZ/2, BaseDominantColor);
-		DecomposeVolumeToBricks(Vol, TargetPieces, Res.Pieces, Res.PartCounts, TotalSteps);
+		DecomposeVolumeToBricks(Vol, TargetPieces, Res.Pieces, Res.PartCounts, TotalSteps, HasNeural ? &NeuralPrediction : nullptr);
 	}
 
 	Res.Success = true;
 	Res.BrickCount = static_cast<int>(Res.Pieces.size());
 	Res.StepCount = TotalSteps;
 	Res.LDrawContent = SerializeLDraw(Res.Title, Res.Pieces, Options.StepByStep);
-	Res.Explanation = QString("Synthesized completely novel 3D LEGO model generated from reference image contours and color mapping (%1 pieces across %2 steps).")
-	                 .arg(Res.BrickCount).arg(Res.StepCount);
+	if (HasNeural)
+	{
+		Res.Explanation = QString("Synthesized novel 3D LEGO model using fine-tuned Neural Vision-to-Brick Structural Weights (%1 pieces across %2 steps).")
+		                 .arg(Res.BrickCount).arg(Res.StepCount);
+	}
+	else
+	{
+		Res.Explanation = QString("Synthesized completely novel 3D LEGO model generated from reference image contours and color mapping (%1 pieces across %2 steps).")
+		                 .arg(Res.BrickCount).arg(Res.StepCount);
+	}
 
 	if (TargetPieces > 0)
 	{
@@ -703,9 +1010,14 @@ lcAIModelResult lcAIGenerator::SynthesizeParametricModel(const QString& Category
 	int TargetPieces = ExtractTargetPieces(Prompt, Options.TargetPieceCount);
 	if (TargetPieces <= 0) TargetPieces = 150; // Default balanced budget
 
+	lcNeuralVLMOutput NeuralPrediction;
+	bool HasNeural = PredictNeuralParameters(Options.AttachedImage, Prompt, TargetPieces, NeuralPrediction);
+
 	int BodyColor = ResolveColor(Prompt, -1);
 	if (BodyColor == -1 && !Options.AttachedImage.isNull())
 		BodyColor = ExtractDominantColor(Options.AttachedImage);
+	if (BodyColor == -1 && HasNeural && NeuralPrediction.DominantColor > 0)
+		BodyColor = NeuralPrediction.DominantColor;
 	if (BodyColor == -1) BodyColor = COLOR_BLUE;
 
 	int SecondaryColor = (BodyColor == COLOR_BLUE) ? COLOR_WHITE : ((BodyColor == COLOR_RED) ? COLOR_BLACK : COLOR_YELLOW);
@@ -718,8 +1030,9 @@ lcAIModelResult lcAIGenerator::SynthesizeParametricModel(const QString& Category
 	{
 		Res.Title = QString("Parametric %1 (%2 pcs)").arg(Prompt.isEmpty() ? "Sports Vehicle" : Prompt).arg(TargetPieces);
 
-		// Dynamically compute dimensions based on requested piece budget
-		int WheelbaseLength = std::max(6, std::min(18, TargetPieces / 14));
+		// Dynamically compute dimensions based on requested piece budget & neural predictions
+		int WheelbaseLength = HasNeural ? std::max(6, std::min(22, static_cast<int>(NeuralPrediction.DepthStuds * 0.7f)))
+		                                : std::max(6, std::min(18, TargetPieces / 14));
 		float HalfLength = WheelbaseLength * 10.0f;
 
 		// 1. Chassis Base Plates
@@ -736,8 +1049,9 @@ lcAIModelResult lcAIGenerator::SynthesizeParametricModel(const QString& Category
 		AddPieceRotY(Pieces, COLOR_DARK_GRAY, 28.0f, 0.0f, HalfLength - 10.0f, -90.0f, "6014b", Step);
 		Step++;
 
-		// 3. Body Layers (scaled dynamically by TargetPieces)
-		int BodyHeightLayers = std::max(2, std::min(6, TargetPieces / 40));
+		// 3. Body Layers (scaled dynamically by TargetPieces and neural model)
+		int BodyHeightLayers = HasNeural ? std::max(2, std::min(8, static_cast<int>(NeuralPrediction.HeightLayers * 0.45f)))
+		                                 : std::max(2, std::min(6, TargetPieces / 40));
 		for (int h = 1; h <= BodyHeightLayers; ++h)
 		{
 			float Y = -static_cast<float>(h * 24.0f);
@@ -769,8 +1083,10 @@ lcAIModelResult lcAIGenerator::SynthesizeParametricModel(const QString& Category
 	{
 		Res.Title = QString("Parametric %1 (%2 pcs)").arg(Prompt.isEmpty() ? "Supersonic Aircraft" : Prompt).arg(TargetPieces);
 
-		int FuselageLength = std::max(8, std::min(24, TargetPieces / 12));
-		int WingSpan = std::max(6, std::min(20, TargetPieces / 15));
+		int FuselageLength = HasNeural ? std::max(8, std::min(26, static_cast<int>(NeuralPrediction.DepthStuds * 0.8f)))
+		                               : std::max(8, std::min(24, TargetPieces / 12));
+		int WingSpan = HasNeural ? std::max(6, std::min(22, static_cast<int>(NeuralPrediction.WidthStuds * 0.7f)))
+		                         : std::max(6, std::min(20, TargetPieces / 15));
 
 		// 1. Fuselage Spine
 		for (int z = -FuselageLength / 2; z <= FuselageLength / 2; z += 2)
@@ -798,8 +1114,10 @@ lcAIModelResult lcAIGenerator::SynthesizeParametricModel(const QString& Category
 	{
 		Res.Title = QString("Parametric %1 (%2 pcs)").arg(Prompt.isEmpty() ? "Architectural Landmark" : Prompt).arg(TargetPieces);
 
-		int Stories = std::max(3, std::min(12, TargetPieces / 25));
-		int Footprint = std::max(4, std::min(8, TargetPieces / 40));
+		int Stories = HasNeural ? std::max(3, std::min(16, static_cast<int>(NeuralPrediction.HeightLayers * 0.8f)))
+		                        : std::max(3, std::min(12, TargetPieces / 25));
+		int Footprint = HasNeural ? std::max(4, std::min(10, static_cast<int>(NeuralPrediction.WidthStuds * 0.4f)))
+		                          : std::max(4, std::min(8, TargetPieces / 40));
 
 		// 1. Foundation Base
 		for (int x = -Footprint / 2; x <= Footprint / 2; x += 2)
@@ -841,8 +1159,16 @@ lcAIModelResult lcAIGenerator::SynthesizeParametricModel(const QString& Category
 	for (const auto& p : Pieces)
 		Res.PartCounts[p.PartId]++;
 	Res.LDrawContent = SerializeLDraw(Res.Title, Pieces, Options.StepByStep);
-	Res.Explanation = QString("Synthesized custom generative 3D LEGO model matching target piece budget (%1 pieces across %2 building steps).")
-	                 .arg(Res.BrickCount).arg(Res.StepCount);
+	if (HasNeural)
+	{
+		Res.Explanation = QString("Synthesized custom generative 3D LEGO model with fine-tuned Neural Structural Weights (%1 pieces across %2 building steps).")
+		                 .arg(Res.BrickCount).arg(Res.StepCount);
+	}
+	else
+	{
+		Res.Explanation = QString("Synthesized custom generative 3D LEGO model matching target piece budget (%1 pieces across %2 building steps).")
+		                 .arg(Res.BrickCount).arg(Res.StepCount);
+	}
 
 	return Res;
 }
