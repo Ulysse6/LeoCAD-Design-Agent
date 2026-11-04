@@ -42,6 +42,7 @@ private slots:
 	void OnAttachImageClicked();
 	void OnRemoveImageClicked();
 	void OnPiecePresetChanged(int Index);
+	void OnBackendChanged(int Index);
 
 private:
 	void AppendUserMessage(const QString& Text, const QString& ImagePath = QString(), int TargetPieces = 0);
@@ -71,6 +72,10 @@ private:
 	QImage mAttachedImage;
 
 	// Options
+	QComboBox* mBackendCombo = nullptr;
+	QWidget* mVlmSettingsWidget = nullptr;
+	QLineEdit* mVlmEndpointInput = nullptr;
+	QLineEdit* mVlmModelInput = nullptr;
 	QCheckBox* mAnimateCheckBox = nullptr;
 	QComboBox* mModeCombo = nullptr;
 	QSlider* mSpeedSlider = nullptr;

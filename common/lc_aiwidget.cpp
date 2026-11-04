@@ -88,18 +88,15 @@ lcAIAssistantWidget::lcAIAssistantWidget(QWidget* Parent)
 
 	struct PresetInfo { QString Icon; QString Label; QString Prompt; };
 	const PresetInfo Presets[] = {
-		{ "🛻", "Pickup", "Build a racing pickup truck" },
-		{ "🚜", "Tractor", "Build a loader tractor" },
-		{ "🏎️", "Ferrari", "Build a red Ferrari sports car" },
-		{ "🚂", "Santa Fe", "Build the Santa Fe Super Chief locomotive" },
-		{ "🚒", "Tow Truck", "Build a super tow truck" },
+		{ "🛻", "Pickup", "Build a futuristic pickup truck" },
+		{ "🏎️", "Racer", "Build a supersonic racing car" },
+		{ "✈️", "Jet", "Build a stealth fighter jet" },
 		{ "🚁", "Helicopter", "Build a rescue helicopter" },
-		{ "🏁", "Dragster", "Build a racing dragster" },
-		{ "🛸", "X-Wing", "Build an x-wing starfighter" },
-		{ "🏛️", "White House", "Build The White House landmark" },
-		{ "🗼", "Eiffel", "Build the Eiffel Tower" },
-		{ "🚤", "Speedboat", "Build a motor speedboat" },
-		{ "🏠", "Beach House", "Build a beachside vacation house" }
+		{ "🚀", "Spaceship", "Build an interstellar starfighter" },
+		{ "🏰", "Castle", "Build a medieval castle tower" },
+		{ "🏠", "Villa", "Build a modern hillside villa" },
+		{ "🤖", "Robot", "Build an autonomous explorer mech" },
+		{ "🚢", "Speedboat", "Build a hydrofoil speedboat" }
 	};
 
 	int ColCount = 3;
@@ -120,6 +117,42 @@ lcAIAssistantWidget::lcAIAssistantWidget(QWidget* Parent)
 	OptionsLayout->setContentsMargins(6, 6, 6, 6);
 	OptionsLayout->setSpacing(4);
 
+	// Generator Engine Selector (Native 3D vs Neural VLM)
+	QHBoxLayout* OptRow0 = new QHBoxLayout();
+	OptRow0->addWidget(new QLabel(tr("Generator:"), OptionsBox));
+	mBackendCombo = new QComboBox(OptionsBox);
+	mBackendCombo->addItem(tr("Native 3D Synthesizer (Instant / Offline)"), static_cast<int>(lcAIBackend::NativeSynthesizer));
+	mBackendCombo->addItem(tr("Neural VLM (Ollama / Local)"), static_cast<int>(lcAIBackend::NeuralVLM));
+	mBackendCombo->addItem(tr("Neural VLM (OpenAI / Cloud)"), static_cast<int>(lcAIBackend::NeuralVLM));
+	mBackendCombo->setStyleSheet("font-size: 11px;");
+	connect(mBackendCombo, QOverload<int>::of(&QComboBox::currentIndexChanged), this, &lcAIAssistantWidget::OnBackendChanged);
+	OptRow0->addWidget(mBackendCombo, 1);
+	OptionsLayout->addLayout(OptRow0);
+
+	// VLM Settings (shown when Neural VLM selected)
+	mVlmSettingsWidget = new QWidget(OptionsBox);
+	mVlmSettingsWidget->setVisible(false);
+	QHBoxLayout* VlmLayout = new QHBoxLayout(mVlmSettingsWidget);
+	VlmLayout->setContentsMargins(0, 2, 0, 2);
+	VlmLayout->setSpacing(4);
+
+	mVlmEndpointInput = new QLineEdit(mVlmSettingsWidget);
+	mVlmEndpointInput->setPlaceholderText("http://localhost:11434/api/generate");
+	mVlmEndpointInput->setText("http://localhost:11434/api/generate");
+	mVlmEndpointInput->setStyleSheet("font-size: 10px; padding: 2px 4px;");
+	VlmLayout->addWidget(new QLabel(tr("URL:"), mVlmSettingsWidget));
+	VlmLayout->addWidget(mVlmEndpointInput, 1);
+
+	mVlmModelInput = new QLineEdit(mVlmSettingsWidget);
+	mVlmModelInput->setPlaceholderText("qwen2-vl");
+	mVlmModelInput->setText("qwen2-vl");
+	mVlmModelInput->setStyleSheet("font-size: 10px; padding: 2px 4px;");
+	VlmLayout->addWidget(new QLabel(tr("Model:"), mVlmSettingsWidget));
+	VlmLayout->addWidget(mVlmModelInput);
+
+	OptionsLayout->addWidget(mVlmSettingsWidget);
+
+	// Build mode row
 	QHBoxLayout* OptRow1 = new QHBoxLayout();
 	mModeCombo = new QComboBox(OptionsBox);
 	mModeCombo->addItem(tr("Replace current model"), true);
@@ -129,6 +162,7 @@ lcAIAssistantWidget::lcAIAssistantWidget(QWidget* Parent)
 	OptRow1->addWidget(mModeCombo, 1);
 	OptionsLayout->addLayout(OptRow1);
 
+	// Animate & speed row
 	QHBoxLayout* OptRow2 = new QHBoxLayout();
 	mAnimateCheckBox = new QCheckBox(tr("Animate build"), OptionsBox);
 	mAnimateCheckBox->setChecked(true);
@@ -222,13 +256,13 @@ lcAIAssistantWidget::lcAIAssistantWidget(QWidget* Parent)
 	QHBoxLayout* InputLayout = new QHBoxLayout();
 
 	mAttachBtn = new QPushButton(tr("📷"), this);
-	mAttachBtn->setToolTip(tr("Attach reference image or CAD render (or drag & drop anywhere)"));
+	mAttachBtn->setToolTip(tr("Attach reference image or photo (or drag & drop anywhere)"));
 	mAttachBtn->setStyleSheet("font-size: 13px; padding: 6px 10px; background-color: #2a3342; color: #a5d6ff; border: 1px solid #3c495e; border-radius: 4px;");
 	connect(mAttachBtn, &QPushButton::clicked, this, &lcAIAssistantWidget::OnAttachImageClicked);
 	InputLayout->addWidget(mAttachBtn);
 
 	mPromptInput = new QLineEdit(this);
-	mPromptInput->setPlaceholderText(tr("Describe model or attach reference photo..."));
+	mPromptInput->setPlaceholderText(tr("Describe arbitrary model or attach reference photo..."));
 	mPromptInput->setStyleSheet("font-size: 12px; padding: 6px; border-radius: 4px;");
 	connect(mPromptInput, &QLineEdit::returnPressed, this, &lcAIAssistantWidget::OnSendClicked);
 	InputLayout->addWidget(mPromptInput, 1);
@@ -251,9 +285,25 @@ lcAIAssistantWidget::lcAIAssistantWidget(QWidget* Parent)
 
 	// Initial welcome message
 	AppendSystemMessage(tr("<b>Welcome to the LeoCAD Multimodal AI Builder!</b><br>"
-	                       "I am your autonomous 3D LEGO builder agent, trained on 198 authentic LEGO sets up to 570 pieces (trains, architecture, supercars, spaceships, houses) paired with CAD renders and real-world photos.<br>"
-	                       "• <b>Multimodal input:</b> Click 📷 or drag & drop any reference photo into this panel.<br>"
-	                       "• <b>Piece Budget:</b> Choose a piece budget (e.g. 150 pcs, 300 pcs) or type 'using 250 pieces' in your prompt."));
+	                       "I synthesize completely novel, arbitrary 3D LEGO builds based on your text prompt and attached reference photos.<br>"
+	                       "• <b>Arbitrary generation:</b> Describe anything (e.g. <i>'futuristic hovercraft'</i>, <i>'cyberpunk skyscraper'</i>, <i>'mech warrior'</i>) or attach any photo.<br>"
+	                       "• <b>Piece Budget:</b> Choose a target budget (e.g. 50, 150, 300, 500 pcs) to control build density."));
+}
+
+void lcAIAssistantWidget::OnBackendChanged(int Index)
+{
+	bool isVlm = (Index > 0);
+	mVlmSettingsWidget->setVisible(isVlm);
+	if (Index == 1) // Ollama / Local
+	{
+		mVlmEndpointInput->setText("http://localhost:11434/api/generate");
+		mVlmModelInput->setText("qwen2-vl");
+	}
+	else if (Index == 2) // OpenAI / Cloud
+	{
+		mVlmEndpointInput->setText("https://api.openai.com/v1/chat/completions");
+		mVlmModelInput->setText("gpt-4o");
+	}
 }
 
 void lcAIAssistantWidget::dragEnterEvent(QDragEnterEvent* Event)
@@ -443,7 +493,7 @@ void lcAIAssistantWidget::BuildPrompt(const QString& Prompt)
 	int TargetPieces = mPieceCountSpin->value();
 	AppendUserMessage(Prompt, mAttachedImagePath, TargetPieces);
 
-	mStatusLabel->setText(tr("Analyzing multimodal request and synthesizing 3D LEGO model..."));
+	mStatusLabel->setText(tr("Synthesizing novel 3D LEGO model..."));
 	mProgressBar->setValue(10);
 	mSendButton->setEnabled(false);
 	mStopButton->setEnabled(true);
@@ -454,6 +504,9 @@ void lcAIAssistantWidget::BuildPrompt(const QString& Prompt)
 	Opts.TargetPieceCount = TargetPieces;
 	Opts.ImagePath = mAttachedImagePath;
 	Opts.AttachedImage = mAttachedImage;
+	Opts.Backend = static_cast<lcAIBackend>(mBackendCombo->currentData().toInt());
+	Opts.VlmEndpoint = mVlmEndpointInput->text().trimmed();
+	Opts.VlmModel = mVlmModelInput->text().trimmed();
 
 	// Reset input fields
 	mPromptInput->clear();
@@ -463,7 +516,7 @@ void lcAIAssistantWidget::BuildPrompt(const QString& Prompt)
 
 	if (!Res.Success)
 	{
-		AppendSystemMessage(tr("❌ Sorry, I encountered an error creating this model: %1").arg(Res.ErrorMessage));
+		AppendSystemMessage(tr("❌ Sorry, I encountered an error synthesizing this model: %1").arg(Res.ErrorMessage));
 		mStatusLabel->setText(tr("Error generating model"));
 		mSendButton->setEnabled(true);
 		mStopButton->setEnabled(false);

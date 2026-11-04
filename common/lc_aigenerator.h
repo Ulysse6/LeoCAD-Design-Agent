@@ -7,6 +7,12 @@
 #include <vector>
 #include <cstdint>
 
+enum class lcAIBackend
+{
+	NativeSynthesizer, // 3D Voxel and Parametric Structural Synthesizer (100% offline, novel builds)
+	NeuralVLM          // Vision-Language Model via Ollama, local vLLM, or OpenAI/Claude API
+};
+
 enum class lcAITheme
 {
 	Auto,
@@ -28,6 +34,7 @@ enum class lcAISize
 
 struct lcAIOptions
 {
+	lcAIBackend Backend = lcAIBackend::NativeSynthesizer;
 	lcAITheme Theme = lcAITheme::Auto;
 	lcAISize Size = lcAISize::Standard;
 	bool StepByStep = true;
@@ -35,8 +42,9 @@ struct lcAIOptions
 	int TargetPieceCount = 0; // 0 = Auto / Unconstrained
 	QString ImagePath;
 	QImage AttachedImage;
-	QString CustomApiKey;
-	QString ApiEndpoint;
+	QString VlmEndpoint = "http://localhost:11434/api/generate";
+	QString VlmModel = "qwen2-vl";
+	QString VlmApiKey;
 };
 
 struct lcAIModelPiece
@@ -73,33 +81,20 @@ class lcAIGenerator
 public:
 	static lcAIModelResult GenerateModel(const QString& Prompt, const lcAIOptions& Options);
 
-	// Multimodal image and piece analysis helpers
+	// Core Hybrid Engine:
+	// 1. Native 3D Voxel & Parametric Structural Synthesizer
+	static lcAIModelResult SynthesizeFromImage(const QImage& Image, const QString& Prompt, const lcAIOptions& Options);
+	static lcAIModelResult SynthesizeParametricModel(const QString& Category, const QString& Prompt, const lcAIOptions& Options);
+
+	// 2. Neural Vision-Language Model Bridge (Ollama / Local / OpenAI / Claude)
+	static lcAIModelResult CallNeuralVLM(const QString& Prompt, const QImage& Image, const lcAIOptions& Options);
+
+	// Helpers
 	static uint64_t ComputeVisualHash(const QImage& Image);
 	static int ExtractDominantColor(const QImage& Image);
 	static int ExtractTargetPieces(const QString& Prompt, int OptionPieces = 0);
 	static lcAIModelResult ParseLDrawString(const QString& Title, const QString& LDrawCode, int StepCount = 1);
 
-private:
-	// Knowledge base builder
-	static lcAIModelResult GenerateFromKnowledgeBase(const lcKBModelEntry* Entry, const QString& Prompt, const lcAIOptions& Options);
-
-	// Domain builders
-	static lcAIModelResult BuildHouse(const QString& Prompt, const lcAIOptions& Options);
-	static lcAIModelResult BuildCar(const QString& Prompt, const lcAIOptions& Options);
-	static lcAIModelResult BuildRocket(const QString& Prompt, const lcAIOptions& Options);
-	static lcAIModelResult BuildSpaceship(const QString& Prompt, const lcAIOptions& Options);
-	static lcAIModelResult BuildCastleTower(const QString& Prompt, const lcAIOptions& Options);
-	static lcAIModelResult BuildPyramid(const QString& Prompt, const lcAIOptions& Options);
-	static lcAIModelResult BuildTree(const QString& Prompt, const lcAIOptions& Options);
-	static lcAIModelResult BuildBoat(const QString& Prompt, const lcAIOptions& Options);
-	static lcAIModelResult BuildRobot(const QString& Prompt, const lcAIOptions& Options);
-	static lcAIModelResult BuildAirplane(const QString& Prompt, const lcAIOptions& Options);
-	static lcAIModelResult BuildFurniture(const QString& Prompt, const lcAIOptions& Options);
-	static lcAIModelResult BuildBridge(const QString& Prompt, const lcAIOptions& Options);
-	static lcAIModelResult BuildRainbowArch(const QString& Prompt, const lcAIOptions& Options);
-	static lcAIModelResult BuildCustomSculpture(const QString& Prompt, const lcAIOptions& Options);
-
-	// Helpers
 	static void AddPiece(std::vector<lcAIModelPiece>& Pieces, int ColorCode, float X, float Y, float Z,
 	                     const float Rot[9], const QString& PartId, int Step);
 	static void AddPieceRotY(std::vector<lcAIModelPiece>& Pieces, int ColorCode, float X, float Y, float Z,
@@ -107,4 +102,8 @@ private:
 	static QByteArray SerializeLDraw(const QString& Title, const std::vector<lcAIModelPiece>& Pieces, bool IncludeSteps);
 	static int ResolveColor(const QString& Prompt, int DefaultColor);
 	static QString GetPartDescription(const QString& PartId);
+
+private:
+	// Knowledge base builder (used when specific reference models are requested)
+	static lcAIModelResult GenerateFromKnowledgeBase(const lcKBModelEntry* Entry, const QString& Prompt, const lcAIOptions& Options);
 };
