@@ -78,6 +78,22 @@ struct lcNeuralVLMOutput
 	float Complexity = 0.2f;
 };
 
+enum class lcAIArchetype
+{
+	Vehicle,        // Car, Truck, Buggy, Racer, Bus, Van, Pickup
+	Train,          // Locomotive, Train Engine, Railcar, Caboose
+	Watercraft,     // Boat, Speedboat, Ship, Submarine, Yacht, Hydrofoil
+	Aircraft,       // Airplane, Fighter Jet, Biplane, Glider, Supersonic
+	Helicopter,     // Helicopter, Chopper, Gyrocopter, Rotorcraft
+	Spacecraft,     // Spaceship, Rocket, Starfighter, Shuttle
+	Creature,       // Dog, Puppy, Cat, Horse, Animal, Dinosaur, Bird
+	Robot,          // Mech, Battle Robot, Droid, Android, Cyborg
+	Furniture,      // Chair, Table, Desk, Bed, Sofa, Bench
+	Castle,         // Castle, Fortress, Tower, Keep, Wall, Bastion
+	House,          // House, Villa, Cottage, Cabin, Building
+	GenericObject   // Geometric sculpted structure for unclassified prompts
+};
+
 struct lcAIModelResult
 {
 	bool Success = false;
@@ -100,6 +116,8 @@ public:
 
 	// Core Hybrid Engine:
 	// 1. Native 3D Voxel & Parametric Structural Synthesizer
+	static lcAIArchetype ClassifyPromptArchetype(const QString& Prompt);
+	static lcAIModelResult SynthesizeArchetypeModel(lcAIArchetype Archetype, const QString& Prompt, const lcAIOptions& Options);
 	static lcAIModelResult SynthesizeFromImage(const QImage& Image, const QString& Prompt, const lcAIOptions& Options);
 	static lcAIModelResult SynthesizeParametricModel(const QString& Category, const QString& Prompt, const lcAIOptions& Options);
 

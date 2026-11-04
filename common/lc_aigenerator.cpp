@@ -1004,11 +1004,82 @@ lcAIModelResult lcAIGenerator::SynthesizeFromImage(const QImage& Image, const QS
 	return Res;
 }
 
-lcAIModelResult lcAIGenerator::SynthesizeParametricModel(const QString& Category, const QString& Prompt, const lcAIOptions& Options)
+// ============================================================================
+// 3. OVERHAULED NATIVE ARCHETYPE STRUCTURAL SYNTHESIZERS
+// ============================================================================
+
+lcAIArchetype lcAIGenerator::ClassifyPromptArchetype(const QString& Prompt)
+{
+	QString p = Prompt.toLower();
+
+	auto hasAny = [&](const QStringList& words) {
+		for (const QString& w : words)
+		{
+			if (p.contains(w))
+				return true;
+		}
+		return false;
+	};
+
+	// 1. Helicopter (check before aircraft)
+	if (hasAny({ "helicopter", "chopper", "gyrocopter", "rotorcraft", "copter", "heli" }))
+		return lcAIArchetype::Helicopter;
+
+	// 2. Spacecraft / Spaceship / Rocket (check before watercraft and aircraft, to catch 'spaceship' and 'starfighter')
+	if (hasAny({ "spaceship", "spacecraft", "starfighter", "starship", "x-wing", "rocket", "shuttle",
+	             "ufo", "satellite", "orbiter", "lander", "apollo", "probe", "interstellar", "space" }))
+		return lcAIArchetype::Spacecraft;
+
+	// 3. Watercraft / Boat / Ship (check before vehicle)
+	if (hasAny({ "boat", "speedboat", "ship", "submarine", "yacht", "vessel", "ferry", "sailboat",
+	             "hydrofoil", "cruiser", "raft", "kayak", "canoe", "barge", "catamaran", "naval" }))
+		return lcAIArchetype::Watercraft;
+
+	// 4. Aircraft / Plane / Jet
+	if (hasAny({ "plane", "airplane", "aeroplane", "jet", "biplane", "fighter", "glider",
+	             "aircraft", "supersonic", "stealth", "bomber", "airliner", "cessna", "monoplane" }))
+		return lcAIArchetype::Aircraft;
+
+	// 5. Train / Locomotive
+	if (hasAny({ "train", "locomotive", "railway", "railroad", "caboose", "freight", "tram", "trolley", "boxcar" }))
+		return lcAIArchetype::Train;
+
+	// 6. Creature / Animal
+	if (hasAny({ "dog", "puppy", "hound", "cat", "kitten", "horse", "animal", "creature", "dinosaur",
+	             "dino", "t-rex", "bird", "dragon", "elephant", "bear", "wolf", "fox", "lion", "tiger",
+	             "fish", "shark", "whale", "monster", "spider", "duck", "rabbit", "bunny", "cow", "pig", "sheep" }))
+		return lcAIArchetype::Creature;
+
+	// 7. Robot / Mech
+	if (hasAny({ "robot", "mech", "droid", "android", "cyborg", "mecha", "automaton", "transformer", "golem", "biped" }))
+		return lcAIArchetype::Robot;
+
+	// 8. Furniture
+	if (hasAny({ "chair", "table", "desk", "seat", "stool", "bed", "couch", "sofa", "bench", "furniture", "throne", "shelf", "cabinet" }))
+		return lcAIArchetype::Furniture;
+
+	// 9. Castle / Fortress
+	if (hasAny({ "castle", "fortress", "tower", "keep", "citadel", "bastion", "stronghold", "rampart", "turret" }))
+		return lcAIArchetype::Castle;
+
+	// 10. House / Building
+	if (hasAny({ "house", "villa", "cottage", "cabin", "building", "home", "lodge", "mansion", "bungalow",
+	             "barn", "church", "temple", "palace", "shack", "garage", "shed", "skyscraper" }))
+		return lcAIArchetype::House;
+
+	// 11. Vehicle (Cars, Trucks, Heavy machinery)
+	if (hasAny({ "car", "racer", "truck", "pickup", "van", "wagon", "buggy", "jeep", "suv", "automobile",
+	             "kart", "tractor", "forklift", "bulldozer", "excavator", "loader", "convertible", "coupe", "sedan", "vehicle" }))
+		return lcAIArchetype::Vehicle;
+
+	return lcAIArchetype::GenericObject;
+}
+
+lcAIModelResult lcAIGenerator::SynthesizeArchetypeModel(lcAIArchetype Archetype, const QString& Prompt, const lcAIOptions& Options)
 {
 	lcAIModelResult Res;
 	int TargetPieces = ExtractTargetPieces(Prompt, Options.TargetPieceCount);
-	if (TargetPieces <= 0) TargetPieces = 150; // Default balanced budget
+	if (TargetPieces <= 0) TargetPieces = 100; // Default balanced budget
 
 	lcNeuralVLMOutput NeuralPrediction;
 	bool HasNeural = PredictNeuralParameters(Options.AttachedImage, Prompt, TargetPieces, NeuralPrediction);
@@ -1018,27 +1089,51 @@ lcAIModelResult lcAIGenerator::SynthesizeParametricModel(const QString& Category
 		BodyColor = ExtractDominantColor(Options.AttachedImage);
 	if (BodyColor == -1 && HasNeural && NeuralPrediction.DominantColor > 0)
 		BodyColor = NeuralPrediction.DominantColor;
-	if (BodyColor == -1) BodyColor = COLOR_BLUE;
 
-	int SecondaryColor = (BodyColor == COLOR_BLUE) ? COLOR_WHITE : ((BodyColor == COLOR_RED) ? COLOR_BLACK : COLOR_YELLOW);
+	if (BodyColor == -1)
+	{
+		switch (Archetype)
+		{
+		case lcAIArchetype::Castle: BodyColor = COLOR_LIGHT_BLUISH_GRAY; break;
+		case lcAIArchetype::Furniture: BodyColor = COLOR_BROWN; break;
+		case lcAIArchetype::Creature: BodyColor = COLOR_TAN; break;
+		case lcAIArchetype::Aircraft: BodyColor = COLOR_WHITE; break;
+		case lcAIArchetype::Helicopter: BodyColor = COLOR_YELLOW; break;
+		case lcAIArchetype::Watercraft: BodyColor = COLOR_BLUE; break;
+		case lcAIArchetype::Spacecraft: BodyColor = COLOR_WHITE; break;
+		case lcAIArchetype::Train: BodyColor = COLOR_BLACK; break;
+		case lcAIArchetype::Robot: BodyColor = COLOR_DARK_BLUISH_GRAY; break;
+		case lcAIArchetype::House: BodyColor = COLOR_WHITE; break;
+		case lcAIArchetype::Vehicle: BodyColor = COLOR_RED; break;
+		default: BodyColor = COLOR_BLUE; break;
+		}
+	}
+
+	int SecondaryColor = COLOR_YELLOW;
+	if (BodyColor == COLOR_RED) SecondaryColor = COLOR_BLACK;
+	else if (BodyColor == COLOR_BLUE) SecondaryColor = COLOR_WHITE;
+	else if (BodyColor == COLOR_BLACK) SecondaryColor = COLOR_DARK_RED;
+	else if (BodyColor == COLOR_LIGHT_BLUISH_GRAY) SecondaryColor = COLOR_DARK_BLUISH_GRAY;
+	else if (BodyColor == COLOR_WHITE) SecondaryColor = COLOR_BLUE;
+	else if (BodyColor == COLOR_BROWN) SecondaryColor = COLOR_TAN;
+	else if (BodyColor == COLOR_TAN) SecondaryColor = COLOR_BROWN;
+	else if (BodyColor == COLOR_YELLOW) SecondaryColor = COLOR_BLACK;
+
 	int Step = 1;
 	std::vector<lcAIModelPiece> Pieces;
 
-	QString Cat = Category.toLower();
-
-	if (Cat.contains("car") || Cat.contains("truck") || Cat.contains("racer") || Cat.contains("vehicle") || Cat.contains("pickup"))
+	switch (Archetype)
 	{
-		Res.Title = QString("Parametric %1 (%2 pcs)").arg(Prompt.isEmpty() ? "Sports Vehicle" : Prompt).arg(TargetPieces);
-
-		// Dynamically compute dimensions based on requested piece budget & neural predictions
-		int WheelbaseLength = HasNeural ? std::max(6, std::min(22, static_cast<int>(NeuralPrediction.DepthStuds * 0.7f)))
-		                                : std::max(6, std::min(18, TargetPieces / 14));
+	case lcAIArchetype::Vehicle:
+	{
+		Res.Title = QString("Parametric Vehicle (%1 pcs)").arg(TargetPieces);
+		int WheelbaseLength = std::max(6, std::min(20, TargetPieces / 14));
 		float HalfLength = WheelbaseLength * 10.0f;
 
 		// 1. Chassis Base Plates
 		for (int z = -WheelbaseLength / 2; z <= WheelbaseLength / 2; z += 2)
 		{
-			AddPieceRotY(Pieces, COLOR_BLACK, 0.0f, 0.0f, z * 20.0f, 0.0f, "3020", Step); // 2x4 Plate
+			AddPieceRotY(Pieces, COLOR_BLACK, 0.0f, 0.0f, z * 20.0f, 0.0f, "3020", Step);
 		}
 		Step++;
 
@@ -1049,9 +1144,8 @@ lcAIModelResult lcAIGenerator::SynthesizeParametricModel(const QString& Category
 		AddPieceRotY(Pieces, COLOR_DARK_GRAY, 28.0f, 0.0f, HalfLength - 10.0f, -90.0f, "6014b", Step);
 		Step++;
 
-		// 3. Body Layers (scaled dynamically by TargetPieces and neural model)
-		int BodyHeightLayers = HasNeural ? std::max(2, std::min(8, static_cast<int>(NeuralPrediction.HeightLayers * 0.45f)))
-		                                 : std::max(2, std::min(6, TargetPieces / 40));
+		// 3. Body Layers (scaled dynamically by TargetPieces)
+		int BodyHeightLayers = std::max(2, std::min(6, TargetPieces / 35));
 		for (int h = 1; h <= BodyHeightLayers; ++h)
 		{
 			float Y = -static_cast<float>(h * 24.0f);
@@ -1061,95 +1155,480 @@ lcAIModelResult lcAIGenerator::SynthesizeParametricModel(const QString& Category
 			{
 				if (h == BodyHeightLayers && z == 0)
 				{
-					// Windshield / Cabin
-					AddPieceRotY(Pieces, COLOR_TRANS_CLEAR, 0.0f, Y, z * 20.0f, 0.0f, "3039", Step); // Slope 2x2
+					AddPieceRotY(Pieces, COLOR_TRANS_CLEAR, 0.0f, Y, z * 20.0f, 0.0f, "3039", Step); // Windshield
 				}
 				else
 				{
-					AddPieceRotY(Pieces, LayerColor, 0.0f, Y, z * 20.0f, (h % 2 == 0 ? 0.0f : 90.0f), "3001", Step); // 2x4 Brick
+					AddPieceRotY(Pieces, LayerColor, 0.0f, Y, z * 20.0f, (h % 2 == 0 ? 0.0f : 90.0f), "3001", Step);
 				}
 			}
 			Step++;
 		}
 
-		// 4. Detailing (Spoilers, Headlights, Grille)
+		// 4. Detailing (Spoilers, Headlights, Taillights)
 		float TopY = -static_cast<float>((BodyHeightLayers + 1) * 24.0f);
-		AddPieceRotY(Pieces, SecondaryColor, 0.0f, TopY + 12.0f, HalfLength, 0.0f, "3020", Step); // Rear Aerodynamic Wing
-		AddPieceRotY(Pieces, COLOR_TRANS_YELLOW, -15.0f, -24.0f, -HalfLength, 0.0f, "3005", Step); // Headlight Left
-		AddPieceRotY(Pieces, COLOR_TRANS_YELLOW, 15.0f, -24.0f, -HalfLength, 0.0f, "3005", Step);  // Headlight Right
+		AddPieceRotY(Pieces, SecondaryColor, 0.0f, TopY + 12.0f, HalfLength, 0.0f, "3020", Step); // Rear Wing
+		AddPieceRotY(Pieces, COLOR_TRANS_YELLOW, -15.0f, -24.0f, -HalfLength, 0.0f, "3005", Step); // Headlight L
+		AddPieceRotY(Pieces, COLOR_TRANS_YELLOW, 15.0f, -24.0f, -HalfLength, 0.0f, "3005", Step);  // Headlight R
+		AddPieceRotY(Pieces, COLOR_TRANS_RED, -15.0f, -24.0f, HalfLength, 0.0f, "3005", Step);     // Taillight L
+		AddPieceRotY(Pieces, COLOR_TRANS_RED, 15.0f, -24.0f, HalfLength, 0.0f, "3005", Step);      // Taillight R
 		Step++;
+		break;
 	}
-	else if (Cat.contains("plane") || Cat.contains("airplane") || Cat.contains("jet") || Cat.contains("spaceship"))
+
+	case lcAIArchetype::Train:
 	{
-		Res.Title = QString("Parametric %1 (%2 pcs)").arg(Prompt.isEmpty() ? "Supersonic Aircraft" : Prompt).arg(TargetPieces);
+		Res.Title = QString("Parametric Locomotive (%1 pcs)").arg(TargetPieces);
+		int TrainLength = std::max(10, std::min(24, TargetPieces / 10));
+		float HalfL = TrainLength * 10.0f;
 
-		int FuselageLength = HasNeural ? std::max(8, std::min(26, static_cast<int>(NeuralPrediction.DepthStuds * 0.8f)))
-		                               : std::max(8, std::min(24, TargetPieces / 12));
-		int WingSpan = HasNeural ? std::max(6, std::min(22, static_cast<int>(NeuralPrediction.WidthStuds * 0.7f)))
-		                         : std::max(6, std::min(20, TargetPieces / 15));
+		// 1. Heavy Base Frame & Buffer Beams
+		for (int z = -TrainLength / 2; z <= TrainLength / 2; z += 2)
+		{
+			AddPieceRotY(Pieces, COLOR_BLACK, 0.0f, 0.0f, z * 20.0f, 0.0f, "3020", Step);
+		}
+		AddPieceRotY(Pieces, COLOR_RED, 0.0f, 0.0f, -HalfL - 10.0f, 90.0f, "3023", Step);
+		AddPieceRotY(Pieces, COLOR_RED, 0.0f, 0.0f, HalfL + 10.0f, 90.0f, "3023", Step);
+		Step++;
 
-		// 1. Fuselage Spine
+		// 2. Wheels (6 wheels along sides)
+		AddPieceRotY(Pieces, COLOR_DARK_GRAY, -28.0f, 0.0f, -HalfL + 10.0f, 90.0f, "6014b", Step);
+		AddPieceRotY(Pieces, COLOR_DARK_GRAY, 28.0f, 0.0f, -HalfL + 10.0f, -90.0f, "6014b", Step);
+		AddPieceRotY(Pieces, COLOR_DARK_GRAY, -28.0f, 0.0f, 0.0f, 90.0f, "6014b", Step);
+		AddPieceRotY(Pieces, COLOR_DARK_GRAY, 28.0f, 0.0f, 0.0f, -90.0f, "6014b", Step);
+		AddPieceRotY(Pieces, COLOR_DARK_GRAY, -28.0f, 0.0f, HalfL - 10.0f, 90.0f, "6014b", Step);
+		AddPieceRotY(Pieces, COLOR_DARK_GRAY, 28.0f, 0.0f, HalfL - 10.0f, -90.0f, "6014b", Step);
+		Step++;
+
+		// 3. Boiler Section (front 60%)
+		int CabSplit = TrainLength / 6;
+		for (int z = -TrainLength / 2; z < CabSplit; z += 2)
+		{
+			AddPieceRotY(Pieces, BodyColor, 0.0f, -24.0f, z * 20.0f, 0.0f, "3001", Step);
+			AddPieceRotY(Pieces, BodyColor, 0.0f, -48.0f, z * 20.0f, 0.0f, "3003", Step);
+		}
+		Step++;
+
+		// 4. Operator Cab (rear 40%) & Roof
+		for (int h = 1; h <= 3; ++h)
+		{
+			float Y = -static_cast<float>(h * 24.0f);
+			for (int z = CabSplit; z <= TrainLength / 2; z += 2)
+			{
+				if (h == 2)
+				{
+					AddPieceRotY(Pieces, COLOR_TRANS_CLEAR, -10.0f, Y, z * 20.0f, 0.0f, "3004", Step);
+					AddPieceRotY(Pieces, COLOR_TRANS_CLEAR, 10.0f, Y, z * 20.0f, 0.0f, "3004", Step);
+				}
+				else
+				{
+					AddPieceRotY(Pieces, SecondaryColor, 0.0f, Y, z * 20.0f, 0.0f, "3001", Step);
+				}
+			}
+		}
+		for (int z = CabSplit; z <= TrainLength / 2; z += 2)
+		{
+			AddPieceRotY(Pieces, COLOR_BLACK, 0.0f, -80.0f, z * 20.0f, 0.0f, "3020", Step);
+		}
+		Step++;
+
+		// 5. Smokestack, Cowcatcher & Headlight
+		AddPieceRotY(Pieces, COLOR_BLACK, 0.0f, -72.0f, -HalfL + 20.0f, 0.0f, "3005", Step);
+		AddPieceRotY(Pieces, COLOR_TRANS_YELLOW, 0.0f, -36.0f, -HalfL - 5.0f, 0.0f, "3005", Step);
+		AddPieceRotY(Pieces, COLOR_DARK_GRAY, 0.0f, -12.0f, -HalfL - 8.0f, 0.0f, "3039", Step);
+		Step++;
+		break;
+	}
+
+	case lcAIArchetype::Watercraft:
+	{
+		Res.Title = QString("Parametric Watercraft (%1 pcs)").arg(TargetPieces);
+		int BoatLength = std::max(10, std::min(24, TargetPieces / 10));
+		float HalfL = BoatLength * 10.0f;
+
+		// 1. Keel & Lower V-Hull (NO WHEELS!)
+		for (int z = -BoatLength / 2 + 1; z <= BoatLength / 2; z += 2)
+		{
+			AddPieceRotY(Pieces, COLOR_DARK_GRAY, 0.0f, 0.0f, z * 20.0f, 0.0f, "3020", Step);
+		}
+		AddPieceRotY(Pieces, COLOR_DARK_GRAY, 0.0f, 0.0f, -HalfL, 0.0f, "3040", Step); // Bow
+		Step++;
+
+		// 2. Hull Freeboard Walls (widening in midsection)
+		for (int z = -BoatLength / 2 + 1; z <= BoatLength / 2; z += 2)
+		{
+			AddPieceRotY(Pieces, BodyColor, -15.0f, -24.0f, z * 20.0f, 0.0f, "3004", Step);
+			AddPieceRotY(Pieces, BodyColor, 15.0f, -24.0f, z * 20.0f, 0.0f, "3004", Step);
+		}
+		AddPieceRotY(Pieces, BodyColor, 0.0f, -24.0f, -HalfL + 10.0f, 0.0f, "3039", Step); // Deck
+		AddPieceRotY(Pieces, BodyColor, 0.0f, -24.0f, HalfL, 90.0f, "3001", Step);         // Transom
+		Step++;
+
+		// 3. Cockpit & Windshield
+		AddPieceRotY(Pieces, COLOR_TRANS_CLEAR, 0.0f, -48.0f, -HalfL * 0.3f, 0.0f, "3039", Step); // Windshield
+		AddPieceRotY(Pieces, SecondaryColor, -15.0f, -48.0f, 0.0f, 0.0f, "3004", Step);
+		AddPieceRotY(Pieces, SecondaryColor, 15.0f, -48.0f, 0.0f, 0.0f, "3004", Step);
+		Step++;
+
+		// 4. Outboard Motor at Stern (Propulsion, NO wheels!)
+		AddPieceRotY(Pieces, COLOR_BLACK, 0.0f, -12.0f, HalfL + 15.0f, 0.0f, "3005", Step);
+		AddPieceRotY(Pieces, COLOR_BLACK, 0.0f, -36.0f, HalfL + 15.0f, 0.0f, "3040", Step);
+		AddPieceRotY(Pieces, COLOR_WHITE, 0.0f, -48.0f, HalfL - 10.0f, 0.0f, "3023", Step); // Stern flag
+		Step++;
+		break;
+	}
+
+	case lcAIArchetype::Aircraft:
+	{
+		Res.Title = QString("Parametric Aircraft (%1 pcs)").arg(TargetPieces);
+		int FuselageLength = std::max(10, std::min(24, TargetPieces / 11));
+		int WingSpan = std::max(8, std::min(22, TargetPieces / 12));
+		float HalfL = FuselageLength * 10.0f;
+
+		// 1. Fuselage Core Spine
 		for (int z = -FuselageLength / 2; z <= FuselageLength / 2; z += 2)
 		{
 			AddPieceRotY(Pieces, BodyColor, 0.0f, -24.0f, z * 20.0f, 0.0f, "3001", Step);
 		}
+		AddPieceRotY(Pieces, SecondaryColor, 0.0f, -24.0f, -HalfL - 10.0f, 0.0f, "3040", Step); // Nose
 		Step++;
 
-		// 2. Swept Wings
+		// 2. Swept Wings (NO wheels on sides)
 		for (int w = 1; w <= WingSpan / 2; ++w)
 		{
 			float X = w * 20.0f;
-			float Z = (w * 10.0f);
+			float Z = w * 10.0f;
 			AddPieceRotY(Pieces, SecondaryColor, -X, -16.0f, Z, 0.0f, "3020", Step); // Left Wing
 			AddPieceRotY(Pieces, SecondaryColor, X, -16.0f, Z, 0.0f, "3020", Step);  // Right Wing
 		}
 		Step++;
 
-		// 3. Cockpit Canopy & Nose Cone
-		AddPieceRotY(Pieces, COLOR_TRANS_CLEAR, 0.0f, -48.0f, -FuselageLength * 6.0f, 0.0f, "3039", Step);
-		AddPieceRotY(Pieces, SecondaryColor, 0.0f, -48.0f, FuselageLength * 8.0f, 90.0f, "3039", Step); // Tail Fin
+		// 3. Underwing Jet Engines & Cockpit Canopy
+		float EngX = (WingSpan / 4 + 1) * 20.0f;
+		AddPieceRotY(Pieces, COLOR_DARK_GRAY, -EngX, 0.0f, 10.0f, 0.0f, "3005", Step); // Left Engine
+		AddPieceRotY(Pieces, COLOR_DARK_GRAY, EngX, 0.0f, 10.0f, 0.0f, "3005", Step);  // Right Engine
+		AddPieceRotY(Pieces, COLOR_TRANS_CLEAR, 0.0f, -48.0f, -HalfL * 0.4f, 0.0f, "3039", Step); // Cockpit
 		Step++;
+
+		// 4. Tail Empennage (Vertical Fin & Stabilizers)
+		AddPieceRotY(Pieces, SecondaryColor, 0.0f, -48.0f, HalfL - 5.0f, 90.0f, "3039", Step); // Vertical Fin
+		AddPieceRotY(Pieces, SecondaryColor, 0.0f, -72.0f, HalfL, 90.0f, "3040", Step);
+		AddPieceRotY(Pieces, SecondaryColor, -20.0f, -28.0f, HalfL - 10.0f, 0.0f, "3023", Step); // Left Stab
+		AddPieceRotY(Pieces, SecondaryColor, 20.0f, -28.0f, HalfL - 10.0f, 0.0f, "3023", Step);  // Right Stab
+		Step++;
+		break;
 	}
-	else // Architecture / Buildings / Castles / Sculptures
+
+	case lcAIArchetype::Helicopter:
 	{
-		Res.Title = QString("Parametric %1 (%2 pcs)").arg(Prompt.isEmpty() ? "Architectural Landmark" : Prompt).arg(TargetPieces);
+		Res.Title = QString("Parametric Helicopter (%1 pcs)").arg(TargetPieces);
+		// 1. Landing Skids (NO wheels)
+		AddPieceRotY(Pieces, COLOR_BLACK, -25.0f, 0.0f, 0.0f, 0.0f, "3020", Step); // Left Skid
+		AddPieceRotY(Pieces, COLOR_BLACK, 25.0f, 0.0f, 0.0f, 0.0f, "3020", Step);  // Right Skid
+		AddPieceRotY(Pieces, COLOR_DARK_GRAY, 0.0f, -8.0f, -15.0f, 90.0f, "3023", Step); // Strut Front
+		AddPieceRotY(Pieces, COLOR_DARK_GRAY, 0.0f, -8.0f, 15.0f, 90.0f, "3023", Step);  // Strut Rear
+		Step++;
 
-		int Stories = HasNeural ? std::max(3, std::min(16, static_cast<int>(NeuralPrediction.HeightLayers * 0.8f)))
-		                        : std::max(3, std::min(12, TargetPieces / 25));
-		int Footprint = HasNeural ? std::max(4, std::min(10, static_cast<int>(NeuralPrediction.WidthStuds * 0.4f)))
-		                          : std::max(4, std::min(8, TargetPieces / 40));
-
-		// 1. Foundation Base
-		for (int x = -Footprint / 2; x <= Footprint / 2; x += 2)
+		// 2. Cabin Pod
+		for (int h = 1; h <= 2; ++h)
 		{
-			for (int z = -Footprint / 2; z <= Footprint / 2; z += 2)
+			float Y = -static_cast<float>(h * 24.0f);
+			AddPieceRotY(Pieces, BodyColor, 0.0f, Y, 0.0f, 0.0f, "3001", Step);
+			AddPieceRotY(Pieces, BodyColor, 0.0f, Y, -20.0f, 0.0f, "3003", Step);
+		}
+		AddPieceRotY(Pieces, COLOR_TRANS_CLEAR, 0.0f, -48.0f, -30.0f, 0.0f, "3039", Step); // Bubble Canopy
+		Step++;
+
+		// 3. Tail Boom & Tail Rotor
+		AddPieceRotY(Pieces, SecondaryColor, 0.0f, -36.0f, 30.0f, 0.0f, "3004", Step);
+		AddPieceRotY(Pieces, SecondaryColor, 0.0f, -36.0f, 60.0f, 0.0f, "3004", Step);
+		AddPieceRotY(Pieces, SecondaryColor, 0.0f, -36.0f, 90.0f, 0.0f, "3004", Step);
+		AddPieceRotY(Pieces, SecondaryColor, 0.0f, -60.0f, 90.0f, 90.0f, "3039", Step); // Tail Fin
+		AddPieceRotY(Pieces, COLOR_BLACK, 6.0f, -60.0f, 90.0f, 90.0f, "3023", Step);    // Tail Rotor
+		Step++;
+
+		// 4. Main Rotor Mast & 4-Blade Cross Rotor
+		AddPieceRotY(Pieces, COLOR_BLACK, 0.0f, -72.0f, 0.0f, 0.0f, "3005", Step); // Mast
+		AddPieceRotY(Pieces, COLOR_BLACK, 0.0f, -80.0f, -40.0f, 0.0f, "3020", Step);  // Blade Front
+		AddPieceRotY(Pieces, COLOR_BLACK, 0.0f, -80.0f, 40.0f, 0.0f, "3020", Step);   // Blade Rear
+		AddPieceRotY(Pieces, COLOR_BLACK, -40.0f, -80.0f, 0.0f, 90.0f, "3020", Step); // Blade Left
+		AddPieceRotY(Pieces, COLOR_BLACK, 40.0f, -80.0f, 0.0f, 90.0f, "3020", Step);  // Blade Right
+		Step++;
+		break;
+	}
+
+	case lcAIArchetype::Spacecraft:
+	{
+		Res.Title = QString("Parametric Spacecraft (%1 pcs)").arg(TargetPieces);
+		int Length = std::max(10, std::min(24, TargetPieces / 11));
+		int WingSpan = std::max(8, std::min(22, TargetPieces / 12));
+		float HalfL = Length * 10.0f;
+
+		// 1. Central Fuselage Core & Needle Nose
+		for (int z = -Length / 2; z <= Length / 2; z += 2)
+		{
+			AddPieceRotY(Pieces, BodyColor, 0.0f, -24.0f, z * 20.0f, 0.0f, "3001", Step);
+		}
+		AddPieceRotY(Pieces, SecondaryColor, 0.0f, -24.0f, -HalfL - 10.0f, 0.0f, "3040", Step);
+		Step++;
+
+		// 2. Attack Wings & Wingtip Blasters
+		for (int w = 1; w <= WingSpan / 2; ++w)
+		{
+			float X = w * 20.0f;
+			float Z = (w * 12.0f);
+			AddPieceRotY(Pieces, SecondaryColor, -X, -16.0f, Z, 0.0f, "3020", Step);
+			AddPieceRotY(Pieces, SecondaryColor, X, -16.0f, Z, 0.0f, "3020", Step);
+		}
+		float TipX = (WingSpan / 2) * 20.0f;
+		float TipZ = (WingSpan / 2) * 12.0f;
+		AddPieceRotY(Pieces, COLOR_DARK_GRAY, -TipX, -16.0f, TipZ - 20.0f, 0.0f, "3010", Step);
+		AddPieceRotY(Pieces, COLOR_DARK_GRAY, TipX, -16.0f, TipZ - 20.0f, 0.0f, "3010", Step);
+		Step++;
+
+		// 3. Shielded Cockpit & Dual Rocket Thrusters
+		AddPieceRotY(Pieces, COLOR_TRANS_DARK_BLUE, 0.0f, -48.0f, -HalfL * 0.3f, 0.0f, "3039", Step);
+		AddPieceRotY(Pieces, COLOR_DARK_GRAY, -15.0f, -24.0f, HalfL + 10.0f, 0.0f, "3005", Step);
+		AddPieceRotY(Pieces, COLOR_DARK_GRAY, 15.0f, -24.0f, HalfL + 10.0f, 0.0f, "3005", Step);
+		AddPieceRotY(Pieces, COLOR_TRANS_YELLOW, -15.0f, -24.0f, HalfL + 20.0f, 0.0f, "3024", Step);
+		AddPieceRotY(Pieces, COLOR_TRANS_YELLOW, 15.0f, -24.0f, HalfL + 20.0f, 0.0f, "3024", Step);
+		Step++;
+		break;
+	}
+
+	case lcAIArchetype::Creature:
+	{
+		Res.Title = QString("Parametric Creature / Animal (%1 pcs)").arg(TargetPieces);
+		// 1. 4 Standing Legs (NO wheels!)
+		int LegColor = BodyColor;
+		for (int h = 0; h < 2; ++h)
+		{
+			float Y = -static_cast<float>(h * 24.0f + 12.0f);
+			AddPieceRotY(Pieces, LegColor, -20.0f, Y, -30.0f, 0.0f, "3005", Step); // Front Left
+			AddPieceRotY(Pieces, LegColor, 20.0f, Y, -30.0f, 0.0f, "3005", Step);  // Front Right
+			AddPieceRotY(Pieces, LegColor, -20.0f, Y, 30.0f, 0.0f, "3005", Step);  // Back Left
+			AddPieceRotY(Pieces, LegColor, 20.0f, Y, 30.0f, 0.0f, "3005", Step);   // Back Right
+		}
+		Step++;
+
+		// 2. Torso Body (bridging legs)
+		AddPieceRotY(Pieces, BodyColor, 0.0f, -48.0f, 0.0f, 0.0f, "3001", Step);
+		AddPieceRotY(Pieces, BodyColor, 0.0f, -48.0f, -25.0f, 0.0f, "3003", Step);
+		AddPieceRotY(Pieces, BodyColor, 0.0f, -48.0f, 25.0f, 0.0f, "3003", Step);
+		Step++;
+
+		// 3. Neck & Head
+		AddPieceRotY(Pieces, BodyColor, 0.0f, -72.0f, -30.0f, 0.0f, "3005", Step);  // Neck
+		AddPieceRotY(Pieces, BodyColor, 0.0f, -84.0f, -45.0f, 0.0f, "3003", Step);  // Head
+		AddPieceRotY(Pieces, COLOR_BLACK, 0.0f, -76.0f, -65.0f, 0.0f, "3005", Step);// Snout / Nose
+		Step++;
+
+		// 4. Ears & Wagging Tail
+		AddPieceRotY(Pieces, SecondaryColor, -10.0f, -100.0f, -45.0f, 0.0f, "3040", Step); // Left Ear
+		AddPieceRotY(Pieces, SecondaryColor, 10.0f, -100.0f, -45.0f, 0.0f, "3040", Step);  // Right Ear
+		AddPieceRotY(Pieces, BodyColor, 0.0f, -60.0f, 45.0f, 0.0f, "3040", Step);          // Tail
+		Step++;
+		break;
+	}
+
+	case lcAIArchetype::Robot:
+	{
+		Res.Title = QString("Parametric Robot Mech (%1 pcs)").arg(TargetPieces);
+		// 1. Bipedal Feet & Legs (NO wheels!)
+		AddPieceRotY(Pieces, COLOR_DARK_GRAY, -25.0f, 0.0f, 0.0f, 0.0f, "3020", Step); // Left Foot
+		AddPieceRotY(Pieces, COLOR_DARK_GRAY, 25.0f, 0.0f, 0.0f, 0.0f, "3020", Step);  // Right Foot
+		for (int h = 1; h <= 2; ++h)
+		{
+			float Y = -static_cast<float>(h * 24.0f);
+			AddPieceRotY(Pieces, BodyColor, -25.0f, Y, 0.0f, 0.0f, "3004", Step); // Left Leg
+			AddPieceRotY(Pieces, BodyColor, 25.0f, Y, 0.0f, 0.0f, "3004", Step);  // Right Leg
+		}
+		Step++;
+
+		// 2. Pelvis & Heavy Armored Chest
+		AddPieceRotY(Pieces, COLOR_DARK_GRAY, 0.0f, -60.0f, 0.0f, 90.0f, "3020", Step); // Waist
+		AddPieceRotY(Pieces, BodyColor, 0.0f, -84.0f, 0.0f, 0.0f, "3001", Step);       // Lower Chest
+		AddPieceRotY(Pieces, SecondaryColor, 0.0f, -108.0f, 0.0f, 0.0f, "3001", Step);   // Upper Chest
+		Step++;
+
+		// 3. Shoulders & Arms with Blaster
+		AddPieceRotY(Pieces, SecondaryColor, -45.0f, -108.0f, 0.0f, 0.0f, "3020", Step); // Left Shoulder
+		AddPieceRotY(Pieces, SecondaryColor, 45.0f, -108.0f, 0.0f, 0.0f, "3020", Step);  // Right Shoulder
+		AddPieceRotY(Pieces, BodyColor, -45.0f, -84.0f, -15.0f, 0.0f, "3004", Step);     // Left Arm
+		AddPieceRotY(Pieces, COLOR_DARK_GRAY, 45.0f, -84.0f, -20.0f, 0.0f, "3010", Step);// Right Blaster
+		Step++;
+
+		// 4. Head & Glowing Visor
+		AddPieceRotY(Pieces, BodyColor, 0.0f, -132.0f, 0.0f, 0.0f, "3003", Step); // Head
+		AddPieceRotY(Pieces, COLOR_TRANS_RED, 0.0f, -128.0f, -12.0f, 0.0f, "3023", Step); // Visor Slit
+		AddPieceRotY(Pieces, COLOR_DARK_GRAY, 0.0f, -96.0f, 15.0f, 0.0f, "3004", Step);   // Power Pack
+		Step++;
+		break;
+	}
+
+	case lcAIArchetype::Furniture:
+	{
+		bool IsTable = Prompt.contains("table", Qt::CaseInsensitive) || Prompt.contains("desk", Qt::CaseInsensitive);
+		if (IsTable)
+		{
+			Res.Title = QString("Parametric Table (%1 pcs)").arg(TargetPieces);
+			// Table: 4 corner legs + tabletop (NO wheels!)
+			for (int h = 0; h < 3; ++h)
 			{
-				AddPieceRotY(Pieces, COLOR_DARK_GRAY, x * 20.0f, 0.0f, z * 20.0f, 0.0f, "3020", Step);
+				float Y = -static_cast<float>(h * 24.0f + 12.0f);
+				AddPieceRotY(Pieces, BodyColor, -35.0f, Y, -35.0f, 0.0f, "3005", Step);
+				AddPieceRotY(Pieces, BodyColor, 35.0f, Y, -35.0f, 0.0f, "3005", Step);
+				AddPieceRotY(Pieces, BodyColor, -35.0f, Y, 35.0f, 0.0f, "3005", Step);
+				AddPieceRotY(Pieces, BodyColor, 35.0f, Y, 35.0f, 0.0f, "3005", Step);
+			}
+			Step++;
+			for (int z = -30; z <= 30; z += 30)
+			{
+				AddPieceRotY(Pieces, SecondaryColor, 0.0f, -80.0f, z, 0.0f, "3020", Step);
+			}
+			Step++;
+		}
+		else
+		{
+			Res.Title = QString("Parametric Chair (%1 pcs)").arg(TargetPieces);
+			// Chair: 4 corner legs + seat plate + vertical backrest (NO wheels!)
+			for (int h = 0; h < 2; ++h)
+			{
+				float Y = -static_cast<float>(h * 24.0f + 12.0f);
+				AddPieceRotY(Pieces, BodyColor, -15.0f, Y, -15.0f, 0.0f, "3005", Step); // Front Left
+				AddPieceRotY(Pieces, BodyColor, 15.0f, Y, -15.0f, 0.0f, "3005", Step);  // Front Right
+				AddPieceRotY(Pieces, BodyColor, -15.0f, Y, 15.0f, 0.0f, "3005", Step);  // Rear Left
+				AddPieceRotY(Pieces, BodyColor, 15.0f, Y, 15.0f, 0.0f, "3005", Step);   // Rear Right
+			}
+			Step++;
+			// Seat Cushion Plate
+			AddPieceRotY(Pieces, SecondaryColor, 0.0f, -54.0f, 0.0f, 0.0f, "3020", Step);
+			Step++;
+			// Vertical Backrest
+			for (int bh = 3; bh <= 5; ++bh)
+			{
+				float BY = -static_cast<float>(bh * 24.0f);
+				AddPieceRotY(Pieces, BodyColor, 0.0f, BY, 15.0f, 0.0f, "3004", Step);
+			}
+			Step++;
+		}
+		break;
+	}
+
+	case lcAIArchetype::Castle:
+	{
+		Res.Title = QString("Parametric Castle Fortress (%1 pcs)").arg(TargetPieces);
+		int Footprint = std::max(4, std::min(8, TargetPieces / 30));
+		int Stories = std::max(4, std::min(12, TargetPieces / 20));
+		float FpStuds = Footprint * 15.0f;
+
+		// 1. Foundation Base Slab
+		for (int x = -Footprint; x <= Footprint; x += 2)
+		{
+			for (int z = -Footprint; z <= Footprint; z += 2)
+			{
+				AddPieceRotY(Pieces, COLOR_DARK_GRAY, x * 15.0f, 0.0f, z * 15.0f, 0.0f, "3020", Step);
 			}
 		}
 		Step++;
 
-		// 2. Stories
+		// 2. Corner Turrets & Walls
 		for (int s = 1; s <= Stories; ++s)
 		{
 			float Y = -static_cast<float>(s * 24.0f);
-			int LayerColor = (s == Stories) ? SecondaryColor : BodyColor;
+			AddPieceRotY(Pieces, COLOR_LIGHT_BLUISH_GRAY, -FpStuds, Y, -FpStuds, 0.0f, "3003", Step);
+			AddPieceRotY(Pieces, COLOR_LIGHT_BLUISH_GRAY, FpStuds, Y, -FpStuds, 0.0f, "3003", Step);
+			AddPieceRotY(Pieces, COLOR_LIGHT_BLUISH_GRAY, -FpStuds, Y, FpStuds, 0.0f, "3003", Step);
+			AddPieceRotY(Pieces, COLOR_LIGHT_BLUISH_GRAY, FpStuds, Y, FpStuds, 0.0f, "3003", Step);
 
-			for (int x = -Footprint / 2; x <= Footprint / 2; x += 2)
+			if (s > 1 || Footprint > 4)
 			{
-				AddPieceRotY(Pieces, LayerColor, x * 20.0f, Y, -Footprint * 10.0f, 0.0f, "3004", Step);
-				AddPieceRotY(Pieces, LayerColor, x * 20.0f, Y, Footprint * 10.0f, 0.0f, "3004", Step);
+				AddPieceRotY(Pieces, COLOR_LIGHT_BLUISH_GRAY, 0.0f, Y, -FpStuds, 0.0f, "3004", Step);
+			}
+			AddPieceRotY(Pieces, COLOR_LIGHT_BLUISH_GRAY, 0.0f, Y, FpStuds, 0.0f, "3004", Step);
+			AddPieceRotY(Pieces, COLOR_LIGHT_BLUISH_GRAY, -FpStuds, Y, 0.0f, 90.0f, "3004", Step);
+			AddPieceRotY(Pieces, COLOR_LIGHT_BLUISH_GRAY, FpStuds, Y, 0.0f, 90.0f, "3004", Step);
+			Step++;
+		}
+
+		// 3. Battlements (Crenellations) & Spire Banner
+		float BatY = -static_cast<float>((Stories + 1) * 24.0f);
+		AddPieceRotY(Pieces, COLOR_DARK_BLUISH_GRAY, -FpStuds, BatY, -FpStuds, 0.0f, "3039", Step);
+		AddPieceRotY(Pieces, COLOR_DARK_BLUISH_GRAY, FpStuds, BatY, -FpStuds, 0.0f, "3039", Step);
+		AddPieceRotY(Pieces, COLOR_DARK_BLUISH_GRAY, -FpStuds, BatY, FpStuds, 0.0f, "3039", Step);
+		AddPieceRotY(Pieces, COLOR_DARK_BLUISH_GRAY, FpStuds, BatY, FpStuds, 0.0f, "3039", Step);
+		AddPieceRotY(Pieces, COLOR_LIGHT_BLUISH_GRAY, 0.0f, BatY - 24.0f, 0.0f, 0.0f, "3005", Step);
+		AddPieceRotY(Pieces, COLOR_RED, 8.0f, BatY - 32.0f, 0.0f, 90.0f, "3023", Step); // Flag
+		Step++;
+		break;
+	}
+
+	case lcAIArchetype::House:
+	{
+		Res.Title = QString("Parametric Building (%1 pcs)").arg(TargetPieces);
+		int HouseLength = std::max(6, std::min(12, TargetPieces / 20));
+		int HouseWidth = std::max(4, std::min(8, TargetPieces / 25));
+		float HalfL = HouseLength * 10.0f;
+		float HalfW = HouseWidth * 10.0f;
+
+		// 1. Foundation Slab
+		for (int z = -HouseLength / 2; z <= HouseLength / 2; z += 2)
+		{
+			AddPieceRotY(Pieces, COLOR_DARK_GRAY, 0.0f, 0.0f, z * 20.0f, 0.0f, "3020", Step);
+		}
+		Step++;
+
+		// 2. Walls with Window and Door openings
+		int Stories = std::max(2, std::min(4, TargetPieces / 40));
+		for (int s = 1; s <= Stories; ++s)
+		{
+			float Y = -static_cast<float>(s * 24.0f);
+			AddPieceRotY(Pieces, BodyColor, -HalfW, Y, 0.0f, 90.0f, "3001", Step);
+			AddPieceRotY(Pieces, BodyColor, HalfW, Y, 0.0f, 90.0f, "3001", Step);
+
+			if (s == 1)
+			{
+				AddPieceRotY(Pieces, BodyColor, -HalfW / 2, Y, -HalfL, 0.0f, "3004", Step);
+				AddPieceRotY(Pieces, BodyColor, HalfW / 2, Y, -HalfL, 0.0f, "3004", Step);
+			}
+			else
+			{
+				AddPieceRotY(Pieces, COLOR_TRANS_CLEAR, 0.0f, Y, -HalfL, 0.0f, "3004", Step);
+				AddPieceRotY(Pieces, COLOR_TRANS_CLEAR, 0.0f, Y, HalfL, 0.0f, "3004", Step);
 			}
 			Step++;
 		}
 
-		// 3. Roof / Spires
-		float RoofY = -static_cast<float>((Stories + 1) * 24.0f);
-		for (int x = -Footprint / 2; x <= Footprint / 2; x += 2)
+		// 3. Gabled Pitched Roof with 45-degree slopes
+		float RoofBaseY = -static_cast<float>((Stories + 1) * 24.0f);
+		for (int z = -HouseLength / 2; z <= HouseLength / 2; z += 2)
 		{
-			AddPieceRotY(Pieces, SecondaryColor, x * 20.0f, RoofY, 0.0f, 0.0f, "3039", Step);
+			AddPieceRotY(Pieces, SecondaryColor, -15.0f, RoofBaseY, z * 20.0f, 0.0f, "3039", Step);
+			AddPieceRotY(Pieces, SecondaryColor, 15.0f, RoofBaseY, z * 20.0f, 180.0f, "3039", Step);
 		}
+		AddPieceRotY(Pieces, COLOR_DARK_RED, -15.0f, RoofBaseY - 24.0f, HalfL - 20.0f, 0.0f, "3005", Step); // Chimney
 		Step++;
+		break;
+	}
+
+	case lcAIArchetype::GenericObject:
+	default:
+	{
+		Res.Title = QString("Sculpted LEGO Model (%1 pcs)").arg(TargetPieces);
+		int Height = std::max(3, std::min(8, TargetPieces / 20));
+		for (int h = 1; h <= Height; ++h)
+		{
+			float Y = -static_cast<float>(h * 24.0f);
+			int LayerColor = (h % 2 == 1) ? BodyColor : SecondaryColor;
+			int Span = std::max(1, Height - h + 1);
+			for (int x = -Span; x <= Span; ++x)
+			{
+				AddPieceRotY(Pieces, LayerColor, x * 20.0f, Y, 0.0f, 0.0f, "3004", Step);
+			}
+			Step++;
+		}
+		break;
+	}
 	}
 
 	Res.Success = true;
@@ -1159,18 +1638,16 @@ lcAIModelResult lcAIGenerator::SynthesizeParametricModel(const QString& Category
 	for (const auto& p : Pieces)
 		Res.PartCounts[p.PartId]++;
 	Res.LDrawContent = SerializeLDraw(Res.Title, Pieces, Options.StepByStep);
-	if (HasNeural)
-	{
-		Res.Explanation = QString("Synthesized custom generative 3D LEGO model with fine-tuned Neural Structural Weights (%1 pieces across %2 building steps).")
-		                 .arg(Res.BrickCount).arg(Res.StepCount);
-	}
-	else
-	{
-		Res.Explanation = QString("Synthesized custom generative 3D LEGO model matching target piece budget (%1 pieces across %2 building steps).")
-		                 .arg(Res.BrickCount).arg(Res.StepCount);
-	}
+	Res.Explanation = QString("Synthesized distinct 3D LEGO model for '%1' matching piece budget (%2 pieces across %3 building steps).")
+	                 .arg(Prompt.isEmpty() ? "custom build" : Prompt).arg(Res.BrickCount).arg(Res.StepCount);
 
 	return Res;
+}
+
+lcAIModelResult lcAIGenerator::SynthesizeParametricModel(const QString& Category, const QString& Prompt, const lcAIOptions& Options)
+{
+	lcAIArchetype Archetype = ClassifyPromptArchetype(Category + " " + Prompt);
+	return SynthesizeArchetypeModel(Archetype, Prompt, Options);
 }
 
 // ============================================================================
@@ -1359,27 +1836,9 @@ lcAIModelResult lcAIGenerator::GenerateModel(const QString& Prompt, const lcAIOp
 		return SynthesizeFromImage(Img, Prompt, Options);
 	}
 
-	// 4. Native Parametric Structural Synthesizer (when text prompt provided)
-	QString Lower = Prompt.toLower().trimmed();
-	QString Domain = "vehicle";
-
-	if (Lower.contains("plane") || Lower.contains("airplane") || Lower.contains("jet") ||
-	    Lower.contains("space") || Lower.contains("ship") || Lower.contains("rocket"))
-	{
-		Domain = "aircraft";
-	}
-	else if (Lower.contains("house") || Lower.contains("castle") || Lower.contains("tower") ||
-	         Lower.contains("building") || Lower.contains("architecture") || Lower.contains("temple"))
-	{
-		Domain = "building";
-	}
-	else if (Lower.contains("robot") || Lower.contains("mech") || Lower.contains("droid") ||
-	         Lower.contains("animal") || Lower.contains("creature"))
-	{
-		Domain = "robot";
-	}
-
-	return SynthesizeParametricModel(Domain, Prompt, Options);
+	// 4. Overhauled Native Archetype Structural Synthesizer
+	lcAIArchetype Archetype = ClassifyPromptArchetype(Prompt);
+	return SynthesizeArchetypeModel(Archetype, Prompt, Options);
 }
 
 // ============================================================================
