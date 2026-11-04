@@ -1308,6 +1308,14 @@ const lcCommand gCommands[] =
 		"",
 		""
 	},
+	// LC_VIEW_TOOLBAR_AI
+	{
+		QT_TRANSLATE_NOOP("Action", "View.Toolbars.AIAssistant"),
+		QT_TRANSLATE_NOOP("Menu", "AI Assistant"),
+		QT_TRANSLATE_NOOP("Status", "Toggle the AI Assistant Sidebar"),
+		"",
+		""
+	},
 	// LC_VIEW_FULLSCREEN
 	{
 		QT_TRANSLATE_NOOP("Action", "View.FullScreen"),

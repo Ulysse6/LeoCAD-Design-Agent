@@ -14,6 +14,7 @@ class lcQPartsTree;
 class lcColorList;
 class lcPropertiesWidget;
 class lcTimelineWidget;
+class lcAIAssistantWidget;
 class lcElidedLabel;
 class lcSpinnerWidget;
 enum class lcRenderDialogMode;
@@ -166,6 +167,11 @@ public:
 	lcPreviewDockWidget* GetPreviewWidget() const
 	{
 		return mPreviewWidget;
+	}
+
+	lcAIAssistantWidget* GetAIAssistantWidget() const
+	{
+		return mAIAssistantWidget;
 	}
 
 	QMenu* GetToolsMenu() const
@@ -361,12 +367,14 @@ protected:
 	QDockWidget* mColorsToolBar = nullptr;
 	QDockWidget* mPropertiesToolBar = nullptr;
 	QDockWidget* mTimelineToolBar = nullptr;
+	QDockWidget* mAIAssistantToolBar = nullptr;
 
 	lcPartSelectionWidget* mPartSelectionWidget = nullptr;
 	lcColorList* mColorList = nullptr;
 	QToolButton* mColorButton = nullptr;
 	lcPropertiesWidget* mPropertiesWidget = nullptr;
 	lcTimelineWidget* mTimelineWidget = nullptr;
+	lcAIAssistantWidget* mAIAssistantWidget = nullptr;
 	QLineEdit* mTransformXEdit = nullptr;
 	QLineEdit* mTransformYEdit = nullptr;
 	QLineEdit* mTransformZEdit = nullptr;

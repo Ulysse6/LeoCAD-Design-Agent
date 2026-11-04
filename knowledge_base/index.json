@@ -1,0 +1,4493 @@
+[
+  {
+    "set_number": "10013-1",
+    "name": "Open Freight Wagon",
+    "theme": "Train > 9V",
+    "year": "2001",
+    "piece_count": 162,
+    "file_name": "10013-1.ldr",
+    "relative_path": "knowledge_base/normalized/10013-1.ldr",
+    "categories": [
+      "train_rail",
+      "truck_pickup",
+      "castle_historical"
+    ],
+    "tags": [
+      "10013-1",
+      "9v",
+      "freight",
+      "freight wagon",
+      "open",
+      "train",
+      "wagon"
+    ],
+    "dominant_colors": [
+      7,
+      0,
+      6
+    ],
+    "bounding_box": {
+      "min_x": -267.0,
+      "max_x": 265.0,
+      "min_y": -152.0,
+      "max_y": 0.0,
+      "min_z": -70.19,
+      "max_z": 69.9
+    },
+    "inventory": {
+      "30104k02.dat": 42,
+      "3941.dat": 36,
+      "4095.dat": 10,
+      "2877.dat": 10,
+      "30237.dat": 10,
+      "4070.dat": 5,
+      "2878c01.dat": 4,
+      "4175.dat": 4
+    }
+  },
+  {
+    "set_number": "10016-1",
+    "name": "Tanker",
+    "theme": "Train > 9V",
+    "year": "2001",
+    "piece_count": 120,
+    "file_name": "10016-1.ldr",
+    "relative_path": "knowledge_base/normalized/10016-1.ldr",
+    "categories": [
+      "train_rail"
+    ],
+    "tags": [
+      "10016-1",
+      "9v",
+      "tanker",
+      "train"
+    ],
+    "dominant_colors": [
+      0,
+      15,
+      4
+    ],
+    "bounding_box": {
+      "min_x": -266.0,
+      "max_x": 266.0,
+      "min_y": -224.0,
+      "max_y": 0.0,
+      "min_z": -80.1,
+      "max_z": 79.87
+    },
+    "inventory": {
+      "30565.dat": 16,
+      "2412b.dat": 12,
+      "3795.dat": 11,
+      "30562.dat": 8,
+      "4175.dat": 6,
+      "3003.dat": 6,
+      "2878c01.dat": 4,
+      "2436a.dat": 4
+    }
+  },
+  {
+    "set_number": "10156-1",
+    "name": "LEGO Truck",
+    "theme": "Town",
+    "year": "2004",
+    "piece_count": 111,
+    "file_name": "10156-1.ldr",
+    "relative_path": "knowledge_base/normalized/10156-1.ldr",
+    "categories": [
+      "truck_pickup"
+    ],
+    "tags": [
+      "10156-1",
+      "lego",
+      "town",
+      "truck"
+    ],
+    "dominant_colors": [
+      14,
+      0,
+      383
+    ],
+    "bounding_box": {
+      "min_x": -203.66,
+      "max_x": 210.51,
+      "min_y": -168.0,
+      "max_y": 0.0,
+      "min_z": -118.98,
+      "max_z": 114.57
+    },
+    "inventory": {
+      "6141.dat": 8,
+      "2412b.dat": 7,
+      "3010.dat": 7,
+      "6014.dat": 6,
+      "6015.dat": 6,
+      "4070.dat": 6,
+      "3023.dat": 5,
+      "4085c.dat": 4
+    }
+  },
+  {
+    "set_number": "1029-1",
+    "name": "Milk Delivery Truck - Tine",
+    "theme": "Town",
+    "year": "1999",
+    "piece_count": 97,
+    "file_name": "1029-1.ldr",
+    "relative_path": "knowledge_base/normalized/1029-1.ldr",
+    "categories": [
+      "truck_pickup"
+    ],
+    "tags": [
+      "1029-1",
+      "delivery",
+      "milk",
+      "tine",
+      "town",
+      "truck"
+    ],
+    "dominant_colors": [
+      15,
+      1,
+      7
+    ],
+    "bounding_box": {
+      "min_x": -113.59,
+      "max_x": 118.0,
+      "min_y": -160.0,
+      "max_y": 0.0,
+      "min_z": -170.0,
+      "max_z": 166.0
+    },
+    "inventory": {
+      "6141.dat": 8,
+      "2412b.dat": 7,
+      "3710.dat": 5,
+      "3020.dat": 5,
+      "6014.dat": 4,
+      "6015.dat": 4,
+      "3062b.dat": 4,
+      "3024.dat": 4
+    }
+  },
+  {
+    "set_number": "106-1",
+    "name": "UNICEF Van",
+    "theme": "Town > Classic Town",
+    "year": "1985",
+    "piece_count": 65,
+    "file_name": "106-1.ldr",
+    "relative_path": "knowledge_base/normalized/106-1.ldr",
+    "categories": [
+      "truck_pickup"
+    ],
+    "tags": [
+      "106-1",
+      "classic",
+      "town",
+      "unicef",
+      "van"
+    ],
+    "dominant_colors": [
+      1,
+      0,
+      7
+    ],
+    "bounding_box": {
+      "min_x": -80.0,
+      "max_x": 85.99,
+      "min_y": -120.0,
+      "max_y": -3.0,
+      "min_z": -114.0,
+      "max_z": 121.0
+    },
+    "inventory": {
+      "3710.dat": 7,
+      "3024.dat": 6,
+      "4624.dat": 5,
+      "4084.dat": 5,
+      "3022.dat": 3,
+      "3004.dat": 3,
+      "4600.dat": 2,
+      "3820.dat": 2
+    }
+  },
+  {
+    "set_number": "1069-1",
+    "name": "Speedboat",
+    "theme": "Town > Res-Q",
+    "year": "1999",
+    "piece_count": 28,
+    "file_name": "1069-1.ldr",
+    "relative_path": "knowledge_base/normalized/1069-1.ldr",
+    "categories": [
+      "service_emergency",
+      "watercraft"
+    ],
+    "tags": [
+      "1069-1",
+      "res-q",
+      "speedboat",
+      "town"
+    ],
+    "dominant_colors": [
+      4,
+      0,
+      15
+    ],
+    "bounding_box": {
+      "min_x": -80.0,
+      "max_x": 90.0,
+      "min_y": -71.01,
+      "max_y": 0.0,
+      "min_z": -30.01,
+      "max_z": 30.0
+    },
+    "inventory": {
+      "3666.dat": 4,
+      "3024.dat": 2,
+      "4859.dat": 2,
+      "3820.dat": 2,
+      "3022.dat": 1,
+      "3816.dat": 1,
+      "3817.dat": 1,
+      "3829c01.dat": 1
+    }
+  },
+  {
+    "set_number": "107-2",
+    "name": "Canada Post Mail Truck",
+    "theme": "Town > Classic Town",
+    "year": "1985",
+    "piece_count": 143,
+    "file_name": "107-2.ldr",
+    "relative_path": "knowledge_base/normalized/107-2.ldr",
+    "categories": [
+      "truck_pickup"
+    ],
+    "tags": [
+      "107-2",
+      "canada",
+      "classic",
+      "mail",
+      "post",
+      "town",
+      "truck"
+    ],
+    "dominant_colors": [
+      0,
+      15,
+      7
+    ],
+    "bounding_box": {
+      "min_x": -40.0,
+      "max_x": 40.0,
+      "min_y": -144.0,
+      "max_y": 0.0,
+      "min_z": -304.0,
+      "max_z": 302.0
+    },
+    "inventory": {
+      "4624.dat": 10,
+      "4084.dat": 10,
+      "3023.dat": 9,
+      "3062b.dat": 8,
+      "3009.dat": 8,
+      "3008.dat": 8,
+      "4081a.dat": 6,
+      "3622.dat": 6
+    }
+  },
+  {
+    "set_number": "10885-1",
+    "name": "My First Fun Puzzle",
+    "theme": "Duplo",
+    "year": "2019",
+    "piece_count": 255,
+    "file_name": "10885-1.ldr",
+    "relative_path": "knowledge_base/normalized/10885-1.ldr",
+    "categories": [
+      "figure_character"
+    ],
+    "tags": [
+      "10885-1",
+      "duplo",
+      "first",
+      "fun",
+      "my",
+      "puzzle"
+    ],
+    "dominant_colors": [
+      14,
+      27,
+      5
+    ],
+    "bounding_box": {
+      "min_x": -454.69,
+      "max_x": 454.69,
+      "min_y": -288.0,
+      "max_y": 0.0,
+      "min_z": -85.61,
+      "max_z": 94.0
+    },
+    "inventory": {
+      "box4-1.dat": 195,
+      "stug7-2x2.dat": 30,
+      "box5.dat": 15,
+      "stug8-1x3.dat": 15
+    }
+  },
+  {
+    "set_number": "1096-1",
+    "name": "Race Buggy",
+    "theme": "Town > Extreme Team",
+    "year": "1997",
+    "piece_count": 29,
+    "file_name": "1096-1.ldr",
+    "relative_path": "knowledge_base/normalized/1096-1.ldr",
+    "categories": [
+      "car_civilian"
+    ],
+    "tags": [
+      "1096-1",
+      "buggy",
+      "extreme",
+      "race",
+      "team",
+      "town"
+    ],
+    "dominant_colors": [
+      14,
+      4,
+      15
+    ],
+    "bounding_box": {
+      "min_x": -47.0,
+      "max_x": 47.0,
+      "min_y": -85.0,
+      "max_y": -3.0,
+      "min_z": -50.0,
+      "max_z": 50.0
+    },
+    "inventory": {
+      "30027a.dat": 4,
+      "30028.dat": 4,
+      "6157.dat": 2,
+      "3062b.dat": 2,
+      "3820.dat": 2,
+      "3795.dat": 1,
+      "2540.dat": 1,
+      "3022.dat": 1
+    }
+  },
+  {
+    "set_number": "1097-1",
+    "name": "Res-Q Runner",
+    "theme": "Town > Res-Q",
+    "year": "1999",
+    "piece_count": 24,
+    "file_name": "1097-1.ldr",
+    "relative_path": "knowledge_base/normalized/1097-1.ldr",
+    "categories": [
+      "service_emergency"
+    ],
+    "tags": [
+      "1097-1",
+      "res-q",
+      "runner",
+      "town"
+    ],
+    "dominant_colors": [
+      14,
+      15,
+      0
+    ],
+    "bounding_box": {
+      "min_x": -90.0,
+      "max_x": 99.32,
+      "min_y": -88.0,
+      "max_y": 0.0,
+      "min_z": -74.58,
+      "max_z": 70.0
+    },
+    "inventory": {
+      "4286.dat": 2,
+      "3820.dat": 2,
+      "2654.dat": 1,
+      "3032.dat": 1,
+      "3023.dat": 1,
+      "4859.dat": 1,
+      "3817.dat": 1,
+      "3816.dat": 1
+    }
+  },
+  {
+    "set_number": "1180-1",
+    "name": "Space Port Moon Buggy",
+    "theme": "Town > Space Port",
+    "year": "1999",
+    "piece_count": 29,
+    "file_name": "1180-1.ldr",
+    "relative_path": "knowledge_base/normalized/1180-1.ldr",
+    "categories": [
+      "spacecraft",
+      "car_civilian"
+    ],
+    "tags": [
+      "1180-1",
+      "buggy",
+      "moon",
+      "port",
+      "space",
+      "town"
+    ],
+    "dominant_colors": [
+      15,
+      0,
+      256
+    ],
+    "bounding_box": {
+      "min_x": -47.0,
+      "max_x": 47.0,
+      "min_y": -85.0,
+      "max_y": -3.0,
+      "min_z": -60.0,
+      "max_z": 51.38
+    },
+    "inventory": {
+      "30028.dat": 4,
+      "30027a.dat": 4,
+      "6157.dat": 2,
+      "6141.dat": 2,
+      "2412b.dat": 2,
+      "3820.dat": 2,
+      "3795.dat": 1,
+      "3829c01.dat": 1
+    }
+  },
+  {
+    "set_number": "121-1",
+    "name": "Roadster",
+    "theme": "Fabuland",
+    "year": "1979",
+    "piece_count": 71,
+    "file_name": "121-1.ldr",
+    "relative_path": "knowledge_base/normalized/121-1.ldr",
+    "categories": [
+      "car_civilian"
+    ],
+    "tags": [
+      "121-1",
+      "fabuland",
+      "roadster"
+    ],
+    "dominant_colors": [
+      1,
+      14,
+      0
+    ],
+    "bounding_box": {
+      "min_x": -80.0,
+      "max_x": 81.92,
+      "min_y": -128.0,
+      "max_y": 1.0,
+      "min_z": -130.0,
+      "max_z": 130.0
+    },
+    "inventory": {
+      "4-4edge.dat": 6,
+      "1-4edge.dat": 6,
+      "3001.dat": 6,
+      "3004.dat": 6,
+      "3003.dat": 5,
+      "4-4cyli.dat": 4,
+      "1-4ndis.dat": 4,
+      "1-4disc.dat": 4
+    }
+  },
+  {
+    "set_number": "1210-2",
+    "name": "Small Store Set",
+    "theme": "System > Town Plan",
+    "year": "1955",
+    "piece_count": 183,
+    "file_name": "1210-2.ldr",
+    "relative_path": "knowledge_base/normalized/1210-2.ldr",
+    "categories": [
+      "building_town"
+    ],
+    "tags": [
+      "1210-2",
+      "plan",
+      "set",
+      "small",
+      "store",
+      "system",
+      "town"
+    ],
+    "dominant_colors": [
+      4,
+      15,
+      1
+    ],
+    "bounding_box": {
+      "min_x": -70.0,
+      "max_x": 70.0,
+      "min_y": -104.0,
+      "max_y": 0.0,
+      "min_z": -62.0,
+      "max_z": 60.0
+    },
+    "inventory": {
+      "1-4chrd.dat": 20,
+      "2-4cylo.dat": 16,
+      "2-4chrd.dat": 16,
+      "1-4ndis.dat": 16,
+      "rect3.dat": 14,
+      "u8001b.dat": 14,
+      "box3u10p.dat": 8,
+      "2-4edge.dat": 8
+    }
+  },
+  {
+    "set_number": "1211-2",
+    "name": "Small House Set",
+    "theme": "System > Town Plan",
+    "year": "1955",
+    "piece_count": 170,
+    "file_name": "1211-2.ldr",
+    "relative_path": "knowledge_base/normalized/1211-2.ldr",
+    "categories": [
+      "building_town"
+    ],
+    "tags": [
+      "1211-2",
+      "house",
+      "plan",
+      "set",
+      "small",
+      "system",
+      "town"
+    ],
+    "dominant_colors": [
+      4,
+      15,
+      1
+    ],
+    "bounding_box": {
+      "min_x": -70.0,
+      "max_x": 70.0,
+      "min_y": -80.0,
+      "max_y": 0.0,
+      "min_z": -34.0,
+      "max_z": 30.0
+    },
+    "inventory": {
+      "box2-5.dat": 19,
+      "1-4chrd.dat": 18,
+      "rect3.dat": 16,
+      "2-4cylo.dat": 14,
+      "2-4chrd.dat": 14,
+      "1-4ndis.dat": 14,
+      "rect.dat": 8,
+      "box4.dat": 8
+    }
+  },
+  {
+    "set_number": "1212-2",
+    "name": "Small House - Left Set",
+    "theme": "System > Town Plan",
+    "year": "1955",
+    "piece_count": 125,
+    "file_name": "1212-2.ldr",
+    "relative_path": "knowledge_base/normalized/1212-2.ldr",
+    "categories": [
+      "building_town"
+    ],
+    "tags": [
+      "1212-2",
+      "house",
+      "left",
+      "plan",
+      "set",
+      "small",
+      "system",
+      "town"
+    ],
+    "dominant_colors": [
+      4,
+      15,
+      1
+    ],
+    "bounding_box": {
+      "min_x": -70.0,
+      "max_x": 70.0,
+      "min_y": -80.0,
+      "max_y": 0.0,
+      "min_z": -30.0,
+      "max_z": 32.0
+    },
+    "inventory": {
+      "1-4chrd.dat": 14,
+      "rect3.dat": 11,
+      "2-4cylo.dat": 10,
+      "2-4chrd.dat": 10,
+      "1-4ndis.dat": 10,
+      "stud.dat": 8,
+      "box4o4a.dat": 5,
+      "box3u10p.dat": 5
+    }
+  },
+  {
+    "set_number": "1213-2",
+    "name": "Small House - Right Set",
+    "theme": "System > Town Plan",
+    "year": "1955",
+    "piece_count": 125,
+    "file_name": "1213-2.ldr",
+    "relative_path": "knowledge_base/normalized/1213-2.ldr",
+    "categories": [
+      "building_town"
+    ],
+    "tags": [
+      "1213-2",
+      "house",
+      "plan",
+      "right",
+      "set",
+      "small",
+      "system",
+      "town"
+    ],
+    "dominant_colors": [
+      4,
+      15,
+      1
+    ],
+    "bounding_box": {
+      "min_x": -70.0,
+      "max_x": 70.0,
+      "min_y": -80.0,
+      "max_y": 0.0,
+      "min_z": -30.0,
+      "max_z": 32.0
+    },
+    "inventory": {
+      "1-4chrd.dat": 14,
+      "rect3.dat": 11,
+      "2-4cylo.dat": 10,
+      "2-4chrd.dat": 10,
+      "1-4ndis.dat": 10,
+      "stud.dat": 8,
+      "box4o4a.dat": 5,
+      "box3u10p.dat": 5
+    }
+  },
+  {
+    "set_number": "126-1",
+    "name": "Steam Locomotive (Push)",
+    "theme": "Train > 4.5V",
+    "year": "1970",
+    "piece_count": 60,
+    "file_name": "126-1.ldr",
+    "relative_path": "knowledge_base/normalized/126-1.ldr",
+    "categories": [
+      "train_rail"
+    ],
+    "tags": [
+      "126-1",
+      "5v",
+      "locomotive",
+      "push",
+      "steam",
+      "train"
+    ],
+    "dominant_colors": [
+      0,
+      4,
+      47
+    ],
+    "bounding_box": {
+      "min_x": -50.0,
+      "max_x": 50.0,
+      "min_y": -152.0,
+      "max_y": 1.9,
+      "min_z": -150.0,
+      "max_z": 150.0
+    },
+    "inventory": {
+      "3005.dat": 10,
+      "3001.dat": 8,
+      "3009.dat": 6,
+      "3004.dat": 6,
+      "243c01.dat": 4,
+      "3003.dat": 4,
+      "3037.dat": 4,
+      "3010.dat": 3
+    }
+  },
+  {
+    "set_number": "1462-1",
+    "name": "Galactic Scout",
+    "theme": "Space > Blacktron II",
+    "year": "1992",
+    "piece_count": 29,
+    "file_name": "1462-1.ldr",
+    "relative_path": "knowledge_base/normalized/1462-1.ldr",
+    "categories": [
+      "spacecraft"
+    ],
+    "tags": [
+      "1462-1",
+      "blacktron",
+      "galactic",
+      "ii",
+      "scout",
+      "space"
+    ],
+    "dominant_colors": [
+      0,
+      15,
+      42
+    ],
+    "bounding_box": {
+      "min_x": -62.36,
+      "max_x": 62.36,
+      "min_y": -96.0,
+      "max_y": 0.0,
+      "min_z": -44.54,
+      "max_z": 48.0
+    },
+    "inventory": {
+      "2452.dat": 2,
+      "4276b.dat": 2,
+      "4531.dat": 2,
+      "3069bp13.dat": 2,
+      "2450.dat": 2,
+      "2433.dat": 2,
+      "3820.dat": 2,
+      "3020.dat": 1
+    }
+  },
+  {
+    "set_number": "1477-1",
+    "name": "{Red Race Car Number 3}",
+    "theme": "Town > Classic Town",
+    "year": "1991",
+    "piece_count": 45,
+    "file_name": "1477-1.ldr",
+    "relative_path": "knowledge_base/normalized/1477-1.ldr",
+    "categories": [
+      "car_civilian"
+    ],
+    "tags": [
+      "1477-1",
+      "car",
+      "classic",
+      "number",
+      "race",
+      "red",
+      "town"
+    ],
+    "dominant_colors": [
+      15,
+      4,
+      14
+    ],
+    "bounding_box": {
+      "min_x": -30.0,
+      "max_x": 30.0,
+      "min_y": -80.0,
+      "max_y": 0.0,
+      "min_z": -80.0,
+      "max_z": 85.32
+    },
+    "inventory": {
+      "4624.dat": 4,
+      "3641.dat": 4,
+      "3794a.dat": 4,
+      "3623.dat": 2,
+      "3023.dat": 2,
+      "2412a.dat": 2,
+      "4865a.dat": 2,
+      "3820.dat": 2
+    }
+  },
+  {
+    "set_number": "1478-1",
+    "name": "Mobile Satellite Up-Link",
+    "theme": "Space > M:Tron",
+    "year": "1991",
+    "piece_count": 37,
+    "file_name": "1478-1.ldr",
+    "relative_path": "knowledge_base/normalized/1478-1.ldr",
+    "categories": [
+      "spacecraft"
+    ],
+    "tags": [
+      "1478-1",
+      "m",
+      "m:tron",
+      "mobile",
+      "satellite",
+      "space",
+      "tron",
+      "up-link"
+    ],
+    "dominant_colors": [
+      0,
+      7,
+      15
+    ],
+    "bounding_box": {
+      "min_x": -48.0,
+      "max_x": 54.89,
+      "min_y": -96.0,
+      "max_y": -3.0,
+      "min_z": -70.0,
+      "max_z": 69.97
+    },
+    "inventory": {
+      "4624.dat": 4,
+      "4288.dat": 4,
+      "4600.dat": 2,
+      "2540.dat": 2,
+      "3820.dat": 2,
+      "6019.dat": 2,
+      "4740.dat": 2,
+      "3639.dat": 1
+    }
+  },
+  {
+    "set_number": "1479-1",
+    "name": "2-Pilot Craft",
+    "theme": "Space > Blacktron II",
+    "year": "1991",
+    "piece_count": 46,
+    "file_name": "1479-1.ldr",
+    "relative_path": "knowledge_base/normalized/1479-1.ldr",
+    "categories": [
+      "spacecraft"
+    ],
+    "tags": [
+      "1479-1",
+      "2-pilot",
+      "blacktron",
+      "craft",
+      "ii",
+      "space"
+    ],
+    "dominant_colors": [
+      0,
+      15,
+      42
+    ],
+    "bounding_box": {
+      "min_x": -148.0,
+      "max_x": 148.0,
+      "min_y": -112.0,
+      "max_y": 0.0,
+      "min_z": -73.26,
+      "max_z": 70.0
+    },
+    "inventory": {
+      "3820.dat": 4,
+      "4229.dat": 3,
+      "2569.dat": 2,
+      "3817.dat": 2,
+      "3816.dat": 2,
+      "3815.dat": 2,
+      "4531.dat": 2,
+      "2433.dat": 2
+    }
+  },
+  {
+    "set_number": "1496-1",
+    "name": "Rally Car",
+    "theme": "Town > Classic Town",
+    "year": "1987",
+    "piece_count": 58,
+    "file_name": "1496-1.ldr",
+    "relative_path": "knowledge_base/normalized/1496-1.ldr",
+    "categories": [
+      "car_racing",
+      "car_civilian"
+    ],
+    "tags": [
+      "1496-1",
+      "car",
+      "classic",
+      "rally",
+      "town"
+    ],
+    "dominant_colors": [
+      0,
+      4,
+      15
+    ],
+    "bounding_box": {
+      "min_x": -32.0,
+      "max_x": 32.0,
+      "min_y": -98.88,
+      "max_y": 1.56,
+      "min_z": -110.45,
+      "max_z": 101.66
+    },
+    "inventory": {
+      "3710.dat": 5,
+      "4624.dat": 4,
+      "3641.dat": 4,
+      "6141.dat": 4,
+      "3024.dat": 4,
+      "4070.dat": 4,
+      "4600.dat": 2,
+      "3022.dat": 2
+    }
+  },
+  {
+    "set_number": "1499-1",
+    "name": "Twin Starfire",
+    "theme": "Space > Classic Space",
+    "year": "1987",
+    "piece_count": 103,
+    "file_name": "1499-1.ldr",
+    "relative_path": "knowledge_base/normalized/1499-1.ldr",
+    "categories": [
+      "spacecraft"
+    ],
+    "tags": [
+      "1499-1",
+      "classic",
+      "space",
+      "starfire",
+      "twin"
+    ],
+    "dominant_colors": [
+      15,
+      14,
+      1
+    ],
+    "bounding_box": {
+      "min_x": -150.0,
+      "max_x": 150.0,
+      "min_y": -117.0,
+      "max_y": 0.0,
+      "min_z": -180.0,
+      "max_z": 182.0
+    },
+    "inventory": {
+      "3710.dat": 8,
+      "3666.dat": 6,
+      "4081b.dat": 4,
+      "3820.dat": 4,
+      "3024.dat": 4,
+      "3069bp05.dat": 3,
+      "3023.dat": 2,
+      "3829c01.dat": 2
+    }
+  },
+  {
+    "set_number": "1517-1",
+    "name": "Race Car",
+    "theme": "Town > Classic Town",
+    "year": "1989",
+    "piece_count": 38,
+    "file_name": "1517-1.ldr",
+    "relative_path": "knowledge_base/normalized/1517-1.ldr",
+    "categories": [
+      "car_civilian"
+    ],
+    "tags": [
+      "1517-1",
+      "car",
+      "classic",
+      "race",
+      "town"
+    ],
+    "dominant_colors": [
+      0,
+      4,
+      15
+    ],
+    "bounding_box": {
+      "min_x": -32.0,
+      "max_x": 32.0,
+      "min_y": -77.0,
+      "max_y": 0.0,
+      "min_z": -100.0,
+      "max_z": 90.0
+    },
+    "inventory": {
+      "3641.dat": 4,
+      "4624.dat": 4,
+      "3020.dat": 2,
+      "3623.dat": 2,
+      "4286.dat": 2,
+      "3820.dat": 2,
+      "4865a.dat": 2,
+      "3829c01.dat": 1
+    }
+  },
+  {
+    "set_number": "1528-1",
+    "name": "Dragster",
+    "theme": "Town > Classic Town",
+    "year": "1986",
+    "piece_count": 34,
+    "file_name": "1528-1.ldr",
+    "relative_path": "knowledge_base/normalized/1528-1.ldr",
+    "categories": [
+      "car_racing"
+    ],
+    "tags": [
+      "1528-1",
+      "classic",
+      "dragster",
+      "town"
+    ],
+    "dominant_colors": [
+      0,
+      15,
+      4
+    ],
+    "bounding_box": {
+      "min_x": -98.18,
+      "max_x": 98.1,
+      "min_y": -80.0,
+      "max_y": 0.15,
+      "min_z": -63.03,
+      "max_z": 72.0
+    },
+    "inventory": {
+      "3710.dat": 5,
+      "3641.dat": 4,
+      "4589.dat": 4,
+      "122c01.dat": 2,
+      "3820.dat": 2,
+      "4070.dat": 2,
+      "3020.dat": 1,
+      "3816.dat": 1
+    }
+  },
+  {
+    "set_number": "1557-1",
+    "name": "Scooter",
+    "theme": "Space > Classic Space",
+    "year": "1986",
+    "piece_count": 34,
+    "file_name": "1557-1.ldr",
+    "relative_path": "knowledge_base/normalized/1557-1.ldr",
+    "categories": [
+      "spacecraft"
+    ],
+    "tags": [
+      "1557-1",
+      "classic",
+      "scooter",
+      "space"
+    ],
+    "dominant_colors": [
+      7,
+      4,
+      1
+    ],
+    "bounding_box": {
+      "min_x": -50.0,
+      "max_x": 50.0,
+      "min_y": -102.0,
+      "max_y": 0.0,
+      "min_z": -100.0,
+      "max_z": 92.0
+    },
+    "inventory": {
+      "4032a.dat": 2,
+      "4595.dat": 2,
+      "4589.dat": 2,
+      "3024.dat": 2,
+      "4349.dat": 2,
+      "4592.dat": 2,
+      "4593.dat": 2,
+      "3820.dat": 2
+    }
+  },
+  {
+    "set_number": "1572-1",
+    "name": "Super Tow Truck",
+    "theme": "Town > Classic Town",
+    "year": "1986",
+    "piece_count": 85,
+    "file_name": "1572-1.ldr",
+    "relative_path": "knowledge_base/normalized/1572-1.ldr",
+    "categories": [
+      "truck_pickup"
+    ],
+    "tags": [
+      "1572-1",
+      "classic",
+      "super",
+      "tow",
+      "tow truck",
+      "town",
+      "truck"
+    ],
+    "dominant_colors": [
+      15,
+      0,
+      1
+    ],
+    "bounding_box": {
+      "min_x": -100.0,
+      "max_x": 98.64,
+      "min_y": -136.0,
+      "max_y": -2.0,
+      "min_z": -151.0,
+      "max_z": 153.0
+    },
+    "inventory": {
+      "6141.dat": 10,
+      "3710.dat": 7,
+      "4084.dat": 6,
+      "3024.dat": 4,
+      "4070.dat": 4,
+      "3023.dat": 4,
+      "122c01.dat": 3,
+      "3795.dat": 2
+    }
+  },
+  {
+    "set_number": "1591-1",
+    "name": "Danone Truck",
+    "theme": "Town > Classic Town",
+    "year": "1980",
+    "piece_count": 40,
+    "file_name": "1591-1.ldr",
+    "relative_path": "knowledge_base/normalized/1591-1.ldr",
+    "categories": [
+      "truck_pickup"
+    ],
+    "tags": [
+      "1591-1",
+      "classic",
+      "danone",
+      "town",
+      "truck"
+    ],
+    "dominant_colors": [
+      15,
+      1,
+      256
+    ],
+    "bounding_box": {
+      "min_x": -93.0,
+      "max_x": 100.0,
+      "min_y": -96.0,
+      "max_y": -2.0,
+      "min_z": -30.0,
+      "max_z": 30.0
+    },
+    "inventory": {
+      "3020.dat": 5,
+      "3023.dat": 5,
+      "3010.dat": 5,
+      "3641.dat": 4,
+      "122c01.dat": 2,
+      "3034.dat": 2,
+      "3788.dat": 2,
+      "3005.dat": 2
+    }
+  },
+  {
+    "set_number": "1620-1",
+    "name": "Astro Dart",
+    "theme": "Space > Futuron",
+    "year": "1990",
+    "piece_count": 38,
+    "file_name": "1620-1.ldr",
+    "relative_path": "knowledge_base/normalized/1620-1.ldr",
+    "categories": [
+      "spacecraft",
+      "aircraft"
+    ],
+    "tags": [
+      "1620-1",
+      "astro",
+      "dart",
+      "futuron",
+      "space"
+    ],
+    "dominant_colors": [
+      0,
+      15,
+      14
+    ],
+    "bounding_box": {
+      "min_x": -87.71,
+      "max_x": 87.71,
+      "min_y": -96.0,
+      "max_y": 0.0,
+      "min_z": -45.66,
+      "max_z": 40.93
+    },
+    "inventory": {
+      "4590.dat": 2,
+      "2452.dat": 2,
+      "4276b.dat": 2,
+      "4592.dat": 2,
+      "4593.dat": 2,
+      "3024.dat": 2,
+      "2450.dat": 2,
+      "2412b.dat": 2
+    }
+  },
+  {
+    "set_number": "1621-1",
+    "name": "Lunar MPV Vehicle",
+    "theme": "Space > Futuron",
+    "year": "1990",
+    "piece_count": 104,
+    "file_name": "1621-1.ldr",
+    "relative_path": "knowledge_base/normalized/1621-1.ldr",
+    "categories": [
+      "spacecraft",
+      "car_civilian"
+    ],
+    "tags": [
+      "1621-1",
+      "futuron",
+      "lunar",
+      "mpv",
+      "space",
+      "vehicle"
+    ],
+    "dominant_colors": [
+      15,
+      0,
+      1
+    ],
+    "bounding_box": {
+      "min_x": -114.15,
+      "max_x": 110.0,
+      "min_y": -133.0,
+      "max_y": -2.87,
+      "min_z": -141.74,
+      "max_z": 148.71
+    },
+    "inventory": {
+      "3022.dat": 7,
+      "4085b.dat": 6,
+      "2444.dat": 5,
+      "3749.dat": 4,
+      "3482.dat": 4,
+      "2346.dat": 4,
+      "6141.dat": 4,
+      "4592.dat": 3
+    }
+  },
+  {
+    "set_number": "1631-1",
+    "name": "Black Racer",
+    "theme": "Town > Classic Town",
+    "year": "1990",
+    "piece_count": 23,
+    "file_name": "1631-1.ldr",
+    "relative_path": "knowledge_base/normalized/1631-1.ldr",
+    "categories": [
+      "car_racing"
+    ],
+    "tags": [
+      "1631-1",
+      "black",
+      "classic",
+      "racer",
+      "town"
+    ],
+    "dominant_colors": [
+      0,
+      14,
+      7
+    ],
+    "bounding_box": {
+      "min_x": -30.0,
+      "max_x": 30.0,
+      "min_y": -56.0,
+      "max_y": 0.0,
+      "min_z": -80.0,
+      "max_z": 80.0
+    },
+    "inventory": {
+      "4624.dat": 4,
+      "3641.dat": 4,
+      "3023.dat": 2,
+      "3623.dat": 2,
+      "4286.dat": 2,
+      "3710.dat": 1,
+      "2441.dat": 1,
+      "3829c01.dat": 1
+    }
+  },
+  {
+    "set_number": "1632-1",
+    "name": "Motor Boat",
+    "theme": "Town > Classic Town",
+    "year": "1990",
+    "piece_count": 28,
+    "file_name": "1632-1.ldr",
+    "relative_path": "knowledge_base/normalized/1632-1.ldr",
+    "categories": [
+      "watercraft"
+    ],
+    "tags": [
+      "1632-1",
+      "boat",
+      "classic",
+      "motor",
+      "town"
+    ],
+    "dominant_colors": [
+      15,
+      4,
+      0
+    ],
+    "bounding_box": {
+      "min_x": -30.0,
+      "max_x": 30.0,
+      "min_y": -64.0,
+      "max_y": 0.0,
+      "min_z": -100.92,
+      "max_z": 109.08
+    },
+    "inventory": {
+      "3666.dat": 4,
+      "3024.dat": 4,
+      "4859.dat": 2,
+      "4592c01.dat": 2,
+      "3023.dat": 2,
+      "2433.dat": 1,
+      "3022.dat": 1,
+      "4855.dat": 1
+    }
+  },
+  {
+    "set_number": "1633-1",
+    "name": "Loader Tractor",
+    "theme": "Town > Classic Town",
+    "year": "1990",
+    "piece_count": 24,
+    "file_name": "1633-1.ldr",
+    "relative_path": "knowledge_base/normalized/1633-1.ldr",
+    "categories": [
+      "heavy_machinery"
+    ],
+    "tags": [
+      "1633-1",
+      "classic",
+      "loader",
+      "town",
+      "tractor"
+    ],
+    "dominant_colors": [
+      14,
+      0,
+      47
+    ],
+    "bounding_box": {
+      "min_x": -70.0,
+      "max_x": 60.0,
+      "min_y": -82.0,
+      "max_y": -2.0,
+      "min_z": -35.0,
+      "max_z": 35.0
+    },
+    "inventory": {
+      "4624.dat": 4,
+      "3641.dat": 2,
+      "4600.dat": 2,
+      "4084.dat": 2,
+      "6141.dat": 2,
+      "3062b.dat": 2,
+      "4070.dat": 2,
+      "3022.dat": 1
+    }
+  },
+  {
+    "set_number": "164-1",
+    "name": "Passenger Wagon",
+    "theme": "Train > 4.5V",
+    "year": "1978",
+    "piece_count": 103,
+    "file_name": "164-1.ldr",
+    "relative_path": "knowledge_base/normalized/164-1.ldr",
+    "categories": [
+      "train_rail",
+      "castle_historical"
+    ],
+    "tags": [
+      "164-1",
+      "5v",
+      "passenger",
+      "train",
+      "wagon"
+    ],
+    "dominant_colors": [
+      4,
+      0,
+      7
+    ],
+    "bounding_box": {
+      "min_x": -80.25,
+      "max_x": 76.81,
+      "min_y": -206.0,
+      "max_y": 4.0,
+      "min_z": -200.0,
+      "max_z": 190.25
+    },
+    "inventory": {
+      "3005.dat": 12,
+      "3024.dat": 10,
+      "3010.dat": 10,
+      "3004.dat": 8,
+      "3297.dat": 8,
+      "3023.dat": 6,
+      "3666.dat": 6,
+      "3488.dat": 4
+    }
+  },
+  {
+    "set_number": "166-1",
+    "name": "Flat Wagon",
+    "theme": "Train > 4.5V",
+    "year": "1978",
+    "piece_count": 51,
+    "file_name": "166-1.ldr",
+    "relative_path": "knowledge_base/normalized/166-1.ldr",
+    "categories": [
+      "train_rail",
+      "castle_historical"
+    ],
+    "tags": [
+      "166-1",
+      "5v",
+      "flat",
+      "train",
+      "wagon"
+    ],
+    "dominant_colors": [
+      0,
+      14,
+      4
+    ],
+    "bounding_box": {
+      "min_x": -240.0,
+      "max_x": 240.0,
+      "min_y": -148.0,
+      "max_y": 0.0,
+      "min_z": -81.41,
+      "max_z": 90.0
+    },
+    "inventory": {
+      "3062b.dat": 8,
+      "3820.dat": 4,
+      "3488.dat": 4,
+      "3710.dat": 4,
+      "3008.dat": 4,
+      "3460.dat": 3,
+      "3228ac01.dat": 2,
+      "3816.dat": 2
+    }
+  },
+  {
+    "set_number": "167-1",
+    "name": "Loading Ramp and Car Transport Wagon",
+    "theme": "Train > 4.5V",
+    "year": "1978",
+    "piece_count": 114,
+    "file_name": "167-1.ldr",
+    "relative_path": "knowledge_base/normalized/167-1.ldr",
+    "categories": [
+      "train_rail",
+      "truck_pickup",
+      "castle_historical",
+      "car_civilian"
+    ],
+    "tags": [
+      "167-1",
+      "5v",
+      "and",
+      "car",
+      "car transport",
+      "loading",
+      "ramp",
+      "train",
+      "transport",
+      "wagon"
+    ],
+    "dominant_colors": [
+      0,
+      14,
+      7
+    ],
+    "bounding_box": {
+      "min_x": -450.69,
+      "max_x": 450.0,
+      "min_y": -160.0,
+      "max_y": 0.0,
+      "min_z": -111.48,
+      "max_z": 110.0
+    },
+    "inventory": {
+      "3633.dat": 12,
+      "3023.dat": 8,
+      "3040b.dat": 6,
+      "3024.dat": 6,
+      "3488.dat": 6,
+      "3021.dat": 5,
+      "3228a.dat": 4,
+      "3820.dat": 4
+    }
+  },
+  {
+    "set_number": "1680-1",
+    "name": "Hay Cart with Smugglers",
+    "theme": "Castle > Forestmen",
+    "year": "1990",
+    "piece_count": 83,
+    "file_name": "1680-1.ldr",
+    "relative_path": "knowledge_base/normalized/1680-1.ldr",
+    "categories": [
+      "castle_historical"
+    ],
+    "tags": [
+      "1680-1",
+      "cart",
+      "castle",
+      "forestmen",
+      "hay",
+      "hay cart",
+      "smugglers",
+      "with"
+    ],
+    "dominant_colors": [
+      0,
+      2,
+      14
+    ],
+    "bounding_box": {
+      "min_x": -156.97,
+      "max_x": 160.0,
+      "min_y": -114.0,
+      "max_y": 4.0,
+      "min_z": -100.75,
+      "max_z": 103.9
+    },
+    "inventory": {
+      "3820.dat": 6,
+      "2420.dat": 4,
+      "4865a.dat": 4,
+      "2436a.dat": 4,
+      "3816b.dat": 3,
+      "3817b.dat": 3,
+      "3022.dat": 3,
+      "3815b.dat": 3
+    }
+  },
+  {
+    "set_number": "1702-1",
+    "name": "Fire Fighter 4 x 4",
+    "theme": "Town > Classic Town",
+    "year": "1994",
+    "piece_count": 63,
+    "file_name": "1702-1.ldr",
+    "relative_path": "knowledge_base/normalized/1702-1.ldr",
+    "categories": [
+      "service_emergency",
+      "spacecraft"
+    ],
+    "tags": [
+      "1702-1",
+      "classic",
+      "fighter",
+      "fire",
+      "town",
+      "x"
+    ],
+    "dominant_colors": [
+      4,
+      0,
+      15
+    ],
+    "bounding_box": {
+      "min_x": -102.1,
+      "max_x": 100.0,
+      "min_y": -112.0,
+      "max_y": -3.0,
+      "min_z": -94.58,
+      "max_z": 96.5
+    },
+    "inventory": {
+      "6014.dat": 4,
+      "6015.dat": 4,
+      "4085c.dat": 4,
+      "3024.dat": 4,
+      "6141.dat": 4,
+      "3710.dat": 3,
+      "3023.dat": 3,
+      "4600.dat": 2
+    }
+  },
+  {
+    "set_number": "1704-1",
+    "name": "Ice Planet Satellite Plough",
+    "theme": "Space > Ice Planet 2002",
+    "year": "1994",
+    "piece_count": 53,
+    "file_name": "1704-1.ldr",
+    "relative_path": "knowledge_base/normalized/1704-1.ldr",
+    "categories": [
+      "spacecraft"
+    ],
+    "tags": [
+      "1704-1",
+      "2002",
+      "ice",
+      "planet",
+      "plough",
+      "satellite",
+      "space"
+    ],
+    "dominant_colors": [
+      15,
+      0,
+      1
+    ],
+    "bounding_box": {
+      "min_x": -30.0,
+      "max_x": 30.0,
+      "min_y": -132.08,
+      "max_y": 1.77,
+      "min_z": -102.06,
+      "max_z": 102.0
+    },
+    "inventory": {
+      "3673.dat": 6,
+      "6118.dat": 6,
+      "2817.dat": 3,
+      "3023.dat": 2,
+      "2452.dat": 2,
+      "6120.dat": 2,
+      "3820.dat": 2,
+      "3794a.dat": 2
+    }
+  },
+  {
+    "set_number": "1713-1",
+    "name": "Shipwrecked Pirate",
+    "theme": "Pirates > Pirates I",
+    "year": "1994",
+    "piece_count": 29,
+    "file_name": "1713-1.ldr",
+    "relative_path": "knowledge_base/normalized/1713-1.ldr",
+    "categories": [
+      "watercraft",
+      "figure_character",
+      "castle_historical"
+    ],
+    "tags": [
+      "1713-1",
+      "i",
+      "pirate",
+      "pirates",
+      "shipwrecked"
+    ],
+    "dominant_colors": [
+      14,
+      0,
+      1
+    ],
+    "bounding_box": {
+      "min_x": -68.0,
+      "max_x": 68.0,
+      "min_y": -120.0,
+      "max_y": 0.0,
+      "min_z": -31.18,
+      "max_z": 40.0
+    },
+    "inventory": {
+      "3062b.dat": 8,
+      "2654.dat": 2,
+      "2436a.dat": 2,
+      "3820.dat": 2,
+      "3020.dat": 1,
+      "3022.dat": 1,
+      "3032.dat": 1,
+      "3957a.dat": 1
+    }
+  },
+  {
+    "set_number": "1714-1",
+    "name": "Surveillance Scooter",
+    "theme": "Space > Spyrius",
+    "year": "1995",
+    "piece_count": 29,
+    "file_name": "1714-1.ldr",
+    "relative_path": "knowledge_base/normalized/1714-1.ldr",
+    "categories": [
+      "spacecraft"
+    ],
+    "tags": [
+      "1714-1",
+      "scooter",
+      "space",
+      "spyrius",
+      "surveillance"
+    ],
+    "dominant_colors": [
+      0,
+      4,
+      36
+    ],
+    "bounding_box": {
+      "min_x": -52.52,
+      "max_x": 52.52,
+      "min_y": -80.0,
+      "max_y": 0.0,
+      "min_z": -40.0,
+      "max_z": 46.0
+    },
+    "inventory": {
+      "2412b.dat": 2,
+      "3938.dat": 2,
+      "4589.dat": 2,
+      "3937.dat": 2,
+      "4595.dat": 2,
+      "3820.dat": 2,
+      "2625.dat": 1,
+      "3816.dat": 1
+    }
+  },
+  {
+    "set_number": "1731-1",
+    "name": "Ice Planet Scooter",
+    "theme": "Space > Ice Planet 2002",
+    "year": "1994",
+    "piece_count": 25,
+    "file_name": "1731-1.ldr",
+    "relative_path": "knowledge_base/normalized/1731-1.ldr",
+    "categories": [
+      "spacecraft"
+    ],
+    "tags": [
+      "1731-1",
+      "2002",
+      "ice",
+      "planet",
+      "scooter",
+      "space"
+    ],
+    "dominant_colors": [
+      15,
+      0,
+      1
+    ],
+    "bounding_box": {
+      "min_x": -30.0,
+      "max_x": 20.56,
+      "min_y": -80.0,
+      "max_y": 0.0,
+      "min_z": -50.0,
+      "max_z": 48.0
+    },
+    "inventory": {
+      "3475b.dat": 2,
+      "4085c.dat": 2,
+      "3820.dat": 2,
+      "3795.dat": 1,
+      "4859.dat": 1,
+      "3816.dat": 1,
+      "3817.dat": 1,
+      "3815.dat": 1
+    }
+  },
+  {
+    "set_number": "1772-1",
+    "name": "Airport Container Truck",
+    "theme": "Town > Classic Town",
+    "year": "1992",
+    "piece_count": 89,
+    "file_name": "1772-1.ldr",
+    "relative_path": "knowledge_base/normalized/1772-1.ldr",
+    "categories": [
+      "truck_pickup"
+    ],
+    "tags": [
+      "1772-1",
+      "airport",
+      "classic",
+      "container",
+      "town",
+      "truck"
+    ],
+    "dominant_colors": [
+      15,
+      4,
+      14
+    ],
+    "bounding_box": {
+      "min_x": -190.0,
+      "max_x": 181.0,
+      "min_y": -176.0,
+      "max_y": -3.0,
+      "min_z": -166.49,
+      "max_z": 170.98
+    },
+    "inventory": {
+      "3010.dat": 7,
+      "4624.dat": 4,
+      "3641.dat": 4,
+      "3666.dat": 4,
+      "3032.dat": 4,
+      "3068b.dat": 4,
+      "4070.dat": 4,
+      "4345b.dat": 4
+    }
+  },
+  {
+    "set_number": "1773-1",
+    "name": "Airline Maintenance Vehicle with Trailer",
+    "theme": "Promotional > Airlines",
+    "year": "1996",
+    "piece_count": 111,
+    "file_name": "1773-1.ldr",
+    "relative_path": "knowledge_base/normalized/1773-1.ldr",
+    "categories": [
+      "truck_pickup",
+      "car_civilian"
+    ],
+    "tags": [
+      "1773-1",
+      "airline",
+      "airlines",
+      "maintenance",
+      "promotional",
+      "trailer",
+      "vehicle",
+      "with"
+    ],
+    "dominant_colors": [
+      15,
+      4,
+      0
+    ],
+    "bounding_box": {
+      "min_x": -95.65,
+      "max_x": 93.0,
+      "min_y": -144.0,
+      "max_y": -2.0,
+      "min_z": -204.0,
+      "max_z": 204.0
+    },
+    "inventory": {
+      "3024.dat": 10,
+      "4624.dat": 8,
+      "3070b.dat": 6,
+      "4070.dat": 6,
+      "4864a.dat": 6,
+      "3710.dat": 5,
+      "3641.dat": 4,
+      "4600.dat": 4
+    }
+  },
+  {
+    "set_number": "1792-1",
+    "name": "Pleasure Cruiser",
+    "theme": "Town > Classic Town",
+    "year": "1994",
+    "piece_count": 66,
+    "file_name": "1792-1.ldr",
+    "relative_path": "knowledge_base/normalized/1792-1.ldr",
+    "categories": [
+      "watercraft",
+      "car_civilian"
+    ],
+    "tags": [
+      "1792-1",
+      "classic",
+      "cruiser",
+      "pleasure",
+      "town"
+    ],
+    "dominant_colors": [
+      15,
+      4,
+      14
+    ],
+    "bounding_box": {
+      "min_x": -215.49,
+      "max_x": 214.28,
+      "min_y": -224.0,
+      "max_y": 0.0,
+      "min_z": -120.49,
+      "max_z": 113.66
+    },
+    "inventory": {
+      "3666.dat": 4,
+      "4865a.dat": 4,
+      "3070a.dat": 4,
+      "3023.dat": 3,
+      "3032.dat": 2,
+      "2625.dat": 2,
+      "6111.dat": 2,
+      "3622.dat": 2
+    }
+  },
+  {
+    "set_number": "1808-1",
+    "name": "Light Aircraft and Ground Support",
+    "theme": "Town > Classic Town",
+    "year": "1996",
+    "piece_count": 138,
+    "file_name": "1808-1.ldr",
+    "relative_path": "knowledge_base/normalized/1808-1.ldr",
+    "categories": [
+      "aircraft"
+    ],
+    "tags": [
+      "1808-1",
+      "aircraft",
+      "and",
+      "classic",
+      "ground",
+      "light",
+      "support",
+      "town"
+    ],
+    "dominant_colors": [
+      15,
+      4,
+      7
+    ],
+    "bounding_box": {
+      "min_x": -320.0,
+      "max_x": 315.2,
+      "min_y": -190.0,
+      "max_y": 0.0,
+      "min_z": -207.58,
+      "max_z": 214.0
+    },
+    "inventory": {
+      "3004.dat": 10,
+      "3023.dat": 8,
+      "4085c.dat": 7,
+      "3005.dat": 4,
+      "3820.dat": 4,
+      "3139.dat": 3,
+      "2420.dat": 3,
+      "6231.dat": 3
+    }
+  },
+  {
+    "set_number": "1854-1",
+    "name": "House with Roof-Windows ( Velux )",
+    "theme": "Town > Classic Town",
+    "year": "1996",
+    "piece_count": 147,
+    "file_name": "1854-1.ldr",
+    "relative_path": "knowledge_base/normalized/1854-1.ldr",
+    "categories": [
+      "building_town"
+    ],
+    "tags": [
+      "1854-1",
+      "classic",
+      "house",
+      "roof-windows",
+      "town",
+      "velux",
+      "with"
+    ],
+    "dominant_colors": [
+      15,
+      4,
+      14
+    ],
+    "bounding_box": {
+      "min_x": -183.66,
+      "max_x": 190.0,
+      "min_y": -248.0,
+      "max_y": 0.0,
+      "min_z": -163.66,
+      "max_z": 160.0
+    },
+    "inventory": {
+      "3004.dat": 9,
+      "3622.dat": 9,
+      "3039.dat": 7,
+      "3010.dat": 6,
+      "3023.dat": 6,
+      "3005.dat": 5,
+      "3024.dat": 5,
+      "4079.dat": 4
+    }
+  },
+  {
+    "set_number": "1869-1",
+    "name": "South African Flag",
+    "theme": "Universal Building Set > Basic",
+    "year": "1996",
+    "piece_count": 82,
+    "file_name": "1869-1.ldr",
+    "relative_path": "knowledge_base/normalized/1869-1.ldr",
+    "categories": [
+      "building_town"
+    ],
+    "tags": [
+      "1869-1",
+      "african",
+      "basic",
+      "building",
+      "flag",
+      "set",
+      "south",
+      "universal"
+    ],
+    "dominant_colors": [
+      2,
+      1,
+      4
+    ],
+    "bounding_box": {
+      "min_x": -170.0,
+      "max_x": 170.0,
+      "min_y": -216.0,
+      "max_y": 0.0,
+      "min_z": -10.0,
+      "max_z": 10.0
+    },
+    "inventory": {
+      "3003.dat": 20,
+      "3004.dat": 20,
+      "3001.dat": 17,
+      "3002.dat": 8,
+      "3005.dat": 8,
+      "3010.dat": 6,
+      "3009.dat": 2,
+      "2456.dat": 1
+    }
+  },
+  {
+    "set_number": "1875-1",
+    "name": "Meteor Monitor",
+    "theme": "Space > Blacktron I",
+    "year": "1990",
+    "piece_count": 38,
+    "file_name": "1875-1.ldr",
+    "relative_path": "knowledge_base/normalized/1875-1.ldr",
+    "categories": [
+      "spacecraft"
+    ],
+    "tags": [
+      "1875-1",
+      "blacktron",
+      "i",
+      "meteor",
+      "monitor",
+      "space"
+    ],
+    "dominant_colors": [
+      0,
+      15,
+      36
+    ],
+    "bounding_box": {
+      "min_x": -99.3,
+      "max_x": 99.3,
+      "min_y": -91.3,
+      "max_y": 0.0,
+      "min_z": -72.44,
+      "max_z": 70.0
+    },
+    "inventory": {
+      "3938.dat": 4,
+      "3937.dat": 4,
+      "2419.dat": 2,
+      "3023.dat": 2,
+      "4276b.dat": 2,
+      "2433.dat": 2,
+      "6141.dat": 2,
+      "3820.dat": 2
+    }
+  },
+  {
+    "set_number": "1887-1",
+    "name": "Scout Patrol Ship",
+    "theme": "Space > Blacktron II",
+    "year": "1992",
+    "piece_count": 36,
+    "file_name": "1887-1.ldr",
+    "relative_path": "knowledge_base/normalized/1887-1.ldr",
+    "categories": [
+      "service_emergency",
+      "watercraft",
+      "spacecraft"
+    ],
+    "tags": [
+      "1887-1",
+      "blacktron",
+      "ii",
+      "patrol",
+      "scout",
+      "ship",
+      "space"
+    ],
+    "dominant_colors": [
+      0,
+      15,
+      42
+    ],
+    "bounding_box": {
+      "min_x": -117.78,
+      "max_x": 117.78,
+      "min_y": -96.0,
+      "max_y": 0.0,
+      "min_z": -100.0,
+      "max_z": 104.0
+    },
+    "inventory": {
+      "4032a.dat": 4,
+      "2419.dat": 2,
+      "2450.dat": 2,
+      "6141.dat": 2,
+      "4589.dat": 2,
+      "3820.dat": 2,
+      "4740.dat": 1,
+      "4596.dat": 1
+    }
+  },
+  {
+    "set_number": "1916-1",
+    "name": "Starion Patrol",
+    "theme": "Space > Space Police II",
+    "year": "1993",
+    "piece_count": 31,
+    "file_name": "1916-1.ldr",
+    "relative_path": "knowledge_base/normalized/1916-1.ldr",
+    "categories": [
+      "service_emergency",
+      "spacecraft"
+    ],
+    "tags": [
+      "1916-1",
+      "ii",
+      "patrol",
+      "police",
+      "space",
+      "starion"
+    ],
+    "dominant_colors": [
+      7,
+      0,
+      2
+    ],
+    "bounding_box": {
+      "min_x": -58.28,
+      "max_x": 58.28,
+      "min_y": -88.0,
+      "max_y": 0.0,
+      "min_z": -50.0,
+      "max_z": 58.0
+    },
+    "inventory": {
+      "2540.dat": 2,
+      "4593.dat": 2,
+      "4592.dat": 2,
+      "3820.dat": 2,
+      "4588.dat": 2,
+      "4735.dat": 2,
+      "4589.dat": 2,
+      "4032a.dat": 1
+    }
+  },
+  {
+    "set_number": "1952-1",
+    "name": "Dairy Tanker",
+    "theme": "Town > Classic Town",
+    "year": "1989",
+    "piece_count": 133,
+    "file_name": "1952-1.ldr",
+    "relative_path": "knowledge_base/normalized/1952-1.ldr",
+    "categories": [
+      "train_rail"
+    ],
+    "tags": [
+      "1952-1",
+      "classic",
+      "dairy",
+      "tanker",
+      "town"
+    ],
+    "dominant_colors": [
+      15,
+      0,
+      2
+    ],
+    "bounding_box": {
+      "min_x": -106.27,
+      "max_x": 100.0,
+      "min_y": -152.0,
+      "max_y": 0.0,
+      "min_z": -220.0,
+      "max_z": 220.0
+    },
+    "inventory": {
+      "4624.dat": 8,
+      "4084.dat": 8,
+      "3024.dat": 8,
+      "3009.dat": 8,
+      "3037.dat": 8,
+      "3023.dat": 6,
+      "6141.dat": 4,
+      "4600.dat": 4
+    }
+  },
+  {
+    "set_number": "1969-1",
+    "name": "Mini Robot",
+    "theme": "Space > Space Police II",
+    "year": "1993",
+    "piece_count": 46,
+    "file_name": "1969-1.ldr",
+    "relative_path": "knowledge_base/normalized/1969-1.ldr",
+    "categories": [
+      "service_emergency",
+      "spacecraft"
+    ],
+    "tags": [
+      "1969-1",
+      "ii",
+      "mini",
+      "police",
+      "robot",
+      "space"
+    ],
+    "dominant_colors": [
+      7,
+      0,
+      256
+    ],
+    "bounding_box": {
+      "min_x": -118.64,
+      "max_x": 113.47,
+      "min_y": -132.0,
+      "max_y": -3.0,
+      "min_z": -41.42,
+      "max_z": 50.0
+    },
+    "inventory": {
+      "4624.dat": 4,
+      "3641.dat": 4,
+      "4600.dat": 2,
+      "3820.dat": 2,
+      "3022.dat": 2,
+      "2540.dat": 2,
+      "4735.dat": 2,
+      "2433.dat": 2
+    }
+  },
+  {
+    "set_number": "1974-3",
+    "name": "Smuggler's Hayride",
+    "theme": "Castle > Forestmen",
+    "year": "1989",
+    "piece_count": 60,
+    "file_name": "1974-3.ldr",
+    "relative_path": "knowledge_base/normalized/1974-3.ldr",
+    "categories": [
+      "castle_historical"
+    ],
+    "tags": [
+      "1974-3",
+      "castle",
+      "forestmen",
+      "hayride",
+      "s",
+      "smuggler"
+    ],
+    "dominant_colors": [
+      0,
+      14,
+      2
+    ],
+    "bounding_box": {
+      "min_x": -140.0,
+      "max_x": 140.0,
+      "min_y": -156.12,
+      "max_y": -4.0,
+      "min_z": -91.85,
+      "max_z": 89.51
+    },
+    "inventory": {
+      "3003.dat": 5,
+      "3820.dat": 4,
+      "3938.dat": 4,
+      "3937.dat": 4,
+      "2486.dat": 4,
+      "3816b.dat": 2,
+      "3817b.dat": 2,
+      "3815b.dat": 2
+    }
+  },
+  {
+    "set_number": "1974-4",
+    "name": "Star Quest",
+    "theme": "Space > Futuron",
+    "year": "1989",
+    "piece_count": 43,
+    "file_name": "1974-4.ldr",
+    "relative_path": "knowledge_base/normalized/1974-4.ldr",
+    "categories": [
+      "spacecraft"
+    ],
+    "tags": [
+      "1974-4",
+      "futuron",
+      "quest",
+      "space",
+      "star"
+    ],
+    "dominant_colors": [
+      0,
+      15,
+      33
+    ],
+    "bounding_box": {
+      "min_x": -79.46,
+      "max_x": 79.46,
+      "min_y": -104.0,
+      "max_y": -3.66,
+      "min_z": -110.0,
+      "max_z": 100.0
+    },
+    "inventory": {
+      "4740.dat": 4,
+      "3023.dat": 4,
+      "4859.dat": 4,
+      "4276b.dat": 2,
+      "3957a.dat": 2,
+      "4081b.dat": 2,
+      "2452.dat": 2,
+      "4590.dat": 2
+    }
+  },
+  {
+    "set_number": "1991-1",
+    "name": "Racing Pickup",
+    "theme": "Town > Classic Town",
+    "year": "1993",
+    "piece_count": 87,
+    "file_name": "1991-1.ldr",
+    "relative_path": "knowledge_base/normalized/1991-1.ldr",
+    "categories": [
+      "car_racing",
+      "truck_pickup"
+    ],
+    "tags": [
+      "1991-1",
+      "classic",
+      "pickup",
+      "racing",
+      "town"
+    ],
+    "dominant_colors": [
+      15,
+      4,
+      7
+    ],
+    "bounding_box": {
+      "min_x": -123.0,
+      "max_x": 130.0,
+      "min_y": -152.0,
+      "max_y": -3.0,
+      "min_z": -38.01,
+      "max_z": 37.99
+    },
+    "inventory": {
+      "6014.dat": 4,
+      "6015.dat": 4,
+      "2877.dat": 4,
+      "3665a.dat": 4,
+      "3024.dat": 4,
+      "3460.dat": 4,
+      "3062b.dat": 4,
+      "4070.dat": 4
+    }
+  },
+  {
+    "set_number": "20004-1",
+    "name": "Jungle Cruiser",
+    "theme": "Indiana Jones",
+    "year": "2008",
+    "piece_count": 90,
+    "file_name": "20004-1.ldr",
+    "relative_path": "knowledge_base/normalized/20004-1.ldr",
+    "categories": [
+      "watercraft",
+      "car_civilian"
+    ],
+    "tags": [
+      "20004-1",
+      "cruiser",
+      "indiana",
+      "jones",
+      "jungle"
+    ],
+    "dominant_colors": [
+      0,
+      70,
+      72
+    ],
+    "bounding_box": {
+      "min_x": -86.02,
+      "max_x": 79.98,
+      "min_y": -80.0,
+      "max_y": -0.0,
+      "min_z": -108.12,
+      "max_z": 102.0
+    },
+    "inventory": {
+      "4070.dat": 12,
+      "3623.dat": 6,
+      "4865a.dat": 6,
+      "6231.dat": 6,
+      "3021.dat": 5,
+      "51011.dat": 4,
+      "42610.dat": 4,
+      "6141.dat": 4
+    }
+  },
+  {
+    "set_number": "20006-1",
+    "name": "Clone Turbo Tank - Mini",
+    "theme": "Star Wars",
+    "year": "2008",
+    "piece_count": 65,
+    "file_name": "20006-1.ldr",
+    "relative_path": "knowledge_base/normalized/20006-1.ldr",
+    "categories": [
+      "spacecraft"
+    ],
+    "tags": [
+      "20006-1",
+      "clone",
+      "mini",
+      "star",
+      "star wars",
+      "tank",
+      "turbo",
+      "wars"
+    ],
+    "dominant_colors": [
+      7,
+      8,
+      0
+    ],
+    "bounding_box": {
+      "min_x": -52.0,
+      "max_x": 52.0,
+      "min_y": -120.0,
+      "max_y": 2.0,
+      "min_z": -140.0,
+      "max_z": 140.0
+    },
+    "inventory": {
+      "55981.dat": 10,
+      "30000.dat": 5,
+      "4274.dat": 4,
+      "3062b.dat": 3,
+      "6112.dat": 2,
+      "2877.dat": 2,
+      "3023.dat": 2,
+      "3037.dat": 2
+    }
+  },
+  {
+    "set_number": "20009-1",
+    "name": "AT-TE Walker - Mini",
+    "theme": "Star Wars",
+    "year": "2009",
+    "piece_count": 100,
+    "file_name": "20009-1.ldr",
+    "relative_path": "knowledge_base/normalized/20009-1.ldr",
+    "categories": [
+      "spacecraft"
+    ],
+    "tags": [
+      "20009-1",
+      "at-te",
+      "mini",
+      "star",
+      "star wars",
+      "walker",
+      "wars"
+    ],
+    "dominant_colors": [
+      7,
+      8,
+      0
+    ],
+    "bounding_box": {
+      "min_x": -68.0,
+      "max_x": 68.0,
+      "min_y": -175.0,
+      "max_y": -3.0,
+      "min_z": -136.0,
+      "max_z": 126.0
+    },
+    "inventory": {
+      "3023.dat": 8,
+      "4592.dat": 6,
+      "4593.dat": 6,
+      "2555.dat": 5,
+      "3794b.dat": 5,
+      "4740.dat": 4,
+      "30375.dat": 4,
+      "3665.dat": 4
+    }
+  },
+  {
+    "set_number": "20011-1",
+    "name": "Garbage Truck",
+    "theme": "Creator",
+    "year": "2009",
+    "piece_count": 74,
+    "file_name": "20011-1.ldr",
+    "relative_path": "knowledge_base/normalized/20011-1.ldr",
+    "categories": [
+      "truck_pickup"
+    ],
+    "tags": [
+      "20011-1",
+      "creator",
+      "garbage",
+      "truck"
+    ],
+    "dominant_colors": [
+      7,
+      2,
+      0
+    ],
+    "bounding_box": {
+      "min_x": -31.0,
+      "max_x": 31.0,
+      "min_y": -104.0,
+      "max_y": 0.0,
+      "min_z": -118.0,
+      "max_z": 124.8
+    },
+    "inventory": {
+      "2877.dat": 8,
+      "3710.dat": 5,
+      "3021.dat": 5,
+      "4624.dat": 4,
+      "3641.dat": 4,
+      "6141.dat": 4,
+      "54200.dat": 4,
+      "3024.dat": 4
+    }
+  },
+  {
+    "set_number": "20014-1",
+    "name": "4 x 4 Dynamo",
+    "theme": "Creator",
+    "year": "2010",
+    "piece_count": 69,
+    "file_name": "20014-1.ldr",
+    "relative_path": "knowledge_base/normalized/20014-1.ldr",
+    "categories": [
+      "car_civilian"
+    ],
+    "tags": [
+      "20014-1",
+      "creator",
+      "dynamo",
+      "x"
+    ],
+    "dominant_colors": [
+      7,
+      8,
+      14
+    ],
+    "bounding_box": {
+      "min_x": -46.0,
+      "max_x": 47.0,
+      "min_y": -76.93,
+      "max_y": 4.0,
+      "min_z": -82.0,
+      "max_z": 78.0
+    },
+    "inventory": {
+      "6141.dat": 12,
+      "4589.dat": 8,
+      "4081b.dat": 6,
+      "54200.dat": 6,
+      "6014.dat": 4,
+      "6015.dat": 4,
+      "6157.dat": 3,
+      "3660.dat": 2
+    }
+  },
+  {
+    "set_number": "20015-1",
+    "name": "Alligator",
+    "theme": "Creator",
+    "year": "2010",
+    "piece_count": 89,
+    "file_name": "20015-1.ldr",
+    "relative_path": "knowledge_base/normalized/20015-1.ldr",
+    "categories": [
+      "creature_animal"
+    ],
+    "tags": [
+      "20015-1",
+      "alligator",
+      "creator"
+    ],
+    "dominant_colors": [
+      2,
+      10,
+      15
+    ],
+    "bounding_box": {
+      "min_x": -78.0,
+      "max_x": 78.0,
+      "min_y": -104.61,
+      "max_y": 0.0,
+      "min_z": -224.81,
+      "max_z": 230.0
+    },
+    "inventory": {
+      "54200.dat": 21,
+      "3020.dat": 9,
+      "3023.dat": 8,
+      "3623.dat": 5,
+      "3666.dat": 4,
+      "4085a.dat": 4,
+      "3024.dat": 4,
+      "2420.dat": 4
+    }
+  },
+  {
+    "set_number": "20019-1",
+    "name": "Slave I",
+    "theme": "Star Wars",
+    "year": "2011",
+    "piece_count": 76,
+    "file_name": "20019-1.ldr",
+    "relative_path": "knowledge_base/normalized/20019-1.ldr",
+    "categories": [
+      "spacecraft"
+    ],
+    "tags": [
+      "20019-1",
+      "i",
+      "slave",
+      "slave i",
+      "star",
+      "star wars",
+      "wars"
+    ],
+    "dominant_colors": [
+      71,
+      320,
+      72
+    ],
+    "bounding_box": {
+      "min_x": -100.0,
+      "max_x": 100.0,
+      "min_y": -218.0,
+      "max_y": -2.0,
+      "min_z": -52.0,
+      "max_z": 58.0
+    },
+    "inventory": {
+      "54200.dat": 8,
+      "3040b.dat": 6,
+      "6141.dat": 5,
+      "3069b.dat": 4,
+      "30357.dat": 4,
+      "6091.dat": 4,
+      "3020.dat": 3,
+      "3700.dat": 3
+    }
+  },
+  {
+    "set_number": "20021-1",
+    "name": "Bounty Hunter Gunship - Mini",
+    "theme": "Star Wars",
+    "year": "2011",
+    "piece_count": 81,
+    "file_name": "20021-1.ldr",
+    "relative_path": "knowledge_base/normalized/20021-1.ldr",
+    "categories": [
+      "spacecraft"
+    ],
+    "tags": [
+      "20021-1",
+      "bounty",
+      "gunship",
+      "hunter",
+      "mini",
+      "star",
+      "star wars",
+      "wars"
+    ],
+    "dominant_colors": [
+      72,
+      288,
+      0
+    ],
+    "bounding_box": {
+      "min_x": -120.0,
+      "max_x": 120.0,
+      "min_y": -118.0,
+      "max_y": 0.0,
+      "min_z": -124.0,
+      "max_z": 130.0
+    },
+    "inventory": {
+      "87087.dat": 8,
+      "50950.dat": 6,
+      "3022.dat": 4,
+      "3023.dat": 4,
+      "3068b.dat": 4,
+      "54200.dat": 4,
+      "4032b.dat": 4,
+      "2431.dat": 4
+    }
+  },
+  {
+    "set_number": "21000-1",
+    "name": "Sears Tower",
+    "theme": "Architecture",
+    "year": "2008",
+    "piece_count": 69,
+    "file_name": "21000-1.ldr",
+    "relative_path": "knowledge_base/normalized/21000-1.ldr",
+    "categories": [
+      "building_town",
+      "castle_historical"
+    ],
+    "tags": [
+      "21000-1",
+      "architecture",
+      "sears",
+      "tower"
+    ],
+    "dominant_colors": [
+      0,
+      71,
+      15
+    ],
+    "bounding_box": {
+      "min_x": -90.0,
+      "max_x": 90.0,
+      "min_y": -456.0,
+      "max_y": 0.0,
+      "min_z": -70.0,
+      "max_z": 70.0
+    },
+    "inventory": {
+      "3622.dat": 12,
+      "3002.dat": 9,
+      "3070b.dat": 7,
+      "3794b.dat": 6,
+      "3005.dat": 6,
+      "6636.dat": 4,
+      "4162.dat": 3,
+      "3003.dat": 3
+    }
+  },
+  {
+    "set_number": "21000-2",
+    "name": "Willis Tower",
+    "theme": "Architecture",
+    "year": "2011",
+    "piece_count": 69,
+    "file_name": "21000-2.ldr",
+    "relative_path": "knowledge_base/normalized/21000-2.ldr",
+    "categories": [
+      "building_town",
+      "castle_historical"
+    ],
+    "tags": [
+      "21000-2",
+      "architecture",
+      "tower",
+      "willis"
+    ],
+    "dominant_colors": [
+      0,
+      71,
+      15
+    ],
+    "bounding_box": {
+      "min_x": -90.0,
+      "max_x": 90.0,
+      "min_y": -456.0,
+      "max_y": 0.0,
+      "min_z": -70.0,
+      "max_z": 70.0
+    },
+    "inventory": {
+      "3622.dat": 12,
+      "3002.dat": 9,
+      "3070b.dat": 7,
+      "3794b.dat": 6,
+      "3005.dat": 6,
+      "6636.dat": 4,
+      "4162.dat": 3,
+      "3003.dat": 3
+    }
+  },
+  {
+    "set_number": "21001-1",
+    "name": "John Hancock Center",
+    "theme": "Architecture",
+    "year": "2008",
+    "piece_count": 69,
+    "file_name": "21001-1.ldr",
+    "relative_path": "knowledge_base/normalized/21001-1.ldr",
+    "categories": [
+      "building_town"
+    ],
+    "tags": [
+      "21001-1",
+      "architecture",
+      "center",
+      "hancock",
+      "john"
+    ],
+    "dominant_colors": [
+      0,
+      71,
+      15
+    ],
+    "bounding_box": {
+      "min_x": -90.0,
+      "max_x": 90.0,
+      "min_y": -392.0,
+      "max_y": 0.0,
+      "min_z": -70.0,
+      "max_z": 70.0
+    },
+    "inventory": {
+      "3794b.dat": 19,
+      "3622.dat": 7,
+      "3002.dat": 7,
+      "6636.dat": 4,
+      "4162.dat": 3,
+      "4032a.dat": 3,
+      "3021.dat": 3,
+      "3001.dat": 3
+    }
+  },
+  {
+    "set_number": "21002-1",
+    "name": "Empire State Building",
+    "theme": "Architecture",
+    "year": "2009",
+    "piece_count": 77,
+    "file_name": "21002-1.ldr",
+    "relative_path": "knowledge_base/normalized/21002-1.ldr",
+    "categories": [
+      "building_town"
+    ],
+    "tags": [
+      "21002-1",
+      "architecture",
+      "building",
+      "empire",
+      "empire state",
+      "state"
+    ],
+    "dominant_colors": [
+      19,
+      0,
+      71
+    ],
+    "bounding_box": {
+      "min_x": -90.0,
+      "max_x": 90.0,
+      "min_y": -448.0,
+      "max_y": 0.0,
+      "min_z": -70.0,
+      "max_z": 70.0
+    },
+    "inventory": {
+      "3004.dat": 13,
+      "3794a.dat": 9,
+      "3069b.dat": 8,
+      "3023.dat": 8,
+      "3002.dat": 7,
+      "6636.dat": 6,
+      "3001.dat": 4,
+      "3005.dat": 4
+    }
+  },
+  {
+    "set_number": "21008-1",
+    "name": "Burj Khalifa",
+    "theme": "Architecture",
+    "year": "2011",
+    "piece_count": 209,
+    "file_name": "21008-1.ldr",
+    "relative_path": "knowledge_base/normalized/21008-1.ldr",
+    "categories": [
+      "building_town"
+    ],
+    "tags": [
+      "21008-1",
+      "architecture",
+      "burj",
+      "khalifa"
+    ],
+    "dominant_colors": [
+      71,
+      0,
+      15
+    ],
+    "bounding_box": {
+      "min_x": -110.0,
+      "max_x": 110.0,
+      "min_y": -594.0,
+      "max_y": 0.0,
+      "min_z": -110.0,
+      "max_z": 110.0
+    },
+    "inventory": {
+      "3062b.dat": 112,
+      "3068b.dat": 23,
+      "4073.dat": 18,
+      "3957a.dat": 13,
+      "3069b.dat": 7,
+      "3794a.dat": 5,
+      "3035.dat": 4,
+      "3032.dat": 4
+    }
+  },
+  {
+    "set_number": "2133-1",
+    "name": "Danone Promotional Set: Impala",
+    "theme": "Universal Building Set > Basic",
+    "year": "1996",
+    "piece_count": 12,
+    "file_name": "2133-1.ldr",
+    "relative_path": "knowledge_base/normalized/2133-1.ldr",
+    "categories": [
+      "building_town"
+    ],
+    "tags": [
+      "2133-1",
+      "basic",
+      "building",
+      "danone",
+      "impala",
+      "promotional",
+      "set",
+      "universal"
+    ],
+    "dominant_colors": [
+      4,
+      14,
+      0
+    ],
+    "bounding_box": {
+      "min_x": -40.0,
+      "max_x": 40.0,
+      "min_y": -64.0,
+      "max_y": 0.0,
+      "min_z": -20.0,
+      "max_z": 20.0
+    },
+    "inventory": {
+      "3023.dat": 3,
+      "3004.dat": 2,
+      "4081b.dat": 2,
+      "3660.dat": 1,
+      "3003.dat": 1,
+      "3003pe2.dat": 1,
+      "3002.dat": 1,
+      "3020.dat": 1
+    }
+  },
+  {
+    "set_number": "2148-1",
+    "name": "LEGO Truck",
+    "theme": "Town > Classic Town",
+    "year": "1997",
+    "piece_count": 111,
+    "file_name": "2148-1.ldr",
+    "relative_path": "knowledge_base/normalized/2148-1.ldr",
+    "categories": [
+      "truck_pickup"
+    ],
+    "tags": [
+      "2148-1",
+      "classic",
+      "lego",
+      "town",
+      "truck"
+    ],
+    "dominant_colors": [
+      14,
+      0,
+      383
+    ],
+    "bounding_box": {
+      "min_x": -203.66,
+      "max_x": 210.5,
+      "min_y": -168.0,
+      "max_y": 0.0,
+      "min_z": -118.98,
+      "max_z": 114.57
+    },
+    "inventory": {
+      "6141.dat": 8,
+      "2412b.dat": 7,
+      "3010.dat": 7,
+      "6014.dat": 6,
+      "6015.dat": 6,
+      "4070.dat": 6,
+      "3023.dat": 5,
+      "4085c.dat": 4
+    }
+  },
+  {
+    "set_number": "2531-1",
+    "name": "Rescue Helicopter and Jeep",
+    "theme": "Town",
+    "year": "1998",
+    "piece_count": 107,
+    "file_name": "2531-1.ldr",
+    "relative_path": "knowledge_base/normalized/2531-1.ldr",
+    "categories": [
+      "service_emergency",
+      "aircraft",
+      "car_civilian"
+    ],
+    "tags": [
+      "2531-1",
+      "and",
+      "helicopter",
+      "jeep",
+      "rescue",
+      "town"
+    ],
+    "dominant_colors": [
+      0,
+      15,
+      4
+    ],
+    "bounding_box": {
+      "min_x": -195.49,
+      "max_x": 201.68,
+      "min_y": -176.0,
+      "max_y": 0.0,
+      "min_z": -220.0,
+      "max_z": 215.49
+    },
+    "inventory": {
+      "3460.dat": 5,
+      "6014.dat": 4,
+      "6015.dat": 4,
+      "3024.dat": 4,
+      "3820.dat": 4,
+      "3023.dat": 4,
+      "3021.dat": 3,
+      "2431.dat": 3
+    }
+  },
+  {
+    "set_number": "2541-1",
+    "name": "Adventurers Car",
+    "theme": "Adventurers > Desert",
+    "year": "1998",
+    "piece_count": 28,
+    "file_name": "2541-1.ldr",
+    "relative_path": "knowledge_base/normalized/2541-1.ldr",
+    "categories": [
+      "car_civilian"
+    ],
+    "tags": [
+      "2541-1",
+      "adventurers",
+      "car",
+      "desert"
+    ],
+    "dominant_colors": [
+      7,
+      0,
+      8
+    ],
+    "bounding_box": {
+      "min_x": -70.0,
+      "max_x": 73.69,
+      "min_y": -81.0,
+      "max_y": -3.0,
+      "min_z": -50.0,
+      "max_z": 40.0
+    },
+    "inventory": {
+      "4624.dat": 4,
+      "3641.dat": 4,
+      "4600.dat": 2,
+      "6141.dat": 2,
+      "2420.dat": 2,
+      "3795.dat": 1,
+      "2540.dat": 1,
+      "3815c01.dat": 1
+    }
+  },
+  {
+    "set_number": "2542-1",
+    "name": "Adventurers Aeroplane",
+    "theme": "Adventurers > Desert",
+    "year": "1998",
+    "piece_count": 25,
+    "file_name": "2542-1.ldr",
+    "relative_path": "knowledge_base/normalized/2542-1.ldr",
+    "categories": [
+      "aircraft"
+    ],
+    "tags": [
+      "2542-1",
+      "adventurers",
+      "aeroplane",
+      "desert"
+    ],
+    "dominant_colors": [
+      0,
+      7,
+      19
+    ],
+    "bounding_box": {
+      "min_x": -90.0,
+      "max_x": 83.69,
+      "min_y": -81.0,
+      "max_y": -3.0,
+      "min_z": -68.0,
+      "max_z": 70.0
+    },
+    "inventory": {
+      "4624.dat": 2,
+      "3641.dat": 2,
+      "3820.dat": 2,
+      "2420.dat": 2,
+      "4600.dat": 1,
+      "3022.dat": 1,
+      "3815c01.dat": 1,
+      "4871.dat": 1
+    }
+  },
+  {
+    "set_number": "2584-1",
+    "name": "Biker Bob",
+    "theme": "Town > Town Jr.",
+    "year": "1998",
+    "piece_count": 21,
+    "file_name": "2584-1.ldr",
+    "relative_path": "knowledge_base/normalized/2584-1.ldr",
+    "categories": [
+      "figure_character"
+    ],
+    "tags": [
+      "2584-1",
+      "biker",
+      "bob",
+      "jr",
+      "town"
+    ],
+    "dominant_colors": [
+      0,
+      7,
+      57
+    ],
+    "bounding_box": {
+      "min_x": -78.0,
+      "max_x": 76.4,
+      "min_y": -64.02,
+      "max_y": 3.98,
+      "min_z": -78.91,
+      "max_z": 70.0
+    },
+    "inventory": {
+      "3070a.dat": 2,
+      "3820.dat": 2,
+      "6126a.dat": 2,
+      "4081b.dat": 2,
+      "3817.dat": 1,
+      "3816.dat": 1,
+      "3815.dat": 1,
+      "30187c01.dat": 1
+    }
+  },
+  {
+    "set_number": "2845-1",
+    "name": "Indian Chief",
+    "theme": "Western",
+    "year": "1997",
+    "piece_count": 37,
+    "file_name": "2845-1.ldr",
+    "relative_path": "knowledge_base/normalized/2845-1.ldr",
+    "categories": [
+      "figure_character",
+      "castle_historical"
+    ],
+    "tags": [
+      "2845-1",
+      "chief",
+      "indian",
+      "western"
+    ],
+    "dominant_colors": [
+      14,
+      6,
+      0
+    ],
+    "bounding_box": {
+      "min_x": -69.17,
+      "max_x": 69.0,
+      "min_y": -144.0,
+      "max_y": -1.0,
+      "min_z": -60.37,
+      "max_z": 60.0
+    },
+    "inventory": {
+      "t04o6250.dat": 9,
+      "3820.dat": 2,
+      "6091.dat": 2,
+      "4070.dat": 2,
+      "4498.dat": 1,
+      "4499.dat": 1,
+      "3039.dat": 1,
+      "3816pw1.dat": 1
+    }
+  },
+  {
+    "set_number": "2846-1",
+    "name": "Indian Kayak",
+    "theme": "Western",
+    "year": "1997",
+    "piece_count": 35,
+    "file_name": "2846-1.ldr",
+    "relative_path": "knowledge_base/normalized/2846-1.ldr",
+    "categories": [
+      "watercraft",
+      "castle_historical"
+    ],
+    "tags": [
+      "2846-1",
+      "indian",
+      "kayak",
+      "western"
+    ],
+    "dominant_colors": [
+      14,
+      0,
+      19
+    ],
+    "bounding_box": {
+      "min_x": -30.0,
+      "max_x": 30.0,
+      "min_y": -93.0,
+      "max_y": 0.0,
+      "min_z": -40.0,
+      "max_z": 50.0
+    },
+    "inventory": {
+      "t04o6250.dat": 6,
+      "61252.dat": 2,
+      "6215.dat": 2,
+      "3820.dat": 2,
+      "t16o6250.dat": 2,
+      "t08o6250.dat": 2,
+      "3034.dat": 1,
+      "4497.dat": 1
+    }
+  },
+  {
+    "set_number": "2882-1",
+    "name": "Speedboat",
+    "theme": "Town > Classic Town",
+    "year": "1997",
+    "piece_count": 28,
+    "file_name": "2882-1.ldr",
+    "relative_path": "knowledge_base/normalized/2882-1.ldr",
+    "categories": [
+      "watercraft"
+    ],
+    "tags": [
+      "2882-1",
+      "classic",
+      "speedboat",
+      "town"
+    ],
+    "dominant_colors": [
+      4,
+      0,
+      15
+    ],
+    "bounding_box": {
+      "min_x": -80.0,
+      "max_x": 90.0,
+      "min_y": -71.01,
+      "max_y": 0.0,
+      "min_z": -30.01,
+      "max_z": 30.0
+    },
+    "inventory": {
+      "3666.dat": 4,
+      "3024.dat": 2,
+      "4859.dat": 2,
+      "3820.dat": 2,
+      "3022.dat": 1,
+      "3816.dat": 1,
+      "3817.dat": 1,
+      "3829c01.dat": 1
+    }
+  },
+  {
+    "set_number": "2962-1",
+    "name": "Res-Q Lifeguard",
+    "theme": "Town > Res-Q",
+    "year": "1998",
+    "piece_count": 81,
+    "file_name": "2962-1.ldr",
+    "relative_path": "knowledge_base/normalized/2962-1.ldr",
+    "categories": [
+      "service_emergency"
+    ],
+    "tags": [
+      "2962-1",
+      "lifeguard",
+      "res-q",
+      "town"
+    ],
+    "dominant_colors": [
+      0,
+      14,
+      15
+    ],
+    "bounding_box": {
+      "min_x": -106.0,
+      "max_x": 100.0,
+      "min_y": -232.03,
+      "max_y": 0.97,
+      "min_z": -139.93,
+      "max_z": 130.0
+    },
+    "inventory": {
+      "3004.dat": 6,
+      "6015.dat": 4,
+      "6014.dat": 4,
+      "3820.dat": 4,
+      "3024.dat": 4,
+      "4865b.dat": 4,
+      "3816.dat": 2,
+      "3817.dat": 2
+    }
+  },
+  {
+    "set_number": "30022-1",
+    "name": "Bee",
+    "theme": "Creator",
+    "year": "2011",
+    "piece_count": 24,
+    "file_name": "30022-1.ldr",
+    "relative_path": "knowledge_base/normalized/30022-1.ldr",
+    "categories": [
+      "creature_animal"
+    ],
+    "tags": [
+      "30022-1",
+      "bee",
+      "creator"
+    ],
+    "dominant_colors": [
+      0,
+      14,
+      15
+    ],
+    "bounding_box": {
+      "min_x": -68.0,
+      "max_x": 76.0,
+      "min_y": -70.0,
+      "max_y": 4.0,
+      "min_z": -60.0,
+      "max_z": 60.0
+    },
+    "inventory": {
+      "87620.dat": 2,
+      "87081.dat": 2,
+      "30541.dat": 2,
+      "6141.dat": 2,
+      "43898.dat": 2,
+      "4592.dat": 2,
+      "4593.dat": 2,
+      "3005.dat": 2
+    }
+  },
+  {
+    "set_number": "30023-1",
+    "name": "Lighthouse",
+    "theme": "Creator",
+    "year": "2011",
+    "piece_count": 25,
+    "file_name": "30023-1.ldr",
+    "relative_path": "knowledge_base/normalized/30023-1.ldr",
+    "categories": [
+      "building_town"
+    ],
+    "tags": [
+      "30023-1",
+      "creator",
+      "lighthouse"
+    ],
+    "dominant_colors": [
+      4,
+      71,
+      0
+    ],
+    "bounding_box": {
+      "min_x": -30.0,
+      "max_x": 30.0,
+      "min_y": -240.0,
+      "max_y": 0.0,
+      "min_z": -40.0,
+      "max_z": 40.0
+    },
+    "inventory": {
+      "85080.dat": 8,
+      "87081.dat": 4,
+      "3039.dat": 2,
+      "54200.dat": 2,
+      "2419.dat": 2,
+      "3941.dat": 2,
+      "3031.dat": 1,
+      "3001.dat": 1
+    }
+  },
+  {
+    "set_number": "30024-1",
+    "name": "Truck",
+    "theme": "Creator",
+    "year": "2011",
+    "piece_count": 56,
+    "file_name": "30024-1.ldr",
+    "relative_path": "knowledge_base/normalized/30024-1.ldr",
+    "categories": [
+      "truck_pickup"
+    ],
+    "tags": [
+      "30024-1",
+      "creator",
+      "truck"
+    ],
+    "dominant_colors": [
+      71,
+      15,
+      1
+    ],
+    "bounding_box": {
+      "min_x": -80.0,
+      "max_x": 80.0,
+      "min_y": -96.0,
+      "max_y": 0.0,
+      "min_z": -30.0,
+      "max_z": 30.0
+    },
+    "inventory": {
+      "54200.dat": 6,
+      "4624.dat": 4,
+      "87414.dat": 4,
+      "3062b.dat": 4,
+      "3021.dat": 4,
+      "3034.dat": 2,
+      "4600.dat": 2,
+      "4081b.dat": 2
+    }
+  },
+  {
+    "set_number": "30025-1",
+    "name": "Clown Fish",
+    "theme": "Creator",
+    "year": "2011",
+    "piece_count": 59,
+    "file_name": "30025-1.ldr",
+    "relative_path": "knowledge_base/normalized/30025-1.ldr",
+    "categories": [
+      "creature_animal"
+    ],
+    "tags": [
+      "30025-1",
+      "clown",
+      "creator",
+      "fish"
+    ],
+    "dominant_colors": [
+      25,
+      0,
+      15
+    ],
+    "bounding_box": {
+      "min_x": -90.0,
+      "max_x": 90.0,
+      "min_y": -112.0,
+      "max_y": 0.0,
+      "min_z": -70.0,
+      "max_z": 70.0
+    },
+    "inventory": {
+      "3004.dat": 9,
+      "3023.dat": 6,
+      "61252.dat": 4,
+      "60478.dat": 4,
+      "3024.dat": 4,
+      "3021.dat": 3,
+      "54200.dat": 3,
+      "60897.dat": 2
+    }
+  },
+  {
+    "set_number": "30026-1",
+    "name": "Panda",
+    "theme": "Creator",
+    "year": "2011",
+    "piece_count": 61,
+    "file_name": "30026-1.ldr",
+    "relative_path": "knowledge_base/normalized/30026-1.ldr",
+    "categories": [
+      "creature_animal"
+    ],
+    "tags": [
+      "30026-1",
+      "creator",
+      "panda"
+    ],
+    "dominant_colors": [
+      0,
+      15,
+      2
+    ],
+    "bounding_box": {
+      "min_x": -100.0,
+      "max_x": 90.0,
+      "min_y": -90.0,
+      "max_y": 0.0,
+      "min_z": -30.0,
+      "max_z": 30.0
+    },
+    "inventory": {
+      "3040b.dat": 4,
+      "3665b.dat": 4,
+      "2780.dat": 4,
+      "6541.dat": 4,
+      "3700.dat": 4,
+      "3794a.dat": 4,
+      "3070b.dat": 4,
+      "6091.dat": 4
+    }
+  },
+  {
+    "set_number": "30027-1",
+    "name": "Reindeer",
+    "theme": "Creator",
+    "year": "2011",
+    "piece_count": 66,
+    "file_name": "30027-1.ldr",
+    "relative_path": "knowledge_base/normalized/30027-1.ldr",
+    "categories": [
+      "creature_animal"
+    ],
+    "tags": [
+      "30027-1",
+      "creator",
+      "reindeer"
+    ],
+    "dominant_colors": [
+      70,
+      19,
+      15
+    ],
+    "bounding_box": {
+      "min_x": -112.0,
+      "max_x": 112.0,
+      "min_y": -128.0,
+      "max_y": -2.0,
+      "min_z": -32.0,
+      "max_z": 32.0
+    },
+    "inventory": {
+      "54200.dat": 13,
+      "2420.dat": 6,
+      "60478.dat": 5,
+      "61252.dat": 5,
+      "6141.dat": 5,
+      "3024.dat": 4,
+      "3623.dat": 4,
+      "4070.dat": 4
+    }
+  },
+  {
+    "set_number": "30028-1",
+    "name": "Wreath",
+    "theme": "Seasonal > Christmas",
+    "year": "2011",
+    "piece_count": 50,
+    "file_name": "30028-1.ldr",
+    "relative_path": "knowledge_base/normalized/30028-1.ldr",
+    "categories": [
+      "seasonal_holiday"
+    ],
+    "tags": [
+      "30028-1",
+      "christmas",
+      "seasonal",
+      "wreath"
+    ],
+    "dominant_colors": [
+      2,
+      14,
+      4
+    ],
+    "bounding_box": {
+      "min_x": -90.7,
+      "max_x": 83.46,
+      "min_y": -211.61,
+      "max_y": -2.51,
+      "min_z": 0.0,
+      "max_z": 10.0
+    },
+    "inventory": {
+      "48336.dat": 9,
+      "60470b.dat": 9,
+      "3022.dat": 7,
+      "3039.dat": 7,
+      "6141.dat": 6,
+      "4032a.dat": 4,
+      "48729b.dat": 2,
+      "43898.dat": 2
+    }
+  },
+  {
+    "set_number": "30029-1",
+    "name": "Pudsey Bear",
+    "theme": "Creator",
+    "year": "2011",
+    "piece_count": 94,
+    "file_name": "30029-1.ldr",
+    "relative_path": "knowledge_base/normalized/30029-1.ldr",
+    "categories": [
+      "creature_animal"
+    ],
+    "tags": [
+      "30029-1",
+      "bear",
+      "creator",
+      "pudsey"
+    ],
+    "dominant_colors": [
+      14,
+      15,
+      0
+    ],
+    "bounding_box": {
+      "min_x": -73.64,
+      "max_x": 73.64,
+      "min_y": -178.0,
+      "max_y": 0.0,
+      "min_z": -41.01,
+      "max_z": 50.0
+    },
+    "inventory": {
+      "3023.dat": 12,
+      "3024.dat": 8,
+      "50746.dat": 8,
+      "6141.dat": 5,
+      "6541.dat": 4,
+      "2420.dat": 4,
+      "4070.dat": 4,
+      "3022.dat": 3
+    }
+  },
+  {
+    "set_number": "30030-1",
+    "name": "Racing Car",
+    "theme": "Racers",
+    "year": "2010",
+    "piece_count": 29,
+    "file_name": "30030-1.ldr",
+    "relative_path": "knowledge_base/normalized/30030-1.ldr",
+    "categories": [
+      "car_racing",
+      "car_civilian"
+    ],
+    "tags": [
+      "30030-1",
+      "car",
+      "racers",
+      "racing"
+    ],
+    "dominant_colors": [
+      0,
+      4,
+      15
+    ],
+    "bounding_box": {
+      "min_x": -50.0,
+      "max_x": 50.0,
+      "min_y": -48.0,
+      "max_y": 0.0,
+      "min_z": -80.0,
+      "max_z": 82.0
+    },
+    "inventory": {
+      "51719.dat": 4,
+      "50951.dat": 4,
+      "3034.dat": 2,
+      "6141.dat": 2,
+      "2926.dat": 2,
+      "50947.dat": 2,
+      "2540.dat": 2,
+      "54200.dat": 2
+    }
+  },
+  {
+    "set_number": "30033-1",
+    "name": "Racing Truck",
+    "theme": "Racers",
+    "year": "2010",
+    "piece_count": 40,
+    "file_name": "30033-1.ldr",
+    "relative_path": "knowledge_base/normalized/30033-1.ldr",
+    "categories": [
+      "car_racing",
+      "truck_pickup"
+    ],
+    "tags": [
+      "30033-1",
+      "racers",
+      "racing",
+      "truck"
+    ],
+    "dominant_colors": [
+      0,
+      9,
+      15
+    ],
+    "bounding_box": {
+      "min_x": -40.0,
+      "max_x": 40.0,
+      "min_y": -88.0,
+      "max_y": 0.0,
+      "min_z": -122.0,
+      "max_z": 120.0
+    },
+    "inventory": {
+      "3021.dat": 5,
+      "51719.dat": 4,
+      "50951.dat": 4,
+      "3794b.dat": 4,
+      "3034.dat": 3,
+      "3710.dat": 3,
+      "6157.dat": 2,
+      "3623.dat": 2
+    }
+  },
+  {
+    "set_number": "30034-1",
+    "name": "Racing Tow Truck",
+    "theme": "Racers",
+    "year": "2010",
+    "piece_count": 34,
+    "file_name": "30034-1.ldr",
+    "relative_path": "knowledge_base/normalized/30034-1.ldr",
+    "categories": [
+      "car_racing",
+      "truck_pickup"
+    ],
+    "tags": [
+      "30034-1",
+      "racers",
+      "racing",
+      "tow",
+      "tow truck",
+      "truck"
+    ],
+    "dominant_colors": [
+      0,
+      14,
+      7
+    ],
+    "bounding_box": {
+      "min_x": -40.0,
+      "max_x": 40.0,
+      "min_y": -64.0,
+      "max_y": 2.0,
+      "min_z": -102.0,
+      "max_z": 110.76
+    },
+    "inventory": {
+      "51719.dat": 4,
+      "50951.dat": 4,
+      "6157.dat": 2,
+      "3023.dat": 2,
+      "3710.dat": 2,
+      "3010.dat": 2,
+      "3022.dat": 2,
+      "6141.dat": 2
+    }
+  },
+  {
+    "set_number": "30035-1",
+    "name": "Racing Car",
+    "theme": "Racers",
+    "year": "2010",
+    "piece_count": 30,
+    "file_name": "30035-1.ldr",
+    "relative_path": "knowledge_base/normalized/30035-1.ldr",
+    "categories": [
+      "car_racing",
+      "car_civilian"
+    ],
+    "tags": [
+      "30035-1",
+      "car",
+      "racers",
+      "racing"
+    ],
+    "dominant_colors": [
+      8,
+      0,
+      25
+    ],
+    "bounding_box": {
+      "min_x": -43.0,
+      "max_x": 43.0,
+      "min_y": -65.86,
+      "max_y": -3.0,
+      "min_z": -82.17,
+      "max_z": 76.41
+    },
+    "inventory": {
+      "6014.dat": 4,
+      "87697.dat": 4,
+      "50947.dat": 4,
+      "3022.dat": 3,
+      "3020.dat": 3,
+      "6157.dat": 2,
+      "3795.dat": 2,
+      "30602.dat": 2
+    }
+  },
+  {
+    "set_number": "30036-1",
+    "name": "Buggy Racer",
+    "theme": "Racers",
+    "year": "2011",
+    "piece_count": 28,
+    "file_name": "30036-1.ldr",
+    "relative_path": "knowledge_base/normalized/30036-1.ldr",
+    "categories": [
+      "car_racing",
+      "car_civilian"
+    ],
+    "tags": [
+      "30036-1",
+      "buggy",
+      "racer",
+      "racers"
+    ],
+    "dominant_colors": [
+      0,
+      14,
+      256
+    ],
+    "bounding_box": {
+      "min_x": -40.0,
+      "max_x": 40.0,
+      "min_y": -55.22,
+      "max_y": -3.0,
+      "min_z": -62.17,
+      "max_z": 70.0
+    },
+    "inventory": {
+      "51719.dat": 4,
+      "50951.dat": 4,
+      "50950.dat": 4,
+      "6157.dat": 2,
+      "3020.dat": 2,
+      "50947.dat": 2,
+      "2412b.dat": 2,
+      "3795.dat": 1
+    }
+  },
+  {
+    "set_number": "30050-1",
+    "name": "Republic Attack Shuttle - Mini",
+    "theme": "Star Wars",
+    "year": "2010",
+    "piece_count": 56,
+    "file_name": "30050-1.ldr",
+    "relative_path": "knowledge_base/normalized/30050-1.ldr",
+    "categories": [
+      "spacecraft"
+    ],
+    "tags": [
+      "30050-1",
+      "attack",
+      "mini",
+      "republic",
+      "shuttle",
+      "star",
+      "star wars",
+      "wars"
+    ],
+    "dominant_colors": [
+      15,
+      320,
+      43
+    ],
+    "bounding_box": {
+      "min_x": -64.0,
+      "max_x": 64.0,
+      "min_y": -76.0,
+      "max_y": 0.0,
+      "min_z": -86.55,
+      "max_z": 92.0
+    },
+    "inventory": {
+      "54200.dat": 7,
+      "6141.dat": 6,
+      "3020.dat": 4,
+      "3021.dat": 4,
+      "60470a.dat": 4,
+      "3794a.dat": 4,
+      "3957a.dat": 2,
+      "4592.dat": 2
+    }
+  },
+  {
+    "set_number": "30051-1",
+    "name": "X-wing Fighter - Mini",
+    "theme": "Star Wars",
+    "year": "2010",
+    "piece_count": 61,
+    "file_name": "30051-1.ldr",
+    "relative_path": "knowledge_base/normalized/30051-1.ldr",
+    "categories": [
+      "spacecraft"
+    ],
+    "tags": [
+      "30051-1",
+      "fighter",
+      "mini",
+      "star",
+      "star wars",
+      "wars",
+      "x-wing"
+    ],
+    "dominant_colors": [
+      71,
+      15,
+      72
+    ],
+    "bounding_box": {
+      "min_x": -103.13,
+      "max_x": 103.13,
+      "min_y": -98.16,
+      "max_y": -1.84,
+      "min_z": -100.0,
+      "max_z": 90.0
+    },
+    "inventory": {
+      "6141.dat": 9,
+      "61184.dat": 4,
+      "6019.dat": 4,
+      "63868.dat": 4,
+      "3957a.dat": 4,
+      "3062b.dat": 4,
+      "4274.dat": 4,
+      "60470a.dat": 4
+    }
+  },
+  {
+    "set_number": "30052-1",
+    "name": "AAT - Mini",
+    "theme": "Star Wars",
+    "year": "2011",
+    "piece_count": 46,
+    "file_name": "30052-1.ldr",
+    "relative_path": "knowledge_base/normalized/30052-1.ldr",
+    "categories": [
+      "spacecraft"
+    ],
+    "tags": [
+      "30052-1",
+      "aat",
+      "mini",
+      "star",
+      "star wars",
+      "wars"
+    ],
+    "dominant_colors": [
+      19,
+      28,
+      71
+    ],
+    "bounding_box": {
+      "min_x": -50.0,
+      "max_x": 50.0,
+      "min_y": -112.0,
+      "max_y": 0.0,
+      "min_z": -73.0,
+      "max_z": 70.0
+    },
+    "inventory": {
+      "3023.dat": 6,
+      "3794a.dat": 6,
+      "54200.dat": 5,
+      "2654.dat": 3,
+      "30565.dat": 2,
+      "30357.dat": 2,
+      "3022.dat": 2,
+      "30162.dat": 2
+    }
+  },
+  {
+    "set_number": "30053-1",
+    "name": "Republic Attack Cruiser - Mini",
+    "theme": "Star Wars",
+    "year": "2011",
+    "piece_count": 41,
+    "file_name": "30053-1.ldr",
+    "relative_path": "knowledge_base/normalized/30053-1.ldr",
+    "categories": [
+      "watercraft",
+      "spacecraft",
+      "car_civilian"
+    ],
+    "tags": [
+      "30053-1",
+      "attack",
+      "cruiser",
+      "mini",
+      "republic",
+      "star",
+      "star wars",
+      "wars"
+    ],
+    "dominant_colors": [
+      71,
+      72,
+      43
+    ],
+    "bounding_box": {
+      "min_x": -30.0,
+      "max_x": 30.0,
+      "min_y": -68.0,
+      "max_y": 0.0,
+      "min_z": -120.0,
+      "max_z": 126.0
+    },
+    "inventory": {
+      "3794a.dat": 10,
+      "6141.dat": 6,
+      "3062b.dat": 2,
+      "4081b.dat": 2,
+      "2412b.dat": 2,
+      "63864.dat": 2,
+      "3623.dat": 2,
+      "54200.dat": 2
+    }
+  },
+  {
+    "set_number": "30054-1",
+    "name": "AT-ST - Mini",
+    "theme": "Star Wars",
+    "year": "2011",
+    "piece_count": 47,
+    "file_name": "30054-1.ldr",
+    "relative_path": "knowledge_base/normalized/30054-1.ldr",
+    "categories": [
+      "spacecraft"
+    ],
+    "tags": [
+      "30054-1",
+      "at-st",
+      "mini",
+      "star",
+      "star wars",
+      "wars"
+    ],
+    "dominant_colors": [
+      71,
+      72,
+      0
+    ],
+    "bounding_box": {
+      "min_x": -46.0,
+      "max_x": 42.0,
+      "min_y": -184.0,
+      "max_y": -3.72,
+      "min_z": -50.0,
+      "max_z": 40.0
+    },
+    "inventory": {
+      "3794a.dat": 5,
+      "4740.dat": 4,
+      "30554a.dat": 4,
+      "6141.dat": 2,
+      "44300.dat": 2,
+      "32039.dat": 2,
+      "32062.dat": 2,
+      "30553.dat": 2
+    }
+  },
+  {
+    "set_number": "30055-1",
+    "name": "Vulture Droid - Mini",
+    "theme": "Star Wars",
+    "year": "2011",
+    "piece_count": 42,
+    "file_name": "30055-1.ldr",
+    "relative_path": "knowledge_base/normalized/30055-1.ldr",
+    "categories": [
+      "spacecraft"
+    ],
+    "tags": [
+      "30055-1",
+      "droid",
+      "mini",
+      "star",
+      "star wars",
+      "vulture",
+      "wars"
+    ],
+    "dominant_colors": [
+      272,
+      72,
+      71
+    ],
+    "bounding_box": {
+      "min_x": -84.21,
+      "max_x": 82.21,
+      "min_y": -56.24,
+      "max_y": 1.98,
+      "min_z": -80.0,
+      "max_z": 71.63
+    },
+    "inventory": {
+      "61678.dat": 8,
+      "3023.dat": 5,
+      "2412b.dat": 4,
+      "3710.dat": 4,
+      "2654.dat": 3,
+      "48336.dat": 2,
+      "60470a.dat": 2,
+      "63868.dat": 2
+    }
+  },
+  {
+    "set_number": "30056-1",
+    "name": "Star Destroyer",
+    "theme": "Star Wars",
+    "year": "2012",
+    "piece_count": 38,
+    "file_name": "30056-1.ldr",
+    "relative_path": "knowledge_base/normalized/30056-1.ldr",
+    "categories": [
+      "spacecraft"
+    ],
+    "tags": [
+      "30056-1",
+      "destroyer",
+      "star",
+      "star wars",
+      "wars"
+    ],
+    "dominant_colors": [
+      71,
+      72,
+      43
+    ],
+    "bounding_box": {
+      "min_x": -60.0,
+      "max_x": 60.0,
+      "min_y": -80.0,
+      "max_y": 0.0,
+      "min_z": -90.0,
+      "max_z": 80.0
+    },
+    "inventory": {
+      "6141.dat": 7,
+      "3794b.dat": 6,
+      "3020.dat": 3,
+      "61409.dat": 2,
+      "54383.dat": 2,
+      "54384.dat": 2,
+      "43723.dat": 2,
+      "43722.dat": 2
+    }
+  },
+  {
+    "set_number": "30090-1",
+    "name": "Desert Glider",
+    "theme": "Pharaoh's Quest",
+    "year": "2011",
+    "piece_count": 33,
+    "file_name": "30090-1.ldr",
+    "relative_path": "knowledge_base/normalized/30090-1.ldr",
+    "categories": [
+      "aircraft"
+    ],
+    "tags": [
+      "30090-1",
+      "desert",
+      "glider",
+      "pharaoh",
+      "quest",
+      "s"
+    ],
+    "dominant_colors": [
+      72,
+      320,
+      0
+    ],
+    "bounding_box": {
+      "min_x": -60.0,
+      "max_x": 60.0,
+      "min_y": -117.0,
+      "max_y": -2.0,
+      "min_z": -56.0,
+      "max_z": 60.0
+    },
+    "inventory": {
+      "3023.dat": 3,
+      "3710.dat": 3,
+      "30162.dat": 2,
+      "6141.dat": 2,
+      "977.dat": 2,
+      "2496.dat": 1,
+      "2655.dat": 1,
+      "3795.dat": 1
+    }
+  },
+  {
+    "set_number": "30091-1",
+    "name": "Desert Rover",
+    "theme": "Pharaoh's Quest",
+    "year": "2011",
+    "piece_count": 35,
+    "file_name": "30091-1.ldr",
+    "relative_path": "knowledge_base/normalized/30091-1.ldr",
+    "categories": [
+      "car_civilian"
+    ],
+    "tags": [
+      "30091-1",
+      "desert",
+      "pharaoh",
+      "quest",
+      "rover",
+      "s"
+    ],
+    "dominant_colors": [
+      0,
+      71,
+      320
+    ],
+    "bounding_box": {
+      "min_x": -30.0,
+      "max_x": 30.0,
+      "min_y": -93.0,
+      "max_y": 0.0,
+      "min_z": -42.0,
+      "max_z": 50.0
+    },
+    "inventory": {
+      "4624.dat": 4,
+      "87414.dat": 4,
+      "6141.dat": 3,
+      "4600.dat": 2,
+      "3710.dat": 2,
+      "50947.dat": 2,
+      "4081b.dat": 2,
+      "977.dat": 2
+    }
+  },
+  {
+    "set_number": "30100-1",
+    "name": "Andrea on the Beach",
+    "theme": "Friends",
+    "year": "2012",
+    "piece_count": 31,
+    "file_name": "30100-1.ldr",
+    "relative_path": "knowledge_base/normalized/30100-1.ldr",
+    "categories": [
+      "figure_character"
+    ],
+    "tags": [
+      "30100-1",
+      "andrea",
+      "beach",
+      "friends",
+      "on",
+      "the"
+    ],
+    "dominant_colors": [
+      19,
+      84,
+      43
+    ],
+    "bounding_box": {
+      "min_x": -100.0,
+      "max_x": 90.0,
+      "min_y": -110.0,
+      "max_y": 0.0,
+      "min_z": -70.0,
+      "max_z": 72.0
+    },
+    "inventory": {
+      "6141.dat": 9,
+      "59900.dat": 5,
+      "2599.dat": 2,
+      "92250p05.dat": 1,
+      "3032.dat": 1,
+      "48245.dat": 1,
+      "3837.dat": 1,
+      "64648.dat": 1
+    }
+  },
+  {
+    "set_number": "30101-1",
+    "name": "Skate Boarder",
+    "theme": "Friends",
+    "year": "2012",
+    "piece_count": 29,
+    "file_name": "30101-1.ldr",
+    "relative_path": "knowledge_base/normalized/30101-1.ldr",
+    "categories": [
+      "figure_character"
+    ],
+    "tags": [
+      "30101-1",
+      "boarder",
+      "friends",
+      "skate"
+    ],
+    "dominant_colors": [
+      27,
+      78,
+      19
+    ],
+    "bounding_box": {
+      "min_x": -74.09,
+      "max_x": 80.0,
+      "min_y": -112.0,
+      "max_y": 0.0,
+      "min_z": -60.0,
+      "max_z": 50.0
+    },
+    "inventory": {
+      "33291.dat": 3,
+      "87580.dat": 2,
+      "3068b.dat": 2,
+      "4032a.dat": 2,
+      "3062b.dat": 2,
+      "6141.dat": 2,
+      "92251p01.dat": 1,
+      "3032.dat": 1
+    }
+  },
+  {
+    "set_number": "30102-1",
+    "name": "Desk",
+    "theme": "Friends",
+    "year": "2012",
+    "piece_count": 27,
+    "file_name": "30102-1.ldr",
+    "relative_path": "knowledge_base/normalized/30102-1.ldr",
+    "categories": [
+      "figure_character",
+      "furniture_props"
+    ],
+    "tags": [
+      "30102-1",
+      "desk",
+      "friends"
+    ],
+    "dominant_colors": [
+      29,
+      322,
+      78
+    ],
+    "bounding_box": {
+      "min_x": -50.0,
+      "max_x": 50.0,
+      "min_y": -112.0,
+      "max_y": 0.0,
+      "min_z": -58.6,
+      "max_z": 60.0
+    },
+    "inventory": {
+      "6141.dat": 5,
+      "3062b.dat": 4,
+      "3659.dat": 2,
+      "3941.dat": 1,
+      "4150.dat": 1,
+      "92248.dat": 1,
+      "92252p01.dat": 1,
+      "6180.dat": 1
+    }
+  },
+  {
+    "set_number": "30103-1",
+    "name": "Car",
+    "theme": "Friends",
+    "year": "2012",
+    "piece_count": 35,
+    "file_name": "30103-1.ldr",
+    "relative_path": "knowledge_base/normalized/30103-1.ldr",
+    "categories": [
+      "figure_character",
+      "car_civilian"
+    ],
+    "tags": [
+      "30103-1",
+      "car",
+      "friends"
+    ],
+    "dominant_colors": [
+      15,
+      29,
+      179
+    ],
+    "bounding_box": {
+      "min_x": -62.0,
+      "max_x": 70.0,
+      "min_y": -82.0,
+      "max_y": -2.0,
+      "min_z": -30.0,
+      "max_z": 30.0
+    },
+    "inventory": {
+      "93594.dat": 4,
+      "50951.dat": 4,
+      "3069b.dat": 3,
+      "3023.dat": 3,
+      "3022.dat": 2,
+      "3622.dat": 2,
+      "4081b.dat": 2,
+      "2441.dat": 1
+    }
+  }
+]

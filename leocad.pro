@@ -190,6 +190,9 @@ ios {
 }
 
 SOURCES += \
+	common/lc_kb_catalog.cpp \
+	common/lc_aigenerator.cpp \
+	common/lc_aiwidget.cpp \
 	common/camera.cpp \
 	common/group.cpp \
 	common/lc_aboutdialog.cpp \
@@ -274,6 +277,9 @@ SOURCES += \
 	qt/lc_renderdialog.cpp \
 	qt/qtmain.cpp
 HEADERS += \
+	common/lc_kb_catalog.h \
+	common/lc_aigenerator.h \
+	common/lc_aiwidget.h \
 	common/camera.h \
 	common/group.h \
 	common/lc_aboutdialog.h \

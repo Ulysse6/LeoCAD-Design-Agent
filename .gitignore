@@ -1,4 +1,4 @@
-﻿*.suo
+*.suo
 *.sln
 *.vcxproj
 *.filters
@@ -17,6 +17,7 @@
 *.dat
 *.mpd
 !/resources/*.ldr
+!/knowledge_base/**
 *.dae
 *.3ds
 *.obj
@@ -38,3 +39,5 @@ uic_wrapper.bat
 appdir
 LeoCAD-Windows*.exe
 *.snap
+library.zip
+tools/__pycache__/

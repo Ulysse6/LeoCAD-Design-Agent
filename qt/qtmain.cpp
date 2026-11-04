@@ -157,6 +157,10 @@ int main(int argc, char *argv[])
 
 #ifdef Q_OS_LINUX
 	LibraryPaths += qMakePair(QDir::cleanPath(QCoreApplication::applicationDirPath() + "/../share/leocad/library.bin"), true);
+	LibraryPaths += qMakePair(QDir::cleanPath(QCoreApplication::applicationDirPath() + "/../../library.zip"), false);
+	LibraryPaths += qMakePair(QDir::cleanPath(QCoreApplication::applicationDirPath() + "/library.zip"), false);
+	LibraryPaths += qMakePair(QDir::cleanPath(QDir::currentPath() + "/library.zip"), false);
+	LibraryPaths += qMakePair(QString::fromLatin1("/home/ulyss/Documents/LeoFork/leocad/library.zip"), false);
 #endif
 
 #ifdef Q_OS_MAC

@@ -68,6 +68,7 @@ public:
 	QString mSaveCOLLADAName;
 	QString mSaveCSVName;
 	QString mSaveHTMLName;
+	QString mAIPrompt;
 	QList<QPair<QString, bool>> mLibraryPaths;
 	QString mStdOut;
 	QString mStdErr;

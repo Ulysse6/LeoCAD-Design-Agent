@@ -1,0 +1,1052 @@
+{
+  "10013-1": {
+    "set_number": "10013-1",
+    "name": "Open Freight Wagon",
+    "theme": "Train &gt; 9V",
+    "year": "2001",
+    "pieces": 136,
+    "file_name": "10013-1.mpd",
+    "omr_id": "1414",
+    "source_url": "https://library.ldraw.org/media/omr_models/1750/10013-1.mpd?v=1758937660"
+  },
+  "10016-1": {
+    "set_number": "10016-1",
+    "name": "Tanker",
+    "theme": "Train &gt; 9V",
+    "year": "2001",
+    "pieces": 113,
+    "file_name": "10016-1.mpd",
+    "omr_id": "1417",
+    "source_url": "https://library.ldraw.org/media/omr_models/1753/10016-1.mpd?v=1758937660"
+  },
+  "10156-1": {
+    "set_number": "10156-1",
+    "name": "LEGO Truck",
+    "theme": "Town",
+    "year": "2004",
+    "pieces": 113,
+    "file_name": "10156-1.mpd",
+    "omr_id": "659",
+    "source_url": "https://library.ldraw.org/media/omr_models/720/10156-1.mpd?v=1758937625"
+  },
+  "1029-1": {
+    "set_number": "1029-1",
+    "name": "Milk Delivery Truck - Tine",
+    "theme": "Town",
+    "year": "1999",
+    "pieces": 102,
+    "file_name": "1029-1.mpd",
+    "omr_id": "565",
+    "source_url": "https://library.ldraw.org/media/omr_models/625/1029-1.mpd?v=1758937623"
+  },
+  "106-1": {
+    "set_number": "106-1",
+    "name": "UNICEF Van",
+    "theme": "Town &gt; Classic Town",
+    "year": "1985",
+    "pieces": 64,
+    "file_name": "106-1.mpd",
+    "omr_id": "561",
+    "source_url": "https://library.ldraw.org/media/omr_models/621/106-1.mpd?v=1758937623"
+  },
+  "1069-1": {
+    "set_number": "1069-1",
+    "name": "Speedboat",
+    "theme": "Town &gt; Res-Q",
+    "year": "1999",
+    "pieces": 30,
+    "file_name": "1069-1.mpd",
+    "omr_id": "1334",
+    "source_url": "https://library.ldraw.org/media/omr_models/1648/1069-1.mpd?v=1758937656"
+  },
+  "107-2": {
+    "set_number": "107-2",
+    "name": "Canada Post Mail Truck",
+    "theme": "Town &gt; Classic Town",
+    "year": "1985",
+    "pieces": 148,
+    "file_name": "107-2.mpd",
+    "omr_id": "562",
+    "source_url": "https://library.ldraw.org/media/omr_models/622/107-2.mpd?v=1758937623"
+  },
+  "10885-1": {
+    "set_number": "10885-1",
+    "name": "My First Fun Puzzle",
+    "theme": "Duplo",
+    "year": "2019",
+    "pieces": 47,
+    "file_name": "10885-1.mpd",
+    "omr_id": "991",
+    "source_url": "https://library.ldraw.org/media/omr_models/1185/10885-1.mpd?v=1758937641"
+  },
+  "1096-1": {
+    "set_number": "1096-1",
+    "name": "Race Buggy",
+    "theme": "Town &gt; Extreme Team",
+    "year": "1997",
+    "pieces": 31,
+    "file_name": "1096-1.mpd",
+    "omr_id": "566",
+    "source_url": "https://library.ldraw.org/media/omr_models/626/1096-1.mpd?v=1758937623"
+  },
+  "1097-1": {
+    "set_number": "1097-1",
+    "name": "Res-Q Runner",
+    "theme": "Town &gt; Res-Q",
+    "year": "1999",
+    "pieces": 26,
+    "file_name": "1097-1.mpd",
+    "omr_id": "567",
+    "source_url": "https://library.ldraw.org/media/omr_models/627/1097-1.mpd?v=1758937623"
+  },
+  "1180-1": {
+    "set_number": "1180-1",
+    "name": "Space Port Moon Buggy",
+    "theme": "Town &gt; Space Port",
+    "year": "1999",
+    "pieces": 30,
+    "file_name": "1180-1.mpd",
+    "omr_id": "769",
+    "source_url": "https://library.ldraw.org/media/omr_models/854/1180-1.mpd?v=1758937630"
+  },
+  "121-1": {
+    "set_number": "121-1",
+    "name": "Roadster",
+    "theme": "Fabuland",
+    "year": "1979",
+    "pieces": 55,
+    "file_name": "121-1.mpd",
+    "omr_id": "488",
+    "source_url": "https://library.ldraw.org/media/omr_models/528/121-1.mpd?v=1758937620"
+  },
+  "1210-2": {
+    "set_number": "1210-2",
+    "name": "Small Store Set",
+    "theme": "System &gt; Town Plan",
+    "year": "1955",
+    "pieces": 135,
+    "file_name": "1210-2.mpd",
+    "omr_id": "1367",
+    "source_url": "https://library.ldraw.org/media/omr_models/1683/1210-2.mpd?v=1758937658"
+  },
+  "1211-2": {
+    "set_number": "1211-2",
+    "name": "Small House Set",
+    "theme": "System &gt; Town Plan",
+    "year": "1955",
+    "pieces": 126,
+    "file_name": "1211-2.mpd",
+    "omr_id": "1368",
+    "source_url": "https://library.ldraw.org/media/omr_models/1685/1211-2.mpd?v=1758937658"
+  },
+  "1212-2": {
+    "set_number": "1212-2",
+    "name": "Small House - Left Set",
+    "theme": "System &gt; Town Plan",
+    "year": "1955",
+    "pieces": 98,
+    "file_name": "1212-2.mpd",
+    "omr_id": "1369",
+    "source_url": "https://library.ldraw.org/media/omr_models/1687/1212-2.mpd?v=1758937658"
+  },
+  "1213-2": {
+    "set_number": "1213-2",
+    "name": "Small House - Right Set",
+    "theme": "System &gt; Town Plan",
+    "year": "1955",
+    "pieces": 98,
+    "file_name": "1213-2.mpd",
+    "omr_id": "1370",
+    "source_url": "https://library.ldraw.org/media/omr_models/1688/1213-2.mpd?v=1758937658"
+  },
+  "126-1": {
+    "set_number": "126-1",
+    "name": "Steam Locomotive (Push)",
+    "theme": "Train &gt; 4.5V",
+    "year": "1970",
+    "pieces": 60,
+    "file_name": "126-1.mpd",
+    "omr_id": "231",
+    "source_url": "https://library.ldraw.org/media/omr_models/255/126-1.mpd?v=1758937611"
+  },
+  "1462-1": {
+    "set_number": "1462-1",
+    "name": "Galactic Scout",
+    "theme": "Space &gt; Blacktron II",
+    "year": "1992",
+    "pieces": 35,
+    "file_name": "1462-1.mpd",
+    "omr_id": "165",
+    "source_url": "https://library.ldraw.org/media/omr_models/183/1462-1.mpd?v=1758937609"
+  },
+  "1477-1": {
+    "set_number": "1477-1",
+    "name": "{Red Race Car Number 3}",
+    "theme": "Town &gt; Classic Town",
+    "year": "1991",
+    "pieces": 46,
+    "file_name": "1477-1.mpd",
+    "omr_id": "569",
+    "source_url": "https://library.ldraw.org/media/omr_models/629/1477-1.mpd?v=1758937623"
+  },
+  "1478-1": {
+    "set_number": "1478-1",
+    "name": "Mobile Satellite Up-Link",
+    "theme": "Space &gt; M:Tron",
+    "year": "1991",
+    "pieces": 44,
+    "file_name": "1478-1.mpd",
+    "omr_id": "189",
+    "source_url": "https://library.ldraw.org/media/omr_models/209/1478-1.mpd?v=1758937609"
+  },
+  "1479-1": {
+    "set_number": "1479-1",
+    "name": "2-Pilot Craft",
+    "theme": "Space &gt; Blacktron II",
+    "year": "1991",
+    "pieces": 49,
+    "file_name": "1479-1.mpd",
+    "omr_id": "166",
+    "source_url": "https://library.ldraw.org/media/omr_models/184/1479-1.mpd?v=1758937609"
+  },
+  "1496-1": {
+    "set_number": "1496-1",
+    "name": "Rally Car",
+    "theme": "Town &gt; Classic Town",
+    "year": "1987",
+    "pieces": 60,
+    "file_name": "1496-1.mpd",
+    "omr_id": "571",
+    "source_url": "https://library.ldraw.org/media/omr_models/631/1496-1.mpd?v=1758937623"
+  },
+  "1499-1": {
+    "set_number": "1499-1",
+    "name": "Twin Starfire",
+    "theme": "Space &gt; Classic Space",
+    "year": "1987",
+    "pieces": 95,
+    "file_name": "1499-1.mpd",
+    "omr_id": "716",
+    "source_url": "https://library.ldraw.org/media/omr_models/785/1499-1.mpd?v=1758937628"
+  },
+  "1517-1": {
+    "set_number": "1517-1",
+    "name": "Race Car",
+    "theme": "Town &gt; Classic Town",
+    "year": "1989",
+    "pieces": 40,
+    "file_name": "1517-1.mpd",
+    "omr_id": "1351",
+    "source_url": "https://library.ldraw.org/media/omr_models/1665/1517-1.mpd?v=1758937657"
+  },
+  "1528-1": {
+    "set_number": "1528-1",
+    "name": "Dragster",
+    "theme": "Town &gt; Classic Town",
+    "year": "1986",
+    "pieces": 36,
+    "file_name": "1528-1.mpd",
+    "omr_id": "1352",
+    "source_url": "https://library.ldraw.org/media/omr_models/1666/1528-1.mpd?v=1758937657"
+  },
+  "1557-1": {
+    "set_number": "1557-1",
+    "name": "Scooter",
+    "theme": "Space &gt; Classic Space",
+    "year": "1986",
+    "pieces": 36,
+    "file_name": "1557-1.mpd",
+    "omr_id": "717",
+    "source_url": "https://library.ldraw.org/media/omr_models/786/1557-1.mpd?v=1758937628"
+  },
+  "1572-1": {
+    "set_number": "1572-1",
+    "name": "Super Tow Truck",
+    "theme": "Town &gt; Classic Town",
+    "year": "1986",
+    "pieces": 87,
+    "file_name": "1572-1.mpd",
+    "omr_id": "1230",
+    "source_url": "https://library.ldraw.org/media/omr_models/1535/1572-1.mpd?v=1758937652"
+  },
+  "1591-1": {
+    "set_number": "1591-1",
+    "name": "Danone Truck",
+    "theme": "Town &gt; Classic Town",
+    "year": "1980",
+    "pieces": 41,
+    "file_name": "1591-1.mpd",
+    "omr_id": "966",
+    "source_url": "https://library.ldraw.org/media/omr_models/1152/1591-1.mpd?v=1758937640"
+  },
+  "1620-1": {
+    "set_number": "1620-1",
+    "name": "Astro Dart",
+    "theme": "Space &gt; Futuron",
+    "year": "1990",
+    "pieces": 44,
+    "file_name": "1620-1.mpd",
+    "omr_id": "279",
+    "source_url": "https://library.ldraw.org/media/omr_models/307/1620-1.mpd?v=1758937613"
+  },
+  "1621-1": {
+    "set_number": "1621-1",
+    "name": "Lunar MPV Vehicle",
+    "theme": "Space &gt; Futuron",
+    "year": "1990",
+    "pieces": 116,
+    "file_name": "1621-1.mpd",
+    "omr_id": "295",
+    "source_url": "https://library.ldraw.org/media/omr_models/323/1621-1.mpd?v=1758937613"
+  },
+  "1631-1": {
+    "set_number": "1631-1",
+    "name": "Black Racer",
+    "theme": "Town &gt; Classic Town",
+    "year": "1990",
+    "pieces": 24,
+    "file_name": "1631-1.mpd",
+    "omr_id": "425",
+    "source_url": "https://library.ldraw.org/media/omr_models/457/1631-1.mpd?v=1758937618"
+  },
+  "1632-1": {
+    "set_number": "1632-1",
+    "name": "Motor Boat",
+    "theme": "Town &gt; Classic Town",
+    "year": "1990",
+    "pieces": 29,
+    "file_name": "1632-1.mpd",
+    "omr_id": "572",
+    "source_url": "https://library.ldraw.org/media/omr_models/632/1632-1.mpd?v=1758937623"
+  },
+  "1633-1": {
+    "set_number": "1633-1",
+    "name": "Loader Tractor",
+    "theme": "Town &gt; Classic Town",
+    "year": "1990",
+    "pieces": 25,
+    "file_name": "1633-1.mpd",
+    "omr_id": "426",
+    "source_url": "https://library.ldraw.org/media/omr_models/458/1633-1.mpd?v=1758937618"
+  },
+  "164-1": {
+    "set_number": "164-1",
+    "name": "Passenger Wagon",
+    "theme": "Train &gt; 4.5V",
+    "year": "1978",
+    "pieces": 107,
+    "file_name": "164-1.mpd",
+    "omr_id": "1098",
+    "source_url": "https://library.ldraw.org/media/omr_models/1303/164-1.mpd?v=1758937645"
+  },
+  "166-1": {
+    "set_number": "166-1",
+    "name": "Flat Wagon",
+    "theme": "Train &gt; 4.5V",
+    "year": "1978",
+    "pieces": 55,
+    "file_name": "166-1.mpd",
+    "omr_id": "1292",
+    "source_url": "https://library.ldraw.org/media/omr_models/1598/166-1.mpd?v=1758937655"
+  },
+  "167-1": {
+    "set_number": "167-1",
+    "name": "Loading Ramp and Car Transport Wagon",
+    "theme": "Train &gt; 4.5V",
+    "year": "1978",
+    "pieces": 119,
+    "file_name": "167-1.mpd",
+    "omr_id": "1293",
+    "source_url": "https://library.ldraw.org/media/omr_models/1599/167-1.mpd?v=1758937655"
+  },
+  "1680-1": {
+    "set_number": "1680-1",
+    "name": "Hay Cart with Smugglers",
+    "theme": "Castle &gt; Forestmen",
+    "year": "1990",
+    "pieces": 88,
+    "file_name": "1680-1.mpd",
+    "omr_id": "1455",
+    "source_url": "https://library.ldraw.org/media/omr_models/1830/1680-1.mpd?v=1758937662"
+  },
+  "1702-1": {
+    "set_number": "1702-1",
+    "name": "Fire Fighter 4 x 4",
+    "theme": "Town &gt; Classic Town",
+    "year": "1994",
+    "pieces": 65,
+    "file_name": "1702-1.mpd",
+    "omr_id": "427",
+    "source_url": "https://library.ldraw.org/media/omr_models/459/1702-1.mpd?v=1758937618"
+  },
+  "1704-1": {
+    "set_number": "1704-1",
+    "name": "Ice Planet Satellite Plough",
+    "theme": "Space &gt; Ice Planet 2002",
+    "year": "1994",
+    "pieces": 61,
+    "file_name": "1704-1.mpd",
+    "omr_id": "267",
+    "source_url": "https://library.ldraw.org/media/omr_models/295/1704-1.mpd?v=1758937612"
+  },
+  "1713-1": {
+    "set_number": "1713-1",
+    "name": "Shipwrecked Pirate",
+    "theme": "Pirates &gt; Pirates I",
+    "year": "1994",
+    "pieces": 31,
+    "file_name": "1713-1.mpd",
+    "omr_id": "6",
+    "source_url": "https://library.ldraw.org/media/omr_models/6/1713-1.mpd?v=1758937603"
+  },
+  "1714-1": {
+    "set_number": "1714-1",
+    "name": "Surveillance Scooter",
+    "theme": "Space &gt; Spyrius",
+    "year": "1995",
+    "pieces": 35,
+    "file_name": "1714-1.mpd",
+    "omr_id": "275",
+    "source_url": "https://library.ldraw.org/media/omr_models/303/1714-1.mpd?v=1758937613"
+  },
+  "1731-1": {
+    "set_number": "1731-1",
+    "name": "Ice Planet Scooter",
+    "theme": "Space &gt; Ice Planet 2002",
+    "year": "1994",
+    "pieces": 29,
+    "file_name": "1731-1.mpd",
+    "omr_id": "266",
+    "source_url": "https://library.ldraw.org/media/omr_models/294/1731-1.mpd?v=1758937612"
+  },
+  "1772-1": {
+    "set_number": "1772-1",
+    "name": "Airport Container Truck",
+    "theme": "Town &gt; Classic Town",
+    "year": "1992",
+    "pieces": 78,
+    "file_name": "1772-1.mpd",
+    "omr_id": "574",
+    "source_url": "https://library.ldraw.org/media/omr_models/634/1772-1.mpd?v=1758937623"
+  },
+  "1773-1": {
+    "set_number": "1773-1",
+    "name": "Airline Maintenance Vehicle with Trailer",
+    "theme": "Promotional &gt; Airlines",
+    "year": "1996",
+    "pieces": 114,
+    "file_name": "1773-1.mpd",
+    "omr_id": "575",
+    "source_url": "https://library.ldraw.org/media/omr_models/635/1773-1.mpd?v=1758937623"
+  },
+  "1792-1": {
+    "set_number": "1792-1",
+    "name": "Pleasure Cruiser",
+    "theme": "Town &gt; Classic Town",
+    "year": "1994",
+    "pieces": 68,
+    "file_name": "1792-1.mpd",
+    "omr_id": "428",
+    "source_url": "https://library.ldraw.org/media/omr_models/460/1792-1.mpd?v=1758937618"
+  },
+  "1808-1": {
+    "set_number": "1808-1",
+    "name": "Light Aircraft and Ground Support",
+    "theme": "Town &gt; Classic Town",
+    "year": "1996",
+    "pieces": 142,
+    "file_name": "1808-1.mpd",
+    "omr_id": "577",
+    "source_url": "https://library.ldraw.org/media/omr_models/637/1808-1.mpd?v=1758937623"
+  },
+  "1854-1": {
+    "set_number": "1854-1",
+    "name": "House with Roof-Windows ( Velux )",
+    "theme": "Town &gt; Classic Town",
+    "year": "1996",
+    "pieces": 150,
+    "file_name": "1854-1.mpd",
+    "omr_id": "429",
+    "source_url": "https://library.ldraw.org/media/omr_models/461/1854-1.mpd?v=1758937618"
+  },
+  "1869-1": {
+    "set_number": "1869-1",
+    "name": "South African Flag",
+    "theme": "Universal Building Set &gt; Basic",
+    "year": "1996",
+    "pieces": 82,
+    "file_name": "1869-1.mpd",
+    "omr_id": "37",
+    "source_url": "https://library.ldraw.org/media/omr_models/40/1869-1.mpd?v=1758937604"
+  },
+  "1875-1": {
+    "set_number": "1875-1",
+    "name": "Meteor Monitor",
+    "theme": "Space &gt; Blacktron I",
+    "year": "1990",
+    "pieces": 38,
+    "file_name": "1875-1.mpd",
+    "omr_id": "148",
+    "source_url": "https://library.ldraw.org/media/omr_models/164/1875-1.mpd?v=1758937608"
+  },
+  "1887-1": {
+    "set_number": "1887-1",
+    "name": "Scout Patrol Ship",
+    "theme": "Space &gt; Blacktron II",
+    "year": "1992",
+    "pieces": 41,
+    "file_name": "1887-1.mpd",
+    "omr_id": "167",
+    "source_url": "https://library.ldraw.org/media/omr_models/185/1887-1.mpd?v=1758937609"
+  },
+  "1916-1": {
+    "set_number": "1916-1",
+    "name": "Starion Patrol",
+    "theme": "Space &gt; Space Police II",
+    "year": "1993",
+    "pieces": 33,
+    "file_name": "1916-1.mpd",
+    "omr_id": "208",
+    "source_url": "https://library.ldraw.org/media/omr_models/230/1916-1.mpd?v=1758937610"
+  },
+  "1952-1": {
+    "set_number": "1952-1",
+    "name": "Dairy Tanker",
+    "theme": "Town &gt; Classic Town",
+    "year": "1989",
+    "pieces": 137,
+    "file_name": "1952-1.mpd",
+    "omr_id": "579",
+    "source_url": "https://library.ldraw.org/media/omr_models/639/1952-1.mpd?v=1758937623"
+  },
+  "1969-1": {
+    "set_number": "1969-1",
+    "name": "Mini Robot",
+    "theme": "Space &gt; Space Police II",
+    "year": "1993",
+    "pieces": 49,
+    "file_name": "1969-1.mpd",
+    "omr_id": "211",
+    "source_url": "https://library.ldraw.org/media/omr_models/233/1969-1.mpd?v=1758937610"
+  },
+  "1974-3": {
+    "set_number": "1974-3",
+    "name": "Smuggler&#039;s Hayride",
+    "theme": "Castle &gt; Forestmen",
+    "year": "1989",
+    "pieces": 61,
+    "file_name": "1974-3.mpd",
+    "omr_id": "1456",
+    "source_url": "https://library.ldraw.org/media/omr_models/1831/1974-3.mpd?v=1758937662"
+  },
+  "1974-4": {
+    "set_number": "1974-4",
+    "name": "Star Quest",
+    "theme": "Space &gt; Futuron",
+    "year": "1989",
+    "pieces": 48,
+    "file_name": "1974-4.mpd",
+    "omr_id": "280",
+    "source_url": "https://library.ldraw.org/media/omr_models/308/1974-4.mpd?v=1758937613"
+  },
+  "1991-1": {
+    "set_number": "1991-1",
+    "name": "Racing Pickup",
+    "theme": "Town &gt; Classic Town",
+    "year": "1993",
+    "pieces": 89,
+    "file_name": "1991-1.mpd",
+    "omr_id": "1353",
+    "source_url": "https://library.ldraw.org/media/omr_models/1667/1991-1.mpd?v=1758937657"
+  },
+  "20004-1": {
+    "set_number": "20004-1",
+    "name": "Jungle Cruiser",
+    "theme": "Indiana Jones",
+    "year": "2008",
+    "pieces": 92,
+    "file_name": "20004-1.mpd",
+    "omr_id": "1427",
+    "source_url": "https://library.ldraw.org/media/omr_models/1766/20004-1.mpd?v=1758937660"
+  },
+  "20006-1": {
+    "set_number": "20006-1",
+    "name": "Clone Turbo Tank - Mini",
+    "theme": "Star Wars",
+    "year": "2008",
+    "pieces": 68,
+    "file_name": "20006-1.mpd",
+    "omr_id": "873",
+    "source_url": "https://library.ldraw.org/media/omr_models/1024/20006-1.mpd?v=1758937635"
+  },
+  "20009-1": {
+    "set_number": "20009-1",
+    "name": "AT-TE Walker - Mini",
+    "theme": "Star Wars",
+    "year": "2009",
+    "pieces": 96,
+    "file_name": "20009-1.mpd",
+    "omr_id": "125",
+    "source_url": "https://library.ldraw.org/media/omr_models/139/20009-1.mpd?v=1758937607"
+  },
+  "20011-1": {
+    "set_number": "20011-1",
+    "name": "Garbage Truck",
+    "theme": "Creator",
+    "year": "2009",
+    "pieces": 75,
+    "file_name": "20011-1.mpd",
+    "omr_id": "874",
+    "source_url": "https://library.ldraw.org/media/omr_models/1025/20011-1.mpd?v=1758937635"
+  },
+  "20014-1": {
+    "set_number": "20014-1",
+    "name": "4 x 4 Dynamo",
+    "theme": "Creator",
+    "year": "2010",
+    "pieces": 70,
+    "file_name": "20014-1.mpd",
+    "omr_id": "25",
+    "source_url": "https://library.ldraw.org/media/omr_models/28/20014-1.mpd?v=1758937604"
+  },
+  "20015-1": {
+    "set_number": "20015-1",
+    "name": "Alligator",
+    "theme": "Creator",
+    "year": "2010",
+    "pieces": 92,
+    "file_name": "20015-1.mpd",
+    "omr_id": "26",
+    "source_url": "https://library.ldraw.org/media/omr_models/29/20015-1.mpd?v=1758937604"
+  },
+  "20019-1": {
+    "set_number": "20019-1",
+    "name": "Slave I",
+    "theme": "Star Wars",
+    "year": "2011",
+    "pieces": 83,
+    "file_name": "20019-1.mpd",
+    "omr_id": "126",
+    "source_url": "https://library.ldraw.org/media/omr_models/140/20019-1.mpd?v=1758937607"
+  },
+  "20021-1": {
+    "set_number": "20021-1",
+    "name": "Bounty Hunter Gunship - Mini",
+    "theme": "Star Wars",
+    "year": "2011",
+    "pieces": 82,
+    "file_name": "20021-1.mpd",
+    "omr_id": "127",
+    "source_url": "https://library.ldraw.org/media/omr_models/141/20021-1.mpd?v=1758937607"
+  },
+  "21000-1": {
+    "set_number": "21000-1",
+    "name": "Sears Tower",
+    "theme": "Architecture",
+    "year": "2008",
+    "pieces": 69,
+    "file_name": "21000-1.mpd",
+    "omr_id": "71",
+    "source_url": "https://library.ldraw.org/media/omr_models/77/21000-1.mpd?v=1758937606"
+  },
+  "21000-2": {
+    "set_number": "21000-2",
+    "name": "Willis Tower",
+    "theme": "Architecture",
+    "year": "2011",
+    "pieces": 69,
+    "file_name": "21000-2.mpd",
+    "omr_id": "72",
+    "source_url": "https://library.ldraw.org/media/omr_models/78/21000-2.mpd?v=1758937606"
+  },
+  "21001-1": {
+    "set_number": "21001-1",
+    "name": "John Hancock Center",
+    "theme": "Architecture",
+    "year": "2008",
+    "pieces": 69,
+    "file_name": "21001-1.mpd",
+    "omr_id": "35",
+    "source_url": "https://library.ldraw.org/media/omr_models/38/21001-1.mpd?v=1758937604"
+  },
+  "21002-1": {
+    "set_number": "21002-1",
+    "name": "Empire State Building",
+    "theme": "Architecture",
+    "year": "2009",
+    "pieces": 79,
+    "file_name": "21002-1.mpd",
+    "omr_id": "11",
+    "source_url": "https://library.ldraw.org/media/omr_models/11/21002-1.mpd?v=1758937604"
+  },
+  "21008-1": {
+    "set_number": "21008-1",
+    "name": "Burj Khalifa",
+    "theme": "Architecture",
+    "year": "2011",
+    "pieces": 128,
+    "file_name": "21008-1.mpd",
+    "omr_id": "14",
+    "source_url": "https://library.ldraw.org/media/omr_models/14/21008-1.mpd?v=1758937604"
+  },
+  "2133-1": {
+    "set_number": "2133-1",
+    "name": "Danone Promotional Set: Impala",
+    "theme": "Universal Building Set &gt; Basic",
+    "year": "1996",
+    "pieces": 13,
+    "file_name": "2133-1.mpd",
+    "omr_id": "1043",
+    "source_url": "https://library.ldraw.org/media/omr_models/1244/2133-1.mpd?v=1758937643"
+  },
+  "2148-1": {
+    "set_number": "2148-1",
+    "name": "LEGO Truck",
+    "theme": "Town &gt; Classic Town",
+    "year": "1997",
+    "pieces": 113,
+    "file_name": "2148-1.mpd",
+    "omr_id": "580",
+    "source_url": "https://library.ldraw.org/media/omr_models/640/2148-1.mpd?v=1758937623"
+  },
+  "2531-1": {
+    "set_number": "2531-1",
+    "name": "Rescue Helicopter and Jeep",
+    "theme": "Town",
+    "year": "1998",
+    "pieces": 111,
+    "file_name": "2531-1.mpd",
+    "omr_id": "583",
+    "source_url": "https://library.ldraw.org/media/omr_models/643/2531-1.mpd?v=1758937623"
+  },
+  "2541-1": {
+    "set_number": "2541-1",
+    "name": "Adventurers Car",
+    "theme": "Adventurers &gt; Desert",
+    "year": "1998",
+    "pieces": 30,
+    "file_name": "2541-1.mpd",
+    "omr_id": "38",
+    "source_url": "https://library.ldraw.org/media/omr_models/41/2541-1.mpd?v=1758937604"
+  },
+  "2542-1": {
+    "set_number": "2542-1",
+    "name": "Adventurers Aeroplane",
+    "theme": "Adventurers &gt; Desert",
+    "year": "1998",
+    "pieces": 27,
+    "file_name": "2542-1.mpd",
+    "omr_id": "39",
+    "source_url": "https://library.ldraw.org/media/omr_models/42/2542-1.mpd?v=1758937604"
+  },
+  "2584-1": {
+    "set_number": "2584-1",
+    "name": "Biker Bob",
+    "theme": "Town &gt; Town Jr.",
+    "year": "1998",
+    "pieces": 23,
+    "file_name": "2584-1.mpd",
+    "omr_id": "431",
+    "source_url": "https://library.ldraw.org/media/omr_models/463/2584-1.mpd?v=1758937618"
+  },
+  "2845-1": {
+    "set_number": "2845-1",
+    "name": "Indian Chief",
+    "theme": "Western",
+    "year": "1997",
+    "pieces": 40,
+    "file_name": "2845-1.mpd",
+    "omr_id": "327",
+    "source_url": "https://library.ldraw.org/media/omr_models/353/2845-1.mpd?v=1758937614"
+  },
+  "2846-1": {
+    "set_number": "2846-1",
+    "name": "Indian Kayak",
+    "theme": "Western",
+    "year": "1997",
+    "pieces": 37,
+    "file_name": "2846-1.mpd",
+    "omr_id": "328",
+    "source_url": "https://library.ldraw.org/media/omr_models/354/2846-1.mpd?v=1758937614"
+  },
+  "2882-1": {
+    "set_number": "2882-1",
+    "name": "Speedboat",
+    "theme": "Town &gt; Classic Town",
+    "year": "1997",
+    "pieces": 30,
+    "file_name": "2882-1.mpd",
+    "omr_id": "1335",
+    "source_url": "https://library.ldraw.org/media/omr_models/1649/2882-1.mpd?v=1758937656"
+  },
+  "2962-1": {
+    "set_number": "2962-1",
+    "name": "Res-Q Lifeguard",
+    "theme": "Town &gt; Res-Q",
+    "year": "1998",
+    "pieces": 86,
+    "file_name": "2962-1.mpd",
+    "omr_id": "1345",
+    "source_url": "https://library.ldraw.org/media/omr_models/1659/2962-1.mpd?v=1758937657"
+  },
+  "30022-1": {
+    "set_number": "30022-1",
+    "name": "Bee",
+    "theme": "Creator",
+    "year": "2011",
+    "pieces": 25,
+    "file_name": "30022-1.mpd",
+    "omr_id": "143",
+    "source_url": "https://library.ldraw.org/media/omr_models/1738/30022-1.mpd?v=1758937659"
+  },
+  "30023-1": {
+    "set_number": "30023-1",
+    "name": "Lighthouse",
+    "theme": "Creator",
+    "year": "2011",
+    "pieces": 26,
+    "file_name": "30023-1.mpd",
+    "omr_id": "144",
+    "source_url": "https://library.ldraw.org/media/omr_models/1739/30023-1.mpd?v=1758937659"
+  },
+  "30024-1": {
+    "set_number": "30024-1",
+    "name": "Truck",
+    "theme": "Creator",
+    "year": "2011",
+    "pieces": 57,
+    "file_name": "30024-1.mpd",
+    "omr_id": "1404",
+    "source_url": "https://library.ldraw.org/media/omr_models/1740/30024-1.mpd?v=1758937659"
+  },
+  "30025-1": {
+    "set_number": "30025-1",
+    "name": "Clown Fish",
+    "theme": "Creator",
+    "year": "2011",
+    "pieces": 60,
+    "file_name": "30025-1.mpd",
+    "omr_id": "1405",
+    "source_url": "https://library.ldraw.org/media/omr_models/1741/30025-1.mpd?v=1758937660"
+  },
+  "30026-1": {
+    "set_number": "30026-1",
+    "name": "Panda",
+    "theme": "Creator",
+    "year": "2011",
+    "pieces": 63,
+    "file_name": "30026-1.mpd",
+    "omr_id": "1406",
+    "source_url": "https://library.ldraw.org/media/omr_models/1742/30026-1.mpd?v=1758937660"
+  },
+  "30027-1": {
+    "set_number": "30027-1",
+    "name": "Reindeer",
+    "theme": "Creator",
+    "year": "2011",
+    "pieces": 68,
+    "file_name": "30027-1.mpd",
+    "omr_id": "1432",
+    "source_url": "https://library.ldraw.org/media/omr_models/1771/30027-1.mpd?v=1758937661"
+  },
+  "30028-1": {
+    "set_number": "30028-1",
+    "name": "Wreath",
+    "theme": "Seasonal &gt; Christmas",
+    "year": "2011",
+    "pieces": 26,
+    "file_name": "30028-1.mpd",
+    "omr_id": "1433",
+    "source_url": "https://library.ldraw.org/media/omr_models/1772/30028-1.mpd?v=1758937661"
+  },
+  "30029-1": {
+    "set_number": "30029-1",
+    "name": "Pudsey Bear",
+    "theme": "Creator",
+    "year": "2011",
+    "pieces": 88,
+    "file_name": "30029-1.mpd",
+    "omr_id": "146",
+    "source_url": "https://library.ldraw.org/media/omr_models/160/30029-1.mpd?v=1758937608"
+  },
+  "30030-1": {
+    "set_number": "30030-1",
+    "name": "Racing Car",
+    "theme": "Racers",
+    "year": "2010",
+    "pieces": 30,
+    "file_name": "30030-1.mpd",
+    "omr_id": "828",
+    "source_url": "https://library.ldraw.org/media/omr_models/911/30030-1.mpd?v=1758937632"
+  },
+  "30033-1": {
+    "set_number": "30033-1",
+    "name": "Racing Truck",
+    "theme": "Racers",
+    "year": "2010",
+    "pieces": 41,
+    "file_name": "30033-1.mpd",
+    "omr_id": "829",
+    "source_url": "https://library.ldraw.org/media/omr_models/912/30033-1.mpd?v=1758937632"
+  },
+  "30034-1": {
+    "set_number": "30034-1",
+    "name": "Racing Tow Truck",
+    "theme": "Racers",
+    "year": "2010",
+    "pieces": 36,
+    "file_name": "30034-1.mpd",
+    "omr_id": "830",
+    "source_url": "https://library.ldraw.org/media/omr_models/913/30034-1.mpd?v=1758937632"
+  },
+  "30035-1": {
+    "set_number": "30035-1",
+    "name": "Racing Car",
+    "theme": "Racers",
+    "year": "2010",
+    "pieces": 31,
+    "file_name": "30035-1.mpd",
+    "omr_id": "831",
+    "source_url": "https://library.ldraw.org/media/omr_models/914/30035-1.mpd?v=1758937632"
+  },
+  "30036-1": {
+    "set_number": "30036-1",
+    "name": "Buggy Racer",
+    "theme": "Racers",
+    "year": "2011",
+    "pieces": 29,
+    "file_name": "30036-1.mpd",
+    "omr_id": "832",
+    "source_url": "https://library.ldraw.org/media/omr_models/915/30036-1.mpd?v=1758937632"
+  },
+  "30050-1": {
+    "set_number": "30050-1",
+    "name": "Republic Attack Shuttle - Mini",
+    "theme": "Star Wars",
+    "year": "2010",
+    "pieces": 60,
+    "file_name": "30050-1.mpd",
+    "omr_id": "128",
+    "source_url": "https://library.ldraw.org/media/omr_models/142/30050-1.mpd?v=1758937608"
+  },
+  "30051-1": {
+    "set_number": "30051-1",
+    "name": "X-wing Fighter - Mini",
+    "theme": "Star Wars",
+    "year": "2010",
+    "pieces": 50,
+    "file_name": "30051-1.mpd",
+    "omr_id": "129",
+    "source_url": "https://library.ldraw.org/media/omr_models/143/30051-1.mpd?v=1758937608"
+  },
+  "30052-1": {
+    "set_number": "30052-1",
+    "name": "AAT - Mini",
+    "theme": "Star Wars",
+    "year": "2011",
+    "pieces": 51,
+    "file_name": "30052-1.mpd",
+    "omr_id": "130",
+    "source_url": "https://library.ldraw.org/media/omr_models/144/30052-1.mpd?v=1758937608"
+  },
+  "30053-1": {
+    "set_number": "30053-1",
+    "name": "Republic Attack Cruiser - Mini",
+    "theme": "Star Wars",
+    "year": "2011",
+    "pieces": 42,
+    "file_name": "30053-1.mpd",
+    "omr_id": "131",
+    "source_url": "https://library.ldraw.org/media/omr_models/145/30053-1.mpd?v=1758937608"
+  },
+  "30054-1": {
+    "set_number": "30054-1",
+    "name": "AT-ST - Mini",
+    "theme": "Star Wars",
+    "year": "2011",
+    "pieces": 51,
+    "file_name": "30054-1.mpd",
+    "omr_id": "132",
+    "source_url": "https://library.ldraw.org/media/omr_models/146/30054-1.mpd?v=1758937608"
+  },
+  "30055-1": {
+    "set_number": "30055-1",
+    "name": "Vulture Droid - Mini",
+    "theme": "Star Wars",
+    "year": "2011",
+    "pieces": 36,
+    "file_name": "30055-1.mpd",
+    "omr_id": "133",
+    "source_url": "https://library.ldraw.org/media/omr_models/147/30055-1.mpd?v=1758937608"
+  },
+  "30056-1": {
+    "set_number": "30056-1",
+    "name": "Star Destroyer",
+    "theme": "Star Wars",
+    "year": "2012",
+    "pieces": 39,
+    "file_name": "30056-1.mpd",
+    "omr_id": "998",
+    "source_url": "https://library.ldraw.org/media/omr_models/1192/30056-1.mpd?v=1758937642"
+  },
+  "30090-1": {
+    "set_number": "30090-1",
+    "name": "Desert Glider",
+    "theme": "Pharaoh&#039;s Quest",
+    "year": "2011",
+    "pieces": 34,
+    "file_name": "30090-1.mpd",
+    "omr_id": "3",
+    "source_url": "https://library.ldraw.org/media/omr_models/3/30090-1.mpd?v=1758937603"
+  },
+  "30091-1": {
+    "set_number": "30091-1",
+    "name": "Desert Rover",
+    "theme": "Pharaoh&#039;s Quest",
+    "year": "2011",
+    "pieces": 36,
+    "file_name": "30091-1.mpd",
+    "omr_id": "5",
+    "source_url": "https://library.ldraw.org/media/omr_models/5/30091-1.mpd?v=1758937603"
+  },
+  "30100-1": {
+    "set_number": "30100-1",
+    "name": "Andrea on the Beach",
+    "theme": "Friends",
+    "year": "2012",
+    "pieces": 33,
+    "file_name": "30100-1.mpd",
+    "omr_id": "1328",
+    "source_url": "https://library.ldraw.org/media/omr_models/1642/30100-1.mpd?v=1758937656"
+  },
+  "30101-1": {
+    "set_number": "30101-1",
+    "name": "Skate Boarder",
+    "theme": "Friends",
+    "year": "2012",
+    "pieces": 32,
+    "file_name": "30101-1.mpd",
+    "omr_id": "1329",
+    "source_url": "https://library.ldraw.org/media/omr_models/1643/30101-1.mpd?v=1758937656"
+  },
+  "30102-1": {
+    "set_number": "30102-1",
+    "name": "Desk",
+    "theme": "Friends",
+    "year": "2012",
+    "pieces": 29,
+    "file_name": "30102-1.mpd",
+    "omr_id": "1330",
+    "source_url": "https://library.ldraw.org/media/omr_models/1644/30102-1.mpd?v=1758937656"
+  },
+  "30103-1": {
+    "set_number": "30103-1",
+    "name": "Car",
+    "theme": "Friends",
+    "year": "2012",
+    "pieces": 37,
+    "file_name": "30103-1.mpd",
+    "omr_id": "1331",
+    "source_url": "https://library.ldraw.org/media/omr_models/1645/30103-1.mpd?v=1758937656"
+  }
+}

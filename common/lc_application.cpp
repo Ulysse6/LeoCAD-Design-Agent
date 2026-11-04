@@ -14,6 +14,8 @@
 #include "lc_previewwidget.h"
 #include "lc_colors.h"
 #include "lc_qutils.h"
+#include "lc_aigenerator.h"
+#include "lc_aiwidget.h"
 
 #ifdef Q_OS_WIN
 #if (QT_VERSION < QT_VERSION_CHECK(6, 0, 0))
@@ -503,7 +505,25 @@ lcStartupMode lcApplication::Initialize(const QList<QPair<QString, bool>>& Libra
 
 	bool ProjectLoaded = false;
 
-	if (!Options.mProjectName.isEmpty())
+	if (!Options.mAIPrompt.isEmpty() && SaveAndExit)
+	{
+		Project* LoadedProject = new Project();
+		lcAIOptions Opts;
+		Opts.StepByStep = false;
+		lcAIModelResult Res = lcAIGenerator::GenerateModel(Options.mAIPrompt, Opts);
+		if (Res.Success)
+		{
+			QBuffer Buffer;
+			QByteArray Content = Res.LDrawContent;
+			Buffer.setData(Content);
+			Buffer.open(QIODevice::ReadOnly);
+			LoadedProject->GetMainModel()->LoadLDraw(Buffer, LoadedProject);
+			LoadedProject->GetMainModel()->CalculateStep(Res.StepCount);
+			SetProject(LoadedProject);
+			ProjectLoaded = true;
+		}
+	}
+	else if (!Options.mProjectName.isEmpty())
 	{
 		if (gMainWindow)
 			gMainWindow->OpenProject(Options.mProjectName);
@@ -525,6 +545,31 @@ lcStartupMode lcApplication::Initialize(const QList<QPair<QString, bool>>& Libra
 				StdErr << LoadResult.error() << '\n';
 
 				return lcStartupMode::Error;
+			}
+		}
+	}
+
+	if (!Options.mAIPrompt.isEmpty())
+	{
+		if (gMainWindow && gMainWindow->GetAIAssistantWidget())
+		{
+			gMainWindow->GetAIAssistantWidget()->BuildPrompt(Options.mAIPrompt);
+			ProjectLoaded = true;
+		}
+		else if (mProject && mProject->GetMainModel())
+		{
+			lcAIOptions Opts;
+			Opts.StepByStep = false;
+			lcAIModelResult Res = lcAIGenerator::GenerateModel(Options.mAIPrompt, Opts);
+			if (Res.Success)
+			{
+				QBuffer Buffer;
+				QByteArray Content = Res.LDrawContent;
+				Buffer.setData(Content);
+				Buffer.open(QIODevice::ReadOnly);
+				mProject->GetMainModel()->LoadLDraw(Buffer, mProject);
+				mProject->GetMainModel()->CalculateStep(Res.StepCount);
+				ProjectLoaded = true;
 			}
 		}
 	}

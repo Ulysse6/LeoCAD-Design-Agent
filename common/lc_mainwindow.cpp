@@ -29,6 +29,7 @@
 #include "lc_previewwidget.h"
 #include "lc_modelhistory.h"
 #include "lc_spinnerwidget.h"
+#include "lc_aiwidget.h"
 
 #if LC_ENABLE_GAMEPAD
 #include <QtGamepad/QGamepad>
@@ -108,6 +109,8 @@ void lcMainWindow::CreateWidgets()
 	restoreGeometry(Settings.value("Geometry").toByteArray());
 	restoreState(Settings.value("State").toByteArray());
 	mPartSelectionWidget->LoadState(Settings);
+	if (mAIAssistantToolBar && !mAIAssistantToolBar->isVisible())
+		mAIAssistantToolBar->show();
 	Settings.endGroup();
 }
 
@@ -281,6 +284,8 @@ void lcMainWindow::CreateActions()
 	mActions[LC_VIEW_TIME_NEXT]->setIcon(QIcon(":/resources/time_next.png"));
 	mActions[LC_VIEW_TIME_LAST]->setIcon(QIcon(":/resources/time_last.png"));
 	mActions[LC_VIEW_TIME_ADD_KEYS]->setIcon(QIcon(":/resources/time_add_keys.png"));
+	mActions[LC_VIEW_TOOLBAR_AI]->setIcon(QIcon(":/resources/gear_in.png"));
+	mActions[LC_VIEW_TOOLBAR_AI]->setToolTip(tr("AI LEGO Builder Assistant"));
 	mActions[LC_HELP_HOMEPAGE]->setIcon(QIcon(":/resources/help_homepage.png"));
 
 	mActions[LC_EDIT_SNAP_MOVE_TOGGLE]->setCheckable(true);
@@ -530,6 +535,7 @@ void lcMainWindow::CreateMenus()
 	ToolBarsMenu->addAction(mActions[LC_VIEW_TOOLBAR_PROPERTIES]);
 	ToolBarsMenu->addAction(mActions[LC_VIEW_TOOLBAR_TIMELINE]);
 	ToolBarsMenu->addAction(mActions[LC_VIEW_TOOLBAR_PREVIEW]);
+	ToolBarsMenu->addAction(mActions[LC_VIEW_TOOLBAR_AI]);
 	ToolBarsMenu->addSeparator();
 	ToolBarsMenu->addAction(mActions[LC_VIEW_TOOLBAR_STANDARD]);
 	ToolBarsMenu->addAction(mActions[LC_VIEW_TOOLBAR_TOOLS]);
@@ -659,6 +665,8 @@ void lcMainWindow::CreateToolBars()
 	mStandardToolBar->addAction(TransformAction);
 	mStandardToolBar->addAction(MoveAction);
 	mStandardToolBar->addAction(AngleAction);
+	mStandardToolBar->addSeparator();
+	mStandardToolBar->addAction(mActions[LC_VIEW_TOOLBAR_AI]);
 
 	((QToolButton*)mStandardToolBar->widgetForAction(SelectionModeAction))->setPopupMode(QToolButton::InstantPopup);
 	((QToolButton*)mStandardToolBar->widgetForAction(TransformAction))->setPopupMode(QToolButton::InstantPopup);
@@ -834,6 +842,15 @@ void lcMainWindow::CreateToolBars()
 	connect(mTimelineToolBar, &QDockWidget::topLevelChanged, this, &lcMainWindow::EnableWindowFlags);
 	connect(mPartsToolBar, &QDockWidget::topLevelChanged, this, &lcMainWindow::EnableWindowFlags);
 	connect(mColorsToolBar, &QDockWidget::topLevelChanged, this, &lcMainWindow::EnableWindowFlags);
+
+	mAIAssistantToolBar = new QDockWidget(tr("AI Assistant"), this);
+	mAIAssistantToolBar->setObjectName("AIAssistantToolbar");
+	mAIAssistantToolBar->setWhatsThis(tr("<p><b>AI Assistant</b></p><p>Describe any 3D LEGO model to have the AI agent build it automatically.</p>"));
+	lcSetupWidgetHelp(mAIAssistantToolBar, nullptr);
+	mAIAssistantWidget = new lcAIAssistantWidget(mAIAssistantToolBar);
+	mAIAssistantToolBar->setWidget(mAIAssistantWidget);
+	addDockWidget(Qt::LeftDockWidgetArea, mAIAssistantToolBar);
+	connect(mAIAssistantToolBar, &QDockWidget::topLevelChanged, this, &lcMainWindow::EnableWindowFlags);
 
 	mPartsToolBar->raise();
 }
@@ -1214,6 +1231,7 @@ QMenu* lcMainWindow::createPopupMenu()
 	Menu->addAction(mActions[LC_VIEW_TOOLBAR_PROPERTIES]);
 	Menu->addAction(mActions[LC_VIEW_TOOLBAR_TIMELINE]);
 	Menu->addAction(mActions[LC_VIEW_TOOLBAR_PREVIEW]);
+	Menu->addAction(mActions[LC_VIEW_TOOLBAR_AI]);
 	Menu->addSeparator();
 	Menu->addAction(mActions[LC_VIEW_TOOLBAR_STANDARD]);
 	Menu->addAction(mActions[LC_VIEW_TOOLBAR_TOOLS]);
@@ -1232,6 +1250,7 @@ void lcMainWindow::UpdateDockWidgetActions()
 	mActions[LC_VIEW_TOOLBAR_TOOLS]->setChecked(mToolsToolBar->isVisible());
 	mActions[LC_VIEW_TOOLBAR_TIME]->setChecked(mTimeToolBar->isVisible());
 	mActions[LC_VIEW_TOOLBAR_PREVIEW]->setChecked(mPreviewToolBar->isVisible());
+	mActions[LC_VIEW_TOOLBAR_AI]->setChecked(mAIAssistantToolBar->isVisible());
 }
 
 void lcMainWindow::UpdateGamepads()
@@ -3240,6 +3259,10 @@ void lcMainWindow::HandleCommand(lcCommandId CommandId)
 
 	case LC_VIEW_TOOLBAR_PREVIEW:
 		ToggleDockWidget(mPreviewToolBar);
+		break;
+
+	case LC_VIEW_TOOLBAR_AI:
+		ToggleDockWidget(mAIAssistantToolBar);
 		break;
 
 	case LC_VIEW_FULLSCREEN:

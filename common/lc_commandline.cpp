@@ -155,6 +155,10 @@ void lcCommandLineOptions::ParseOption(const QString& Option, QStringList& Argum
 		if (ParseString(Option, Arguments, LibPath, true))
 			mLibraryPaths += QPair<QString, bool>(LibPath, false);
 	}
+	else if (Option == QLatin1String("-ai") || Option == QLatin1String("--ai-prompt"))
+	{
+		ParseString(Option, Arguments, mAIPrompt, true);
+	}
 	else if (Option == QLatin1String("-v") || Option == QLatin1String("--version"))
 	{
 		AppendVersion();
@@ -726,8 +730,15 @@ void lcCommandLineOptions::ValidateOptions()
 
 	if (HasExportRequest() && mProjectName.isEmpty())
 	{
-		mStdErr += tr("No file name specified.\n");
-		mParseOK = false;
+		if (!mAIPrompt.isEmpty())
+		{
+			mProjectName = QLatin1String("ai_model.ldr");
+		}
+		else
+		{
+			mStdErr += tr("No file name specified.\n");
+			mParseOK = false;
+		}
 	}
 }
 
