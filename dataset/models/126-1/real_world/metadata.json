@@ -1,0 +1,21 @@
+{
+  "set_number": "126-1",
+  "name": "Steam Locomotive (Push)",
+  "query": "steam locomotive",
+  "photos": [
+    {
+      "file": "photo_01.jpg",
+      "relative_path": "dataset/models/126-1/real_world/photo_01.jpg",
+      "source_title": "File:Rostov-on-Don. Museum of North Caucasus Railway, steam locomotive LV-0333 P9161402 2350.jpg",
+      "source_url": "https://upload.wikimedia.org/wikipedia/commons/4/49/Rostov-on-Don._Museum_of_North_Caucasus_Railway%2C_steam_locomotive_LV-0333_P9161402_2350.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "query": "steam locomotive"
+    },
+    {
+      "file": "photo_02.jpg",
+      "relative_path": "dataset/models/126-1/real_world/photo_02.jpg",
+      "source_title": "File:Steam locomotive gear (J\u017d 06-018; Slovenia).jpg",
+      "source_url": "https://upload.wikimedia.org/wikipedia/commons/e/e5/Steam_locomotive_gear_%28J%C5%BD_06-018%3B_Slovenia%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "query": "steam locomotive"
+    }
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "set_number": "21011-1",
+  "name": "Brandenburg Gate",
+  "query": "Brandenburg Gate Berlin",
+  "photos": [
+    {
+      "file": "photo_01.jpg",
+      "relative_path": "dataset/models/21011-1/real_world/photo_01.jpg",
+      "source_title": "File:Brandenburg Gate Quadriga at Night.jpg",
+      "source_url": "https://upload.wikimedia.org/wikipedia/commons/e/ef/Brandenburg_Gate_Quadriga_at_Night.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "query": "Brandenburg Gate Berlin"
+    }
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "set_number": "2882-1",
+  "name": "Speedboat",
+  "query": "motor speedboat",
+  "photos": [
+    {
+      "file": "photo_01.jpg",
+      "relative_path": "dataset/models/2882-1/real_world/photo_01.jpg",
+      "source_title": "File:Glastron Carlson CV-23HT Speedboat (Moonraker) left National Motor Museum, Beaulieu.jpg",
+      "source_url": "https://upload.wikimedia.org/wikipedia/commons/b/ba/Glastron_Carlson_CV-23HT_Speedboat_%28Moonraker%29_left_National_Motor_Museum%2C_Beaulieu.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "query": "motor speedboat"
+    }
+  ]
+}

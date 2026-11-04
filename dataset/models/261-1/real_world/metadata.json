@@ -1,0 +1,14 @@
+{
+  "set_number": "261-1",
+  "name": "Bathroom",
+  "query": "Bathroom",
+  "photos": [
+    {
+      "file": "photo_01.jpg",
+      "relative_path": "dataset/models/261-1/real_world/photo_01.jpg",
+      "source_title": "File:Bathroom Number London Cheerberry.jpg",
+      "source_url": "https://upload.wikimedia.org/wikipedia/commons/2/2a/Bathroom_Number_London_Cheerberry.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "query": "Bathroom"
+    }
+  ]
+}

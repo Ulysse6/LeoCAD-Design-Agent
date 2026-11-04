@@ -1,0 +1,21 @@
+{
+  "set_number": "1633-1",
+  "name": "Loader Tractor",
+  "query": "front loader tractor",
+  "photos": [
+    {
+      "file": "photo_01.jpg",
+      "relative_path": "dataset/models/1633-1/real_world/photo_01.jpg",
+      "source_title": "File:TYM Series 6, Agritechnica 2023, Hanover (P1160323).jpg",
+      "source_url": "https://upload.wikimedia.org/wikipedia/commons/b/b4/TYM_Series_6%2C_Agritechnica_2023%2C_Hanover_%28P1160323%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "query": "front loader tractor"
+    },
+    {
+      "file": "photo_02.jpg",
+      "relative_path": "dataset/models/1633-1/real_world/photo_02.jpg",
+      "source_title": "File:Front loader tractor with bale gripper.jpg",
+      "source_url": "https://upload.wikimedia.org/wikipedia/commons/2/22/Front_loader_tractor_with_bale_gripper.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "query": "front loader tractor"
+    }
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "set_number": "30191-1",
+  "name": "Scuderia Ferrari Truck",
+  "query": "Ferrari racing car",
+  "photos": [
+    {
+      "file": "photo_01.jpg",
+      "relative_path": "dataset/models/30191-1/real_world/photo_01.jpg",
+      "source_title": "File:Ferrari 637 front-left Museo Ferrari.jpg",
+      "source_url": "https://upload.wikimedia.org/wikipedia/commons/6/6c/Ferrari_637_front-left_Museo_Ferrari.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "query": "Ferrari racing car"
+    }
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "set_number": "1572-1",
+  "name": "Super Tow Truck",
+  "query": "tow truck wrecker",
+  "photos": [
+    {
+      "file": "photo_01.jpg",
+      "relative_path": "dataset/models/1572-1/real_world/photo_01.jpg",
+      "source_title": "File:DongFeng tow truck, Korle-Klottey (P1090871).jpg",
+      "source_url": "https://upload.wikimedia.org/wikipedia/commons/b/b6/DongFeng_tow_truck%2C_Korle-Klottey_%28P1090871%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "query": "tow truck wrecker"
+    },
+    {
+      "file": "photo_02.jpg",
+      "relative_path": "dataset/models/1572-1/real_world/photo_02.jpg",
+      "source_title": "File:Volvo FH16 tow truck, Nufam 2023, Rheinstetten (P1130808).jpg",
+      "source_url": "https://upload.wikimedia.org/wikipedia/commons/3/3d/Volvo_FH16_tow_truck%2C_Nufam_2023%2C_Rheinstetten_%28P1130808%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "query": "tow truck wrecker"
+    }
+  ]
+}

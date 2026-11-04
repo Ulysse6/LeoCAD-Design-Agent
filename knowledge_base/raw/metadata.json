@@ -1048,5 +1048,955 @@
     "file_name": "30103-1.mpd",
     "omr_id": "1331",
     "source_url": "https://library.ldraw.org/media/omr_models/1645/30103-1.mpd?v=1758937656"
+  },
+  "10002-1": {
+    "set_number": "10002-1",
+    "name": "Railroad Club Car",
+    "theme": "Train",
+    "year": "2001",
+    "pieces": 347,
+    "file_name": "10002-1.mpd",
+    "omr_id": "1413",
+    "source_url": "https://library.ldraw.org/media/omr_models/1749/10002-1.mpd?v=1758937660"
+  },
+  "10014-1": {
+    "set_number": "10014-1",
+    "name": "Caboose",
+    "theme": "Train &gt; 9V",
+    "year": "2001",
+    "pieces": 171,
+    "file_name": "10014-1.mpd",
+    "omr_id": "1415",
+    "source_url": "https://library.ldraw.org/media/omr_models/1751/10014-1.mpd?v=1758937660"
+  },
+  "10015-1": {
+    "set_number": "10015-1",
+    "name": "Passenger Wagon",
+    "theme": "Train &gt; 9V",
+    "year": "2001",
+    "pieces": 183,
+    "file_name": "10015-1.mpd",
+    "omr_id": "1416",
+    "source_url": "https://library.ldraw.org/media/omr_models/1752/10015-1.mpd?v=1758937660"
+  },
+  "10017-1": {
+    "set_number": "10017-1",
+    "name": "Hopper Wagon",
+    "theme": "Train &gt; 9V",
+    "year": "2001",
+    "pieces": 201,
+    "file_name": "10017-1.mpd",
+    "omr_id": "1418",
+    "source_url": "https://library.ldraw.org/media/omr_models/1754/10017-1.mpd?v=1758937660"
+  },
+  "10020-1": {
+    "set_number": "10020-1",
+    "name": "Santa Fe Super Chief",
+    "theme": "Train &gt; 9V",
+    "year": "2002",
+    "pieces": 447,
+    "file_name": "10020-1.mpd",
+    "omr_id": "1419",
+    "source_url": "https://library.ldraw.org/media/omr_models/1755/10020-1.mpd?v=1758937660"
+  },
+  "10022-1": {
+    "set_number": "10022-1",
+    "name": "Santa Fe Cars - Set II (dining, observation, or sleeping car)",
+    "theme": "Train &gt; 9V",
+    "year": "2002",
+    "pieces": 325,
+    "file_name": "10022-1.mpd",
+    "omr_id": "1420",
+    "source_url": "https://library.ldraw.org/media/omr_models/1756/10022-1_Observation-Car.mpd?v=1758937660"
+  },
+  "10025-1": {
+    "set_number": "10025-1",
+    "name": "Santa Fe Cars - Set I (mail or baggage car)",
+    "theme": "Train &gt; 9V",
+    "year": "2002",
+    "pieces": 263,
+    "file_name": "10025-1.mpd",
+    "omr_id": "1421",
+    "source_url": "https://library.ldraw.org/media/omr_models/1759/10025-1_Baggage-Car.mpd?v=1758937660"
+  },
+  "10036-1": {
+    "set_number": "10036-1",
+    "name": "Pizza To Go",
+    "theme": "Town",
+    "year": "2002",
+    "pieces": 171,
+    "file_name": "10036-1.mpd",
+    "omr_id": "658",
+    "source_url": "https://library.ldraw.org/media/omr_models/719/10036-1.mpd?v=1758937625"
+  },
+  "10037-1": {
+    "set_number": "10037-1",
+    "name": "Breezeway Cafe",
+    "theme": "Town",
+    "year": "2002",
+    "pieces": 227,
+    "file_name": "10037-1.mpd",
+    "omr_id": "690",
+    "source_url": "https://library.ldraw.org/media/omr_models/751/10037-1.mpd?v=1758937626"
+  },
+  "10128-1": {
+    "set_number": "10128-1",
+    "name": "Train Level Crossing",
+    "theme": "Town &gt; World City",
+    "year": "2003",
+    "pieces": 319,
+    "file_name": "10128-1.mpd",
+    "omr_id": "864",
+    "source_url": "https://library.ldraw.org/media/omr_models/996/10128-1.mpd?v=1758937634"
+  },
+  "10133-1": {
+    "set_number": "10133-1",
+    "name": "Burlington Northern Santa Fe Locomotive",
+    "theme": "Train &gt; 9V",
+    "year": "2004",
+    "pieces": 422,
+    "file_name": "10133-1.mpd",
+    "omr_id": "1422",
+    "source_url": "https://library.ldraw.org/media/omr_models/1761/10133-1.mpd?v=1758937660"
+  },
+  "10158-1": {
+    "set_number": "10158-1",
+    "name": "High Speed Train Car",
+    "theme": "Town &gt; World City",
+    "year": "2004",
+    "pieces": 170,
+    "file_name": "10158-1.mpd",
+    "omr_id": "1423",
+    "source_url": "https://library.ldraw.org/media/omr_models/1762/10158-1.mpd?v=1758937660"
+  },
+  "10170-1": {
+    "set_number": "10170-1",
+    "name": "TTX Intermodal Double-Stack Car",
+    "theme": "Train &gt; 9V",
+    "year": "2005",
+    "pieces": 250,
+    "file_name": "10170-1.mpd",
+    "omr_id": "1424",
+    "source_url": "https://library.ldraw.org/media/omr_models/1763/10170-1.mpd?v=1758937660"
+  },
+  "10205-1": {
+    "set_number": "10205-1",
+    "name": "Locomotive",
+    "theme": "Train &gt; 9V",
+    "year": "2002",
+    "pieces": 231,
+    "file_name": "10205-1.mpd",
+    "omr_id": "1426",
+    "source_url": "https://library.ldraw.org/media/omr_models/1765/10205-1.mpd?v=1758937660"
+  },
+  "10280-1": {
+    "set_number": "10280-1",
+    "name": "Flower Bouquet",
+    "theme": "Botanicals",
+    "year": "2021",
+    "pieces": 430,
+    "file_name": "10280-1.mpd",
+    "omr_id": "1382",
+    "source_url": "https://library.ldraw.org/media/omr_models/1702/10280-1.mpd?v=1758937658"
+  },
+  "10349-1": {
+    "set_number": "10349-1",
+    "name": "Happy Plants",
+    "theme": "Botanicals",
+    "year": "2025",
+    "pieces": 221,
+    "file_name": "10349-1.mpd",
+    "omr_id": "4513",
+    "source_url": "https://library.ldraw.org/media/omr_models/1855/10349-1.mpd?v=1770146566"
+  },
+  "112-2": {
+    "set_number": "112-2",
+    "name": "Locomotive with Motor",
+    "theme": "Train &gt; 4.5V",
+    "year": "1966",
+    "pieces": 469,
+    "file_name": "112-2.mpd",
+    "omr_id": "698",
+    "source_url": "https://library.ldraw.org/media/omr_models/767/112-2.mpd?v=1758937627"
+  },
+  "1472-1": {
+    "set_number": "1472-1",
+    "name": "Holiday Home",
+    "theme": "Town &gt; Classic Town",
+    "year": "1987",
+    "pieces": 376,
+    "file_name": "1472-1.mpd",
+    "omr_id": "568",
+    "source_url": "https://library.ldraw.org/media/omr_models/628/1472-1.mpd?v=1758937623"
+  },
+  "148-1": {
+    "set_number": "148-1",
+    "name": "Central Station",
+    "theme": "Train &gt; 4.5V",
+    "year": "1975",
+    "pieces": 366,
+    "file_name": "148-1.mpd",
+    "omr_id": "1291",
+    "source_url": "https://library.ldraw.org/media/omr_models/1597/148-1.mpd?v=1758937655"
+  },
+  "1484-1": {
+    "set_number": "1484-1",
+    "name": "Weetabix Town House",
+    "theme": "Town &gt; Classic Town",
+    "year": "1987",
+    "pieces": 211,
+    "file_name": "1484-1.mpd",
+    "omr_id": "570",
+    "source_url": "https://library.ldraw.org/media/omr_models/630/1484-1.mpd?v=1758937623"
+  },
+  "1489-1": {
+    "set_number": "1489-1",
+    "name": "Mobile Car Crane",
+    "theme": "Town &gt; Classic Town",
+    "year": "1989",
+    "pieces": 187,
+    "file_name": "1489-1.mpd",
+    "omr_id": "423",
+    "source_url": "https://library.ldraw.org/media/omr_models/455/1489-1.mpd?v=1758937618"
+  },
+  "1490-1": {
+    "set_number": "1490-1",
+    "name": "Town Bank",
+    "theme": "Town &gt; Classic Town",
+    "year": "1988",
+    "pieces": 207,
+    "file_name": "1490-1.mpd",
+    "omr_id": "424",
+    "source_url": "https://library.ldraw.org/media/omr_models/456/1490-1.mpd?v=1758937618"
+  },
+  "165-1": {
+    "set_number": "165-1",
+    "name": "Cargo Station",
+    "theme": "Train &gt; 4.5V",
+    "year": "1978",
+    "pieces": 291,
+    "file_name": "165-1.mpd",
+    "omr_id": "1388",
+    "source_url": "https://library.ldraw.org/media/omr_models/1710/165-1.mpd?v=1758937658"
+  },
+  "1656-1": {
+    "set_number": "1656-1",
+    "name": "Evacuation Team",
+    "theme": "Town &gt; Classic Town",
+    "year": "1991",
+    "pieces": 265,
+    "file_name": "1656-1.mpd",
+    "omr_id": "573",
+    "source_url": "https://library.ldraw.org/media/omr_models/633/1656-1.mpd?v=1758937623"
+  },
+  "1775-1": {
+    "set_number": "1775-1",
+    "name": "Jet",
+    "theme": "Town &gt; Classic Town",
+    "year": "1994",
+    "pieces": 187,
+    "file_name": "1775-1.mpd",
+    "omr_id": "576",
+    "source_url": "https://library.ldraw.org/media/omr_models/636/1775-1.mpd?v=1758937623"
+  },
+  "1787-1": {
+    "set_number": "1787-1",
+    "name": "Crater Cruiser",
+    "theme": "Space &gt; Unitron",
+    "year": "1995",
+    "pieces": 206,
+    "file_name": "1787-1.mpd",
+    "omr_id": "262",
+    "source_url": "https://library.ldraw.org/media/omr_models/290/1787-1.mpd?v=1758937612"
+  },
+  "1789-1": {
+    "set_number": "1789-1",
+    "name": "Star Hawk II",
+    "theme": "Space &gt; Unitron",
+    "year": "1995",
+    "pieces": 365,
+    "file_name": "1789-1.mpd",
+    "omr_id": "263",
+    "source_url": "https://library.ldraw.org/media/omr_models/291/1789-1.mpd?v=1758937612"
+  },
+  "1793-1": {
+    "set_number": "1793-1",
+    "name": "Space Station Zenon",
+    "theme": "Space &gt; Unitron",
+    "year": "1995",
+    "pieces": 401,
+    "file_name": "1793-1.mpd",
+    "omr_id": "264",
+    "source_url": "https://library.ldraw.org/media/omr_models/292/1793-1.mpd?v=1758937612"
+  },
+  "1831-1": {
+    "set_number": "1831-1",
+    "name": "Maersk Line Container Lorry",
+    "theme": "Town &gt; Classic Town",
+    "year": "1995",
+    "pieces": 194,
+    "file_name": "1831-1.mpd",
+    "omr_id": "578",
+    "source_url": "https://library.ldraw.org/media/omr_models/638/1831-1.mpd?v=1758937623"
+  },
+  "1896-1": {
+    "set_number": "1896-1",
+    "name": "Trauma Team",
+    "theme": "Town &gt; Classic Town",
+    "year": "1992",
+    "pieces": 441,
+    "file_name": "1896-1.mpd",
+    "omr_id": "391",
+    "source_url": "https://library.ldraw.org/media/omr_models/423/1896-1.mpd?v=1758937617"
+  },
+  "1972-1": {
+    "set_number": "1972-1",
+    "name": "Go-Cart",
+    "theme": "Technic",
+    "year": "1985",
+    "pieces": 222,
+    "file_name": "1972-1.mpd",
+    "omr_id": "1157",
+    "source_url": "https://library.ldraw.org/media/omr_models/1430/1972-1.mpd?v=1758937649"
+  },
+  "21004-1": {
+    "set_number": "21004-1",
+    "name": "Solomon R. Guggenheim Museum",
+    "theme": "Architecture",
+    "year": "2009",
+    "pieces": 179,
+    "file_name": "21004-1.mpd",
+    "omr_id": "12",
+    "source_url": "https://library.ldraw.org/media/omr_models/12/21004-1.mpd?v=1758937604"
+  },
+  "21006-1": {
+    "set_number": "21006-1",
+    "name": "The White House",
+    "theme": "Architecture",
+    "year": "2010",
+    "pieces": 441,
+    "file_name": "21006-1.mpd",
+    "omr_id": "74",
+    "source_url": "https://library.ldraw.org/media/omr_models/80/21006-1.mpd?v=1758937606"
+  },
+  "21007-1": {
+    "set_number": "21007-1",
+    "name": "Rockefeller Center",
+    "theme": "Architecture",
+    "year": "2010",
+    "pieces": 247,
+    "file_name": "21007-1.mpd",
+    "omr_id": "75",
+    "source_url": "https://library.ldraw.org/media/omr_models/81/21007-1.mpd?v=1758937606"
+  },
+  "21009-1": {
+    "set_number": "21009-1",
+    "name": "Farnsworth House",
+    "theme": "Architecture",
+    "year": "2011",
+    "pieces": 475,
+    "file_name": "21009-1.mpd",
+    "omr_id": "15",
+    "source_url": "https://library.ldraw.org/media/omr_models/15/21009-1.mpd?v=1758937604"
+  },
+  "21011-1": {
+    "set_number": "21011-1",
+    "name": "Brandenburg Gate",
+    "theme": "Architecture",
+    "year": "2011",
+    "pieces": 356,
+    "file_name": "21011-1.mpd",
+    "omr_id": "16",
+    "source_url": "https://library.ldraw.org/media/omr_models/16/21011-1.mpd?v=1758937604"
+  },
+  "21012-1": {
+    "set_number": "21012-1",
+    "name": "Sydney Opera House",
+    "theme": "Architecture",
+    "year": "2012",
+    "pieces": 274,
+    "file_name": "21012-1.mpd",
+    "omr_id": "76",
+    "source_url": "https://library.ldraw.org/media/omr_models/82/21012-1.mpd?v=1758937606"
+  },
+  "21013-1": {
+    "set_number": "21013-1",
+    "name": "Big Ben",
+    "theme": "Architecture",
+    "year": "2012",
+    "pieces": 298,
+    "file_name": "21013-1.mpd",
+    "omr_id": "17",
+    "source_url": "https://library.ldraw.org/media/omr_models/17/21013-1.mpd?v=1758937604"
+  },
+  "21015-1": {
+    "set_number": "21015-1",
+    "name": "The Leaning Tower of Pisa",
+    "theme": "Architecture",
+    "year": "2013",
+    "pieces": 337,
+    "file_name": "21015-1.mpd",
+    "omr_id": "78",
+    "source_url": "https://library.ldraw.org/media/omr_models/84/21015-1.mpd?v=1758937606"
+  },
+  "21016-1": {
+    "set_number": "21016-1",
+    "name": "Sungnyemun",
+    "theme": "Architecture",
+    "year": "2012",
+    "pieces": 325,
+    "file_name": "21016-1.mpd",
+    "omr_id": "36",
+    "source_url": "https://library.ldraw.org/media/omr_models/39/21016-1.mpd?v=1758937604"
+  },
+  "21018-1": {
+    "set_number": "21018-1",
+    "name": "United Nations Headquarters",
+    "theme": "Architecture",
+    "year": "2013",
+    "pieces": 497,
+    "file_name": "21018-1.mpd",
+    "omr_id": "80",
+    "source_url": "https://library.ldraw.org/media/omr_models/86/21018-1.mpd?v=1758937606"
+  },
+  "21019-1": {
+    "set_number": "21019-1",
+    "name": "Eiffel Tower",
+    "theme": "Architecture",
+    "year": "2014",
+    "pieces": 221,
+    "file_name": "21019-1.mpd",
+    "omr_id": "81",
+    "source_url": "https://library.ldraw.org/media/omr_models/87/21019-1.mpd?v=1758937606"
+  },
+  "21022-1": {
+    "set_number": "21022-1",
+    "name": "Lincoln Memorial",
+    "theme": "Architecture",
+    "year": "2015",
+    "pieces": 270,
+    "file_name": "21022-1.mpd",
+    "omr_id": "84",
+    "source_url": "https://library.ldraw.org/media/omr_models/90/21022-1.mpd?v=1758937606"
+  },
+  "21023-1": {
+    "set_number": "21023-1",
+    "name": "Flatiron Building",
+    "theme": "Architecture",
+    "year": "2015",
+    "pieces": 483,
+    "file_name": "21023-1.mpd",
+    "omr_id": "85",
+    "source_url": "https://library.ldraw.org/media/omr_models/91/21023-1.mpd?v=1758937606"
+  },
+  "21026-1": {
+    "set_number": "21026-1",
+    "name": "Venice",
+    "theme": "Architecture &gt; Skylines",
+    "year": "2016",
+    "pieces": 210,
+    "file_name": "21026-1.mpd",
+    "omr_id": "87",
+    "source_url": "https://library.ldraw.org/media/omr_models/93/21026-1.mpd?v=1758937606"
+  },
+  "21027-1": {
+    "set_number": "21027-1",
+    "name": "Berlin",
+    "theme": "Architecture &gt; Skylines",
+    "year": "2016",
+    "pieces": 290,
+    "file_name": "21027-1.mpd",
+    "omr_id": "206",
+    "source_url": "https://library.ldraw.org/media/omr_models/228/21027-1.mpd?v=1758937610"
+  },
+  "21031-1": {
+    "set_number": "21031-1",
+    "name": "Burj Khalifa",
+    "theme": "Architecture",
+    "year": "2016",
+    "pieces": 315,
+    "file_name": "21031-1.mpd",
+    "omr_id": "88",
+    "source_url": "https://library.ldraw.org/media/omr_models/94/21031-1.mpd?v=1758937606"
+  },
+  "21032-1": {
+    "set_number": "21032-1",
+    "name": "Sydney",
+    "theme": "Architecture &gt; Skylines",
+    "year": "2017",
+    "pieces": 348,
+    "file_name": "21032-1.mpd",
+    "omr_id": "467",
+    "source_url": "https://library.ldraw.org/media/omr_models/499/21032-1.mpd?v=1758937619"
+  },
+  "21033-1": {
+    "set_number": "21033-1",
+    "name": "Chicago",
+    "theme": "Architecture &gt; Skylines",
+    "year": "2017",
+    "pieces": 343,
+    "file_name": "21033-1.mpd",
+    "omr_id": "466",
+    "source_url": "https://library.ldraw.org/media/omr_models/498/21033-1.mpd?v=1758937619"
+  },
+  "21036-1": {
+    "set_number": "21036-1",
+    "name": "Arc de Triomphe",
+    "theme": "Architecture",
+    "year": "2017",
+    "pieces": 320,
+    "file_name": "21036-1.mpd",
+    "omr_id": "911",
+    "source_url": "https://library.ldraw.org/media/omr_models/1070/21036-1.mpd?v=1758937637"
+  },
+  "21107-1": {
+    "set_number": "21107-1",
+    "name": "Micro World - The End",
+    "theme": "Minecraft",
+    "year": "2014",
+    "pieces": 426,
+    "file_name": "21107-1.mpd",
+    "omr_id": "361",
+    "source_url": "https://library.ldraw.org/media/omr_models/394/21107-1.mpd?v=1758937616"
+  },
+  "21113-1": {
+    "set_number": "21113-1",
+    "name": "The Cave",
+    "theme": "Minecraft",
+    "year": "2014",
+    "pieces": 240,
+    "file_name": "21113-1.mpd",
+    "omr_id": "298",
+    "source_url": "https://library.ldraw.org/media/omr_models/326/21113-1.mpd?v=1758937613"
+  },
+  "21302-1": {
+    "set_number": "21302-1",
+    "name": "The Big Bang Theory",
+    "theme": "LEGO Ideas and CUUSOO",
+    "year": "2015",
+    "pieces": 477,
+    "file_name": "21302-1.mpd",
+    "omr_id": "1285",
+    "source_url": "https://library.ldraw.org/media/omr_models/1590/21302-1.mpd?v=1758937654"
+  },
+  "2140-1": {
+    "set_number": "2140-1",
+    "name": "ANWB Roadside Assistance Crew",
+    "theme": "Town &gt; Classic Town",
+    "year": "1996",
+    "pieces": 273,
+    "file_name": "2140-1.mpd",
+    "omr_id": "430",
+    "source_url": "https://library.ldraw.org/media/omr_models/462/2140-1.mpd?v=1758937618"
+  },
+  "2149-1": {
+    "set_number": "2149-1",
+    "name": "Color Line Container Lorry",
+    "theme": "Town &gt; Classic Town",
+    "year": "1997",
+    "pieces": 174,
+    "file_name": "2149-1.mpd",
+    "omr_id": "581",
+    "source_url": "https://library.ldraw.org/media/omr_models/641/2149-1.mpd?v=1758937623"
+  },
+  "261-1": {
+    "set_number": "261-1",
+    "name": "Bathroom",
+    "theme": "Homemaker",
+    "year": "1979",
+    "pieces": 265,
+    "file_name": "261-1.mpd",
+    "omr_id": "900",
+    "source_url": "https://library.ldraw.org/media/omr_models/1220/261-1.mpd?v=1758937642"
+  },
+  "262-2": {
+    "set_number": "262-2",
+    "name": "Complete Children&#039;s Room Set",
+    "theme": "Homemaker",
+    "year": "1972",
+    "pieces": 259,
+    "file_name": "262-2.mpd",
+    "omr_id": "1022",
+    "source_url": "https://library.ldraw.org/media/omr_models/1221/262-2.mpd?v=1758937642"
+  },
+  "30105-1": {
+    "set_number": "30105-1",
+    "name": "Stephanie and Mailbox",
+    "theme": "Friends",
+    "year": "2012",
+    "pieces": 44,
+    "file_name": "30105-1.mpd",
+    "omr_id": "1332",
+    "source_url": "https://library.ldraw.org/media/omr_models/1646/30105-1.mpd?v=1758937656"
+  },
+  "3015-1": {
+    "set_number": "3015-1",
+    "name": "Space Police Car",
+    "theme": "Space &gt; Space Police II",
+    "year": "1999",
+    "pieces": 33,
+    "file_name": "3015-1.mpd",
+    "omr_id": "215",
+    "source_url": "https://library.ldraw.org/media/omr_models/237/3015-1.mpd?v=1758937610"
+  },
+  "30161-1": {
+    "set_number": "30161-1",
+    "name": "Batmobile",
+    "theme": "Super Heroes DC &gt; Batman",
+    "year": "2012",
+    "pieces": 45,
+    "file_name": "30161-1.mpd",
+    "omr_id": "833",
+    "source_url": "https://library.ldraw.org/media/omr_models/916/30161-1.mpd?v=1758937632"
+  },
+  "30181-1": {
+    "set_number": "30181-1",
+    "name": "Helicopter",
+    "theme": "Creator",
+    "year": "2012",
+    "pieces": 52,
+    "file_name": "30181-1.mpd",
+    "omr_id": "145",
+    "source_url": "https://library.ldraw.org/media/omr_models/159/30181-1.mpd?v=1758937608"
+  },
+  "30190-1": {
+    "set_number": "30190-1",
+    "name": "Ferrari 150\u00b0 Italia",
+    "theme": "Racers &gt; Ferrari",
+    "year": "2012",
+    "pieces": 33,
+    "file_name": "30190-1.mpd",
+    "omr_id": "936",
+    "source_url": "https://library.ldraw.org/media/omr_models/1102/30190-1.mpd?v=1758937638"
+  },
+  "30191-1": {
+    "set_number": "30191-1",
+    "name": "Scuderia Ferrari Truck",
+    "theme": "Racers &gt; Ferrari",
+    "year": "2012",
+    "pieces": 41,
+    "file_name": "30191-1.mpd",
+    "omr_id": "834",
+    "source_url": "https://library.ldraw.org/media/omr_models/917/30191-1.mpd?v=1758937632"
+  },
+  "30192-1": {
+    "set_number": "30192-1",
+    "name": "F40",
+    "theme": "Racers &gt; Ferrari",
+    "year": "2012",
+    "pieces": 48,
+    "file_name": "30192-1.mpd",
+    "omr_id": "835",
+    "source_url": "https://library.ldraw.org/media/omr_models/918/30192-1.mpd?v=1758937632"
+  },
+  "30193-1": {
+    "set_number": "30193-1",
+    "name": "250 GT Berlinetta",
+    "theme": "Racers &gt; Ferrari",
+    "year": "2012",
+    "pieces": 118,
+    "file_name": "30193-1.mpd",
+    "omr_id": "836",
+    "source_url": "https://library.ldraw.org/media/omr_models/919/30193-1.mpd?v=1758937632"
+  },
+  "30194-1": {
+    "set_number": "30194-1",
+    "name": "458 Italia",
+    "theme": "Racers &gt; Ferrari",
+    "year": "2012",
+    "pieces": 33,
+    "file_name": "30194-1.mpd",
+    "omr_id": "837",
+    "source_url": "https://library.ldraw.org/media/omr_models/920/30194-1.mpd?v=1758937632"
+  },
+  "30195-1": {
+    "set_number": "30195-1",
+    "name": "FXX",
+    "theme": "Racers &gt; Ferrari",
+    "year": "2012",
+    "pieces": 53,
+    "file_name": "30195-1.mpd",
+    "omr_id": "838",
+    "source_url": "https://library.ldraw.org/media/omr_models/921/30195-1.mpd?v=1758937632"
+  },
+  "30201-1": {
+    "set_number": "30201-1",
+    "name": "Ghost",
+    "theme": "Monster Fighters",
+    "year": "2012",
+    "pieces": 50,
+    "file_name": "30201-1.mpd",
+    "omr_id": "876",
+    "source_url": "https://library.ldraw.org/media/omr_models/1027/30201-1.mpd?v=1758937635"
+  },
+  "30210-1": {
+    "set_number": "30210-1",
+    "name": "Frodo with Cooking Corner",
+    "theme": "The Hobbit and Lord of the Rings &gt; The Lord of the Rings",
+    "year": "2012",
+    "pieces": 39,
+    "file_name": "30210-1.mpd",
+    "omr_id": "31",
+    "source_url": "https://library.ldraw.org/media/omr_models/34/30210-1.mpd?v=1758937604"
+  },
+  "30259-1": {
+    "set_number": "30259-1",
+    "name": "Azari\u2019s Magic Fire",
+    "theme": "Elves",
+    "year": "2015",
+    "pieces": 70,
+    "file_name": "30259-1.mpd",
+    "omr_id": "368",
+    "source_url": "https://library.ldraw.org/media/omr_models/401/30259-1.mpd?v=1758937616"
+  },
+  "30277-1": {
+    "set_number": "30277-1",
+    "name": "First Order Star Destroyer",
+    "theme": "Star Wars",
+    "year": "2016",
+    "pieces": 57,
+    "file_name": "30277-1.mpd",
+    "omr_id": "997",
+    "source_url": "https://library.ldraw.org/media/omr_models/1191/30277-1.mpd?v=1758937642"
+  },
+  "30283-1": {
+    "set_number": "30283-1",
+    "name": "Off-Road",
+    "theme": "Creator",
+    "year": "2015",
+    "pieces": 105,
+    "file_name": "30283-1.mpd",
+    "omr_id": "260",
+    "source_url": "https://library.ldraw.org/media/omr_models/288/30283-1.mpd?v=1758937612"
+  },
+  "30284-1": {
+    "set_number": "30284-1",
+    "name": "Tractor",
+    "theme": "Creator",
+    "year": "2015",
+    "pieces": 53,
+    "file_name": "30284-1.mpd",
+    "omr_id": "261",
+    "source_url": "https://library.ldraw.org/media/omr_models/289/30284-1.mpd?v=1758937612"
+  },
+  "30285-1": {
+    "set_number": "30285-1",
+    "name": "Tiger",
+    "theme": "Creator",
+    "year": "2015",
+    "pieces": 113,
+    "file_name": "30285-1.mpd",
+    "omr_id": "340",
+    "source_url": "https://library.ldraw.org/media/omr_models/374/30285-1.mpd?v=1758937615"
+  },
+  "30300-1": {
+    "set_number": "30300-1",
+    "name": "The Batman Tumbler",
+    "theme": "Super Heroes DC &gt; Batman",
+    "year": "2014",
+    "pieces": 58,
+    "file_name": "30300-1.mpd",
+    "omr_id": "839",
+    "source_url": "https://library.ldraw.org/media/omr_models/922/30300-1.mpd?v=1758937632"
+  },
+  "30311-1": {
+    "set_number": "30311-1",
+    "name": "Swamp Police Helicopter",
+    "theme": "City &gt; Police",
+    "year": "2015",
+    "pieces": 58,
+    "file_name": "30311-1.mpd",
+    "omr_id": "344",
+    "source_url": "https://library.ldraw.org/media/omr_models/379/30311-1.mpd?v=1758937615"
+  },
+  "30312-1": {
+    "set_number": "30312-1",
+    "name": "Demolition Driller",
+    "theme": "City &gt; Construction",
+    "year": "2015",
+    "pieces": 150,
+    "file_name": "30312-1.mpd",
+    "omr_id": "363",
+    "source_url": "https://library.ldraw.org/media/omr_models/396/30312-1.mpd?v=1758937616"
+  },
+  "30313-1": {
+    "set_number": "30313-1",
+    "name": "Garbage Truck",
+    "theme": "City &gt; Traffic",
+    "year": "2015",
+    "pieces": 62,
+    "file_name": "30313-1.mpd",
+    "omr_id": "364",
+    "source_url": "https://library.ldraw.org/media/omr_models/397/30313-1.mpd?v=1758937616"
+  },
+  "30472-1": {
+    "set_number": "30472-1",
+    "name": "Parrot",
+    "theme": "Creator",
+    "year": "2016",
+    "pieces": 48,
+    "file_name": "30472-1.mpd",
+    "omr_id": "1163",
+    "source_url": "https://library.ldraw.org/media/omr_models/1436/30472-1.mpd?v=1758937649"
+  },
+  "30542-1": {
+    "set_number": "30542-1",
+    "name": "Cute Pug",
+    "theme": "Creator &gt; Creator 3-in-1",
+    "year": "2018",
+    "pieces": 73,
+    "file_name": "30542-1.mpd",
+    "omr_id": "554",
+    "source_url": "https://library.ldraw.org/media/omr_models/605/30542-1_Cute-Pug.mpd?v=1758937622"
+  },
+  "3056-1": {
+    "set_number": "3056-1",
+    "name": "Go-Kart",
+    "theme": "Town",
+    "year": "1998",
+    "pieces": 31,
+    "file_name": "3056-1.mpd",
+    "omr_id": "584",
+    "source_url": "https://library.ldraw.org/media/omr_models/644/3056-1.mpd?v=1758937623"
+  },
+  "30571-1": {
+    "set_number": "30571-1",
+    "name": "Pelican",
+    "theme": "Creator &gt; Creator 3-in-1",
+    "year": "2019",
+    "pieces": 70,
+    "file_name": "30571-1.mpd",
+    "omr_id": "975",
+    "source_url": "https://library.ldraw.org/media/omr_models/1163/30571-1.mpd?v=1758937640"
+  },
+  "30572-1": {
+    "set_number": "30572-1",
+    "name": "Race Car",
+    "theme": "Creator",
+    "year": "2019",
+    "pieces": 69,
+    "file_name": "30572-1.mpd",
+    "omr_id": "1136",
+    "source_url": "https://library.ldraw.org/media/omr_models/1387/30572-1.mpd?v=1758937648"
+  },
+  "3061-1": {
+    "set_number": "3061-1",
+    "name": "City Park Caf\u00e9",
+    "theme": "Friends",
+    "year": "2012",
+    "pieces": 270,
+    "file_name": "3061-1.mpd",
+    "omr_id": "312",
+    "source_url": "https://library.ldraw.org/media/omr_models/1099/3061-1.mpd?v=1758937638"
+  },
+  "3063-1": {
+    "set_number": "3063-1",
+    "name": "Heartlake Flying Club",
+    "theme": "Friends",
+    "year": "2012",
+    "pieces": 200,
+    "file_name": "3063-1.mpd",
+    "omr_id": "93",
+    "source_url": "https://library.ldraw.org/media/omr_models/107/3063-1.mpd?v=1758937606"
+  },
+  "310-3": {
+    "set_number": "310-3",
+    "name": "Tug",
+    "theme": "Boat",
+    "year": "1973",
+    "pieces": 85,
+    "file_name": "310-3.mpd",
+    "omr_id": "232",
+    "source_url": "https://library.ldraw.org/media/omr_models/256/310-3.mpd?v=1758937611"
+  },
+  "31009-1": {
+    "set_number": "31009-1",
+    "name": "Small Cottage",
+    "theme": "Creator &gt; Creator 3-in-1",
+    "year": "2013",
+    "pieces": 272,
+    "file_name": "31009-1.mpd",
+    "omr_id": "1164",
+    "source_url": "https://library.ldraw.org/media/omr_models/1437/31009-1.mpd?v=1758937649"
+  },
+  "31027-1": {
+    "set_number": "31027-1",
+    "name": "Blue Racer",
+    "theme": "Creator &gt; Creator 3-in-1",
+    "year": "2015",
+    "pieces": 65,
+    "file_name": "31027-1.mpd",
+    "omr_id": "223",
+    "source_url": "https://library.ldraw.org/media/omr_models/245/31027-1.mpd?v=1758937611"
+  },
+  "31028-1": {
+    "set_number": "31028-1",
+    "name": "Sea Plane",
+    "theme": "Creator &gt; Creator 3-in-1",
+    "year": "2015",
+    "pieces": 54,
+    "file_name": "31028-1.mpd",
+    "omr_id": "259",
+    "source_url": "https://library.ldraw.org/media/omr_models/287/31028-1.mpd?v=1758937612"
+  },
+  "31031-1": {
+    "set_number": "31031-1",
+    "name": "Rainforest Animals",
+    "theme": "Creator &gt; Creator 3-in-1",
+    "year": "2015",
+    "pieces": 207,
+    "file_name": "31031-1.mpd",
+    "omr_id": "1137",
+    "source_url": "https://library.ldraw.org/media/omr_models/1388/31031-1.mpd?v=1758937648"
+  },
+  "31037-1": {
+    "set_number": "31037-1",
+    "name": "Adventure Vehicles",
+    "theme": "Creator &gt; Creator 3-in-1",
+    "year": "2015",
+    "pieces": 337,
+    "file_name": "31037-1.mpd",
+    "omr_id": "257",
+    "source_url": "https://library.ldraw.org/media/omr_models/283/31037-1.mpd?v=1758937612"
+  },
+  "31040-1": {
+    "set_number": "31040-1",
+    "name": "Desert Racers",
+    "theme": "Creator &gt; Creator 3-in-1",
+    "year": "2016",
+    "pieces": 108,
+    "file_name": "31040-1.mpd",
+    "omr_id": "471",
+    "source_url": "https://library.ldraw.org/media/omr_models/503/31040-1.mpd?v=1758937619"
+  },
+  "31045-1": {
+    "set_number": "31045-1",
+    "name": "Ocean Explorer",
+    "theme": "Creator &gt; Creator 3-in-1",
+    "year": "2016",
+    "pieces": 254,
+    "file_name": "31045-1.mpd",
+    "omr_id": "339",
+    "source_url": "https://library.ldraw.org/media/omr_models/371/31045-1.mpd?v=1758937615"
+  },
+  "31048-1": {
+    "set_number": "31048-1",
+    "name": "Lakeside Lodge",
+    "theme": "Creator &gt; Creator 3-in-1",
+    "year": "2016",
+    "pieces": 354,
+    "file_name": "31048-1.mpd",
+    "omr_id": "1138",
+    "source_url": "https://library.ldraw.org/media/omr_models/1394/31048-1.mpd?v=1758937648"
+  },
+  "31063-1": {
+    "set_number": "31063-1",
+    "name": "Beachside Vacation",
+    "theme": "Creator &gt; Creator 3-in-1",
+    "year": "2017",
+    "pieces": 354,
+    "file_name": "31063-1.mpd",
+    "omr_id": "878",
+    "source_url": "https://library.ldraw.org/media/omr_models/1031/31063-1.mpd?v=1758937635"
   }
 }

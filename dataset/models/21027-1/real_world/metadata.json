@@ -1,0 +1,14 @@
+{
+  "set_number": "21027-1",
+  "name": "Berlin",
+  "query": "Berlin building",
+  "photos": [
+    {
+      "file": "photo_01.jpg",
+      "relative_path": "dataset/models/21027-1/real_world/photo_01.jpg",
+      "source_title": "File:Investitionsbank Berlin 20150113 3.jpg",
+      "source_url": "https://upload.wikimedia.org/wikipedia/commons/c/cd/Investitionsbank_Berlin_20150113_3.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "query": "Berlin building"
+    }
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "set_number": "1869-1",
+  "name": "South African Flag",
+  "query": "South African Flag building",
+  "photos": [
+    {
+      "file": "photo_01.jpg",
+      "relative_path": "dataset/models/1869-1/real_world/photo_01.jpg",
+      "source_title": "File:New South African flag unveiling.jpg",
+      "source_url": "https://upload.wikimedia.org/wikipedia/commons/c/c0/New_South_African_flag_unveiling.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "query": "South African Flag building"
+    }
+  ]
+}

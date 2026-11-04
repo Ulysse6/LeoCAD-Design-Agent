@@ -1,0 +1,14 @@
+{
+  "set_number": "30090-1",
+  "name": "Desert Glider",
+  "query": "Desert Glider aircraft",
+  "photos": [
+    {
+      "file": "photo_01.jpg",
+      "relative_path": "dataset/models/30090-1/real_world/photo_01.jpg",
+      "source_title": "File:Alvord Desert (22582680306).jpg",
+      "source_url": "https://upload.wikimedia.org/wikipedia/commons/5/58/Alvord_Desert_%2822582680306%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "query": "Desert Glider aircraft"
+    }
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "set_number": "1991-1",
+  "name": "Racing Pickup",
+  "query": "pickup truck",
+  "photos": [
+    {
+      "file": "photo_01.jpg",
+      "relative_path": "dataset/models/1991-1/real_world/photo_01.jpg",
+      "source_title": "File:Chevy Pickup 1956.jpg",
+      "source_url": "https://upload.wikimedia.org/wikipedia/commons/b/bd/Chevy_Pickup_1956.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "query": "pickup truck"
+    },
+    {
+      "file": "photo_02.jpg",
+      "relative_path": "dataset/models/1991-1/real_world/photo_02.jpg",
+      "source_title": "File:Fargo pickup.jpg",
+      "source_url": "https://upload.wikimedia.org/wikipedia/commons/b/b9/Fargo_pickup.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "query": "pickup truck"
+    }
+  ]
+}

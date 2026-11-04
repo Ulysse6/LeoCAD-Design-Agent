@@ -1,0 +1,14 @@
+{
+  "set_number": "21016-1",
+  "name": "Sungnyemun",
+  "query": "Sungnyemun building",
+  "photos": [
+    {
+      "file": "photo_01.jpg",
+      "relative_path": "dataset/models/21016-1/real_world/photo_01.jpg",
+      "source_title": "File:Sungnyemun Gate in Seoul.jpg",
+      "source_url": "https://upload.wikimedia.org/wikipedia/commons/1/1d/Sungnyemun_Gate_in_Seoul.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "query": "Sungnyemun building"
+    }
+  ]
+}

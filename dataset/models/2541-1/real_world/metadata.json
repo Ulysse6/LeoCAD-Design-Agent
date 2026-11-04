@@ -1,0 +1,14 @@
+{
+  "set_number": "2541-1",
+  "name": "Adventurers Car",
+  "query": "Adventurers Car",
+  "photos": [
+    {
+      "file": "photo_01.jpg",
+      "relative_path": "dataset/models/2541-1/real_world/photo_01.jpg",
+      "source_title": "File:2024 Downtown West Allis Classic Car Show 08 (1960 DeSoto Adventurer).jpg",
+      "source_url": "https://upload.wikimedia.org/wikipedia/commons/3/39/2024_Downtown_West_Allis_Classic_Car_Show_08_%281960_DeSoto_Adventurer%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "query": "Adventurers Car"
+    }
+  ]
+}

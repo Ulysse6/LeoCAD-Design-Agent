@@ -1,0 +1,14 @@
+{
+  "set_number": "30572-1",
+  "name": "Race Car",
+  "query": "Race Car",
+  "photos": [
+    {
+      "file": "photo_01.jpg",
+      "relative_path": "dataset/models/30572-1/real_world/photo_01.jpg",
+      "source_title": "File:Porsche race car Verschuur amk.jpg",
+      "source_url": "https://upload.wikimedia.org/wikipedia/commons/6/65/Porsche_race_car_Verschuur_amk.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "query": "Race Car"
+    }
+  ]
+}

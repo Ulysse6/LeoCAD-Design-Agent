@@ -1,0 +1,14 @@
+{
+  "set_number": "30035-1",
+  "name": "Racing Car",
+  "query": "Racing Car",
+  "photos": [
+    {
+      "file": "photo_01.jpg",
+      "relative_path": "dataset/models/30035-1/real_world/photo_01.jpg",
+      "source_title": "File:Formel3 racing car 2 amk.jpg",
+      "source_url": "https://upload.wikimedia.org/wikipedia/commons/7/7a/Formel3_racing_car_2_amk.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "query": "Racing Car"
+    }
+  ]
+}

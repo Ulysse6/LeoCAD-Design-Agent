@@ -1,0 +1,14 @@
+{
+  "set_number": "20014-1",
+  "name": "4 x 4 Dynamo",
+  "query": "Dynamo car",
+  "photos": [
+    {
+      "file": "photo_01.jpg",
+      "relative_path": "dataset/models/20014-1/real_world/photo_01.jpg",
+      "source_title": "File:Roewe E50 01 China 2014-04-20.JPG",
+      "source_url": "https://upload.wikimedia.org/wikipedia/commons/1/15/Roewe_E50_01_China_2014-04-20.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "query": "Dynamo car"
+    }
+  ]
+}

@@ -222,7 +222,7 @@ def run_normalization():
             continue
 
         pieces = flatten_submodels(submodels, root)
-        if len(pieces) < 8 or len(pieces) > 260:
+        if len(pieces) < 8 or len(pieces) > 600:
             skipped += 1
             continue
 

@@ -1,0 +1,14 @@
+{
+  "set_number": "2846-1",
+  "name": "Indian Kayak",
+  "query": "Indian Kayak historical",
+  "photos": [
+    {
+      "file": "photo_01.jpg",
+      "relative_path": "dataset/models/2846-1/real_world/photo_01.jpg",
+      "source_title": "File:Greenland Inuit Kayak Purchased by Charles and Anne Lindbergh - DPLA - 426822235310270eb6f9acbf1c0842bf (page 3).jpg",
+      "source_url": "https://upload.wikimedia.org/wikipedia/commons/a/a3/Greenland_Inuit_Kayak_Purchased_by_Charles_and_Anne_Lindbergh_-_DPLA_-_426822235310270eb6f9acbf1c0842bf_%28page_3%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "query": "Indian Kayak historical"
+    }
+  ]
+}

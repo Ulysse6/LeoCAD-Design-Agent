@@ -1,0 +1,14 @@
+{
+  "set_number": "1489-1",
+  "name": "Mobile Car Crane",
+  "query": "mobile crane truck",
+  "photos": [
+    {
+      "file": "photo_01.jpg",
+      "relative_path": "dataset/models/1489-1/real_world/photo_01.jpg",
+      "source_title": "File:A Liebherr LTM 1500-8.1 crane truck in Taiwan 01.jpg",
+      "source_url": "https://upload.wikimedia.org/wikipedia/commons/3/30/A_Liebherr_LTM_1500-8.1_crane_truck_in_Taiwan_01.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "query": "mobile crane truck"
+    }
+  ]
+}

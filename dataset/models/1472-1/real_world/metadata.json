@@ -1,0 +1,14 @@
+{
+  "set_number": "1472-1",
+  "name": "Holiday Home",
+  "query": "Holiday Home",
+  "photos": [
+    {
+      "file": "photo_01.jpg",
+      "relative_path": "dataset/models/1472-1/real_world/photo_01.jpg",
+      "source_title": "File:Praha Vinohrady Americka 37 Holiday Home.jpg",
+      "source_url": "https://upload.wikimedia.org/wikipedia/commons/d/dd/Praha_Vinohrady_Americka_37_Holiday_Home.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "query": "Holiday Home"
+    }
+  ]
+}

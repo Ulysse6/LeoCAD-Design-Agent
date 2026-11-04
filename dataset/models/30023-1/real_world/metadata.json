@@ -1,0 +1,21 @@
+{
+  "set_number": "30023-1",
+  "name": "Lighthouse",
+  "query": "coastal lighthouse",
+  "photos": [
+    {
+      "file": "photo_01.jpg",
+      "relative_path": "dataset/models/30023-1/real_world/photo_01.jpg",
+      "source_title": "File:2016-11-13 01 Kjeungskj\u00e6r Lighthouse, S\u00f8r-Tr\u00f8ndelag, Norway.jpg",
+      "source_url": "https://upload.wikimedia.org/wikipedia/commons/9/92/2016-11-13_01_Kjeungskj%C3%A6r_Lighthouse%2C_S%C3%B8r-Tr%C3%B8ndelag%2C_Norway.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "query": "coastal lighthouse"
+    },
+    {
+      "file": "photo_02.jpg",
+      "relative_path": "dataset/models/30023-1/real_world/photo_02.jpg",
+      "source_title": "File:Leuchtturm in Westerheversand crop.jpg",
+      "source_url": "https://upload.wikimedia.org/wikipedia/commons/0/02/Leuchtturm_in_Westerheversand_crop.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "query": "coastal lighthouse"
+    }
+  ]
+}

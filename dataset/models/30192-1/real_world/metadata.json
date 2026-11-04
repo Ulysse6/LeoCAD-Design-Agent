@@ -1,0 +1,14 @@
+{
+  "set_number": "30192-1",
+  "name": "F40",
+  "query": "Ferrari F40",
+  "photos": [
+    {
+      "file": "photo_01.jpg",
+      "relative_path": "dataset/models/30192-1/real_world/photo_01.jpg",
+      "source_title": "File:F40 Ferrari 20090509.jpg",
+      "source_url": "https://upload.wikimedia.org/wikipedia/commons/c/cb/F40_Ferrari_20090509.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "query": "Ferrari F40"
+    }
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "set_number": "1875-1",
+  "name": "Meteor Monitor",
+  "query": "Meteor Monitor spacecraft",
+  "photos": [
+    {
+      "file": "photo_01.jpg",
+      "relative_path": "dataset/models/1875-1/real_world/photo_01.jpg",
+      "source_title": "File:DART \u2014 Earth's first planetary defense mission (51708994661).jpg",
+      "source_url": "https://upload.wikimedia.org/wikipedia/commons/4/43/DART_%E2%80%94_Earth%27s_first_planetary_defense_mission_%2851708994661%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "query": "Meteor Monitor spacecraft"
+    }
+  ]
+}

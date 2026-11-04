@@ -1,0 +1,14 @@
+{
+  "set_number": "1887-1",
+  "name": "Scout Patrol Ship",
+  "query": "Scout Patrol Ship vehicle",
+  "photos": [
+    {
+      "file": "photo_01.jpg",
+      "relative_path": "dataset/models/1887-1/real_world/photo_01.jpg",
+      "source_title": "File:Sailors run tests on an unmanned aerial vehicle aboard USS Coronado. (34021239310).jpg",
+      "source_url": "https://upload.wikimedia.org/wikipedia/commons/4/49/Sailors_run_tests_on_an_unmanned_aerial_vehicle_aboard_USS_Coronado._%2834021239310%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "query": "Scout Patrol Ship vehicle"
+    }
+  ]
+}

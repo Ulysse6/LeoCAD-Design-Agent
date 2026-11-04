@@ -1,0 +1,14 @@
+{
+  "set_number": "20019-1",
+  "name": "Slave I",
+  "query": "Slave I spaceship",
+  "photos": [
+    {
+      "file": "photo_01.jpg",
+      "relative_path": "dataset/models/20019-1/real_world/photo_01.jpg",
+      "source_title": "File:Pete and Slave I (7857291874).jpg",
+      "source_url": "https://upload.wikimedia.org/wikipedia/commons/3/3c/Pete_and_Slave_I_%287857291874%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "query": "Slave I spaceship"
+    }
+  ]
+}

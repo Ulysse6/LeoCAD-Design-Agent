@@ -1,0 +1,14 @@
+{
+  "set_number": "30054-1",
+  "name": "AT-ST - Mini",
+  "query": "AT-ST - spacecraft",
+  "photos": [
+    {
+      "file": "photo_01.jpg",
+      "relative_path": "dataset/models/30054-1/real_world/photo_01.jpg",
+      "source_title": "File:Soyuz T-6 mission patch.png",
+      "source_url": "https://upload.wikimedia.org/wikipedia/commons/f/f2/Soyuz_T-6_mission_patch.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "query": "AT-ST - spacecraft"
+    }
+  ]
+}

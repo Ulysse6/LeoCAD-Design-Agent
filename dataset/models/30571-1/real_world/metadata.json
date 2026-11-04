@@ -1,0 +1,14 @@
+{
+  "set_number": "30571-1",
+  "name": "Pelican",
+  "query": "pelican bird",
+  "photos": [
+    {
+      "file": "photo_01.jpg",
+      "relative_path": "dataset/models/30571-1/real_world/photo_01.jpg",
+      "source_title": "File:128 Great white pelican in flight at Pelican point Photo by Giles Laurent.jpg",
+      "source_url": "https://upload.wikimedia.org/wikipedia/commons/b/b3/128_Great_white_pelican_in_flight_at_Pelican_point_Photo_by_Giles_Laurent.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "query": "pelican bird"
+    }
+  ]
+}

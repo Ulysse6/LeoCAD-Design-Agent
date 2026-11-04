@@ -16,9 +16,9 @@ BASE_URL = "https://library.ldraw.org"
 OMR_SETS_URL = f"{BASE_URL}/omr/sets?page="
 OUTPUT_DIR = os.path.abspath("knowledge_base/raw")
 METADATA_FILE = os.path.join(OUTPUT_DIR, "metadata.json")
-MAX_MODELS = 105
+MAX_MODELS = 200
 MIN_PIECES = 12
-MAX_PIECES = 150
+MAX_PIECES = 500
 
 HEADERS = {
     "User-Agent": "Mozilla/5.0 (X11; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0"

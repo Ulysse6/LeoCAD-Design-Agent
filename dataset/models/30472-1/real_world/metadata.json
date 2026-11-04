@@ -1,0 +1,14 @@
+{
+  "set_number": "30472-1",
+  "name": "Parrot",
+  "query": "colorful parrot",
+  "photos": [
+    {
+      "file": "photo_01.jpg",
+      "relative_path": "dataset/models/30472-1/real_world/photo_01.jpg",
+      "source_title": "File:Colorful Parrots Couple.jpg",
+      "source_url": "https://upload.wikimedia.org/wikipedia/commons/5/54/Colorful_Parrots_Couple.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "query": "colorful parrot"
+    }
+  ]
+}

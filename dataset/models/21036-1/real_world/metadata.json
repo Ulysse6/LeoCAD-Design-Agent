@@ -1,0 +1,14 @@
+{
+  "set_number": "21036-1",
+  "name": "Arc de Triomphe",
+  "query": "Arc de Triomphe Paris",
+  "photos": [
+    {
+      "file": "photo_01.jpg",
+      "relative_path": "dataset/models/21036-1/real_world/photo_01.jpg",
+      "source_title": "File:Arc de Triomphe de l'\u00c9toile at night vertical fix.jpg",
+      "source_url": "https://upload.wikimedia.org/wikipedia/commons/8/8e/Arc_de_Triomphe_de_l%27%C3%89toile_at_night_vertical_fix.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "query": "Arc de Triomphe Paris"
+    }
+  ]
+}

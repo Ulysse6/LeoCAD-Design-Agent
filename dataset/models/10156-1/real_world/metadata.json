@@ -1,0 +1,21 @@
+{
+  "set_number": "10156-1",
+  "name": "LEGO Truck",
+  "query": "commercial transport truck",
+  "photos": [
+    {
+      "file": "photo_01.jpg",
+      "relative_path": "dataset/models/10156-1/real_world/photo_01.jpg",
+      "source_title": "File:PK Truck on N-5 near Thatta asv2020-02 img2.jpg",
+      "source_url": "https://upload.wikimedia.org/wikipedia/commons/0/04/PK_Truck_on_N-5_near_Thatta_asv2020-02_img2.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "query": "commercial transport truck"
+    },
+    {
+      "file": "photo_02.jpg",
+      "relative_path": "dataset/models/10156-1/real_world/photo_02.jpg",
+      "source_title": "File:Recology Lodal Garbage Truck 14425 in San Francisco.jpg",
+      "source_url": "https://upload.wikimedia.org/wikipedia/commons/b/b0/Recology_Lodal_Garbage_Truck_14425_in_San_Francisco.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "query": "commercial transport truck"
+    }
+  ]
+}

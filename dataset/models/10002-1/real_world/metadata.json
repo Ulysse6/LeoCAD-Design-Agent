@@ -1,0 +1,14 @@
+{
+  "set_number": "10002-1",
+  "name": "Railroad Club Car",
+  "query": "Railroad Club Car",
+  "photos": [
+    {
+      "file": "photo_01.jpg",
+      "relative_path": "dataset/models/10002-1/real_world/photo_01.jpg",
+      "source_title": "File:Illinois Central Railroad Panama Limited club car 1917.JPG",
+      "source_url": "https://upload.wikimedia.org/wikipedia/commons/b/bd/Illinois_Central_Railroad_Panama_Limited_club_car_1917.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "query": "Railroad Club Car"
+    }
+  ]
+}

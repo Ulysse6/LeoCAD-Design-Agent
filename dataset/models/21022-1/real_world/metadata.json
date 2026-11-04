@@ -1,0 +1,14 @@
+{
+  "set_number": "21022-1",
+  "name": "Lincoln Memorial",
+  "query": "Lincoln Memorial Washington",
+  "photos": [
+    {
+      "file": "photo_01.jpg",
+      "relative_path": "dataset/models/21022-1/real_world/photo_01.jpg",
+      "source_title": "File:Lincoln Memorial east side.JPG",
+      "source_url": "https://upload.wikimedia.org/wikipedia/commons/6/62/Lincoln_Memorial_east_side.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "query": "Lincoln Memorial Washington"
+    }
+  ]
+}

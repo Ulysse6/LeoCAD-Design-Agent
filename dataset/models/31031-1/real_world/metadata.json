@@ -1,0 +1,14 @@
+{
+  "set_number": "31031-1",
+  "name": "Rainforest Animals",
+  "query": "Rainforest Animals",
+  "photos": [
+    {
+      "file": "photo_01.jpg",
+      "relative_path": "dataset/models/31031-1/real_world/photo_01.jpg",
+      "source_title": "File:Rainforest Cafe at Animal Kingdom.jpg",
+      "source_url": "https://upload.wikimedia.org/wikipedia/commons/1/14/Rainforest_Cafe_at_Animal_Kingdom.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "query": "Rainforest Animals"
+    }
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "set_number": "30103-1",
+  "name": "Car",
+  "query": "modern passenger car",
+  "photos": [
+    {
+      "file": "photo_01.jpg",
+      "relative_path": "dataset/models/30103-1/real_world/photo_01.jpg",
+      "source_title": "File:Brazil-00928 - Passenger car (48979406962).jpg",
+      "source_url": "https://upload.wikimedia.org/wikipedia/commons/0/07/Brazil-00928_-_Passenger_car_%2848979406962%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "query": "modern passenger car"
+    }
+  ]
+}

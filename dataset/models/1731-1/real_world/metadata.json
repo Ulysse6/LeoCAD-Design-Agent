@@ -1,0 +1,14 @@
+{
+  "set_number": "1731-1",
+  "name": "Ice Planet Scooter",
+  "query": "passenger airplane",
+  "photos": [
+    {
+      "file": "photo_01.jpg",
+      "relative_path": "dataset/models/1731-1/real_world/photo_01.jpg",
+      "source_title": "File:Airliner Contrail.jpg",
+      "source_url": "https://upload.wikimedia.org/wikipedia/commons/b/bd/Airliner_Contrail.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "query": "passenger airplane"
+    }
+  ]
+}

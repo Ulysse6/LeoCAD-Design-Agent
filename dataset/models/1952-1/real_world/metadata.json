@@ -1,0 +1,14 @@
+{
+  "set_number": "1952-1",
+  "name": "Dairy Tanker",
+  "query": "railroad tank car tanker",
+  "photos": [
+    {
+      "file": "photo_01.jpg",
+      "relative_path": "dataset/models/1952-1/real_world/photo_01.jpg",
+      "source_title": "File:Tanker Car 94460. Valley Railroad, CT.jpg",
+      "source_url": "https://upload.wikimedia.org/wikipedia/commons/6/60/Tanker_Car_94460._Valley_Railroad%2C_CT.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "query": "railroad tank car tanker"
+    }
+  ]
+}

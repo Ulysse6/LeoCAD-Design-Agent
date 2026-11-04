@@ -1,0 +1,21 @@
+{
+  "set_number": "30051-1",
+  "name": "X-wing Fighter - Mini",
+  "query": "X-wing starfighter",
+  "photos": [
+    {
+      "file": "photo_01.jpg",
+      "relative_path": "dataset/models/30051-1/real_world/photo_01.jpg",
+      "source_title": "File:Guarding the X-wing 2.jpg",
+      "source_url": "https://upload.wikimedia.org/wikipedia/commons/c/c0/Guarding_the_X-wing_2.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "query": "X-wing starfighter"
+    },
+    {
+      "file": "photo_02.jpg",
+      "relative_path": "dataset/models/30051-1/real_world/photo_02.jpg",
+      "source_title": "File:X-Wing render.webp",
+      "source_url": "https://upload.wikimedia.org/wikipedia/commons/0/0b/X-Wing_render.webp?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "query": "X-wing starfighter"
+    }
+  ]
+}

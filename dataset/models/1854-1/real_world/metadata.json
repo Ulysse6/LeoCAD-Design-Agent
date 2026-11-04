@@ -1,0 +1,14 @@
+{
+  "set_number": "1854-1",
+  "name": "House with Roof-Windows ( Velux )",
+  "query": "House with Roof-Windows Velux building",
+  "photos": [
+    {
+      "file": "photo_01.jpg",
+      "relative_path": "dataset/models/1854-1/real_world/photo_01.jpg",
+      "source_title": "File:Unfertige Dinge 003 2022 10 26.jpg",
+      "source_url": "https://upload.wikimedia.org/wikipedia/commons/0/03/Unfertige_Dinge_003_2022_10_26.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "query": "House with Roof-Windows Velux building"
+    }
+  ]
+}

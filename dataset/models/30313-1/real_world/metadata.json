@@ -1,0 +1,14 @@
+{
+  "set_number": "30313-1",
+  "name": "Garbage Truck",
+  "query": "garbage collection truck",
+  "photos": [
+    {
+      "file": "photo_01.jpg",
+      "relative_path": "dataset/models/30313-1/real_world/photo_01.jpg",
+      "source_title": "File:Recology Lodal Garbage Truck 14425 in San Francisco.jpg",
+      "source_url": "https://upload.wikimedia.org/wikipedia/commons/b/b0/Recology_Lodal_Garbage_Truck_14425_in_San_Francisco.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "query": "garbage collection truck"
+    }
+  ]
+}

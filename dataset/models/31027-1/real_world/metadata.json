@@ -1,0 +1,14 @@
+{
+  "set_number": "31027-1",
+  "name": "Blue Racer",
+  "query": "Blue Racer racing car",
+  "photos": [
+    {
+      "file": "photo_01.jpg",
+      "relative_path": "dataset/models/31027-1/real_world/photo_01.jpg",
+      "source_title": "File:1973 Datsun 240Z GTU racer no. 33, front right.jpg",
+      "source_url": "https://upload.wikimedia.org/wikipedia/commons/9/98/1973_Datsun_240Z_GTU_racer_no._33%2C_front_right.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "query": "Blue Racer racing car"
+    }
+  ]
+}

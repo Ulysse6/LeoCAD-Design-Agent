@@ -1,0 +1,14 @@
+{
+  "set_number": "30022-1",
+  "name": "Bee",
+  "query": "honey bee on flower",
+  "photos": [
+    {
+      "file": "photo_01.jpg",
+      "relative_path": "dataset/models/30022-1/real_world/photo_01.jpg",
+      "source_title": "File:Honey bee (\u00c1pis mellif\u00e9ra) on quince (Cyd\u014dnia) flower.jpg",
+      "source_url": "https://upload.wikimedia.org/wikipedia/commons/3/34/Honey_bee_%28%C3%81pis_mellif%C3%A9ra%29_on_quince_%28Cyd%C5%8Dnia%29_flower.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "query": "honey bee on flower"
+    }
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "set_number": "30201-1",
+  "name": "Ghost",
+  "query": "Ghost animal",
+  "photos": [
+    {
+      "file": "photo_01.jpg",
+      "relative_path": "dataset/models/30201-1/real_world/photo_01.jpg",
+      "source_title": "File:Athenodorus - The Greek Stoic Philosopher Athenodorus Rents a Haunted House.jpg",
+      "source_url": "https://upload.wikimedia.org/wikipedia/commons/2/29/Athenodorus_-_The_Greek_Stoic_Philosopher_Athenodorus_Rents_a_Haunted_House.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "query": "Ghost animal"
+    }
+  ]
+}

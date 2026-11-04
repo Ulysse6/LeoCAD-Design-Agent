@@ -1,0 +1,14 @@
+{
+  "set_number": "10349-1",
+  "name": "Happy Plants",
+  "query": "flower bouquet colorful",
+  "photos": [
+    {
+      "file": "photo_01.jpg",
+      "relative_path": "dataset/models/10349-1/real_world/photo_01.jpg",
+      "source_title": "File:Bouquet of Colorful Chrysanthemum Flowers Inside Car.jpg",
+      "source_url": "https://upload.wikimedia.org/wikipedia/commons/d/d5/Bouquet_of_Colorful_Chrysanthemum_Flowers_Inside_Car.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "query": "flower bouquet colorful"
+    }
+  ]
+}

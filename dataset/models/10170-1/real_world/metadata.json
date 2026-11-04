@@ -1,0 +1,14 @@
+{
+  "set_number": "10170-1",
+  "name": "TTX Intermodal Double-Stack Car",
+  "query": "TTX Intermodal Double-Stack Car",
+  "photos": [
+    {
+      "file": "photo_01.jpg",
+      "relative_path": "dataset/models/10170-1/real_world/photo_01.jpg",
+      "source_title": "File:Double Stack Intermodal (4012871511).jpg",
+      "source_url": "https://upload.wikimedia.org/wikipedia/commons/0/09/Double_Stack_Intermodal_%284012871511%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "query": "TTX Intermodal Double-Stack Car"
+    }
+  ]
+}

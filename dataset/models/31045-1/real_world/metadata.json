@@ -1,0 +1,14 @@
+{
+  "set_number": "31045-1",
+  "name": "Ocean Explorer",
+  "query": "Ocean Explorer",
+  "photos": [
+    {
+      "file": "photo_01.jpg",
+      "relative_path": "dataset/models/31045-1/real_world/photo_01.jpg",
+      "source_title": "File:Ctneophore - Flickr - NOAA Ocean Exploration ^ Research.jpg",
+      "source_url": "https://upload.wikimedia.org/wikipedia/commons/1/12/Ctneophore_-_Flickr_-_NOAA_Ocean_Exploration_%5E_Research.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "query": "Ocean Explorer"
+    }
+  ]
+}

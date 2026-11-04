@@ -1,0 +1,14 @@
+{
+  "set_number": "30052-1",
+  "name": "AAT - Mini",
+  "query": "AAT - spacecraft",
+  "photos": [
+    {
+      "file": "photo_01.jpg",
+      "relative_path": "dataset/models/30052-1/real_world/photo_01.jpg",
+      "source_title": "File:Stamp of Congo, Republic (Brazzaville) - 1969 - Colnect 973616 - Blast off from Moon.jpeg",
+      "source_url": "https://upload.wikimedia.org/wikipedia/commons/8/84/Stamp_of_Congo%2C_Republic_%28Brazzaville%29_-_1969_-_Colnect_973616_-_Blast_off_from_Moon.jpeg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "query": "AAT - spacecraft"
+    }
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "set_number": "10016-1",
+  "name": "Tanker",
+  "query": "railroad tank car tanker",
+  "photos": [
+    {
+      "file": "photo_01.jpg",
+      "relative_path": "dataset/models/10016-1/real_world/photo_01.jpg",
+      "source_title": "File:Tanker Car 94460. Valley Railroad, CT.jpg",
+      "source_url": "https://upload.wikimedia.org/wikipedia/commons/6/60/Tanker_Car_94460._Valley_Railroad%2C_CT.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "query": "railroad tank car tanker"
+    },
+    {
+      "file": "photo_02.jpg",
+      "relative_path": "dataset/models/10016-1/real_world/photo_02.jpg",
+      "source_title": "File:NASA Railroad helium tank cars at KSC (KSC-2012-2889).jpg",
+      "source_url": "https://upload.wikimedia.org/wikipedia/commons/7/74/NASA_Railroad_helium_tank_cars_at_KSC_%28KSC-2012-2889%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "query": "railroad tank car tanker"
+    }
+  ]
+}

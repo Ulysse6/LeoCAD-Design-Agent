@@ -1,0 +1,14 @@
+{
+  "set_number": "21033-1",
+  "name": "Chicago",
+  "query": "Chicago building",
+  "photos": [
+    {
+      "file": "photo_01.jpg",
+      "relative_path": "dataset/models/21033-1/real_world/photo_01.jpg",
+      "source_title": "File:2010-03-03 1856x2784 chicago chicago building.jpg",
+      "source_url": "https://upload.wikimedia.org/wikipedia/commons/a/a3/2010-03-03_1856x2784_chicago_chicago_building.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "query": "Chicago building"
+    }
+  ]
+}

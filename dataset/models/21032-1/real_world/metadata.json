@@ -1,0 +1,14 @@
+{
+  "set_number": "21032-1",
+  "name": "Sydney",
+  "query": "Sydney building",
+  "photos": [
+    {
+      "file": "photo_01.jpg",
+      "relative_path": "dataset/models/21032-1/real_world/photo_01.jpg",
+      "source_title": "File:Sydney Building.jpg",
+      "source_url": "https://upload.wikimedia.org/wikipedia/commons/2/23/Sydney_Building.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "query": "Sydney building"
+    }
+  ]
+}

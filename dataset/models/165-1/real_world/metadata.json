@@ -1,0 +1,14 @@
+{
+  "set_number": "165-1",
+  "name": "Cargo Station",
+  "query": "Cargo Station building",
+  "photos": [
+    {
+      "file": "photo_01.jpg",
+      "relative_path": "dataset/models/165-1/real_world/photo_01.jpg",
+      "source_title": "File:Rublyovo railway station (cargo building on line from metallobase).JPG",
+      "source_url": "https://upload.wikimedia.org/wikipedia/commons/3/30/Rublyovo_railway_station_%28cargo_building_on_line_from_metallobase%29.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "query": "Cargo Station building"
+    }
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "set_number": "1213-2",
+  "name": "Small House - Right Set",
+  "query": "Small House - Right building",
+  "photos": [
+    {
+      "file": "photo_01.jpg",
+      "relative_path": "dataset/models/1213-2/real_world/photo_01.jpg",
+      "source_title": "File:Old small house made of granite stone.jpg",
+      "source_url": "https://upload.wikimedia.org/wikipedia/commons/7/79/Old_small_house_made_of_granite_stone.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "query": "Small House - Right building"
+    }
+  ]
+}

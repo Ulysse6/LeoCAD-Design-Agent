@@ -1,0 +1,14 @@
+{
+  "set_number": "21015-1",
+  "name": "The Leaning Tower of Pisa",
+  "query": "Leaning Tower of Pisa",
+  "photos": [
+    {
+      "file": "photo_01.jpg",
+      "relative_path": "dataset/models/21015-1/real_world/photo_01.jpg",
+      "source_title": "File:The Duomo and Tower of Pisa at sunrise.jpg",
+      "source_url": "https://upload.wikimedia.org/wikipedia/commons/5/5f/The_Duomo_and_Tower_of_Pisa_at_sunrise.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "query": "Leaning Tower of Pisa"
+    }
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "set_number": "31063-1",
+  "name": "Beachside Vacation",
+  "query": "Beachside Vacation",
+  "photos": [
+    {
+      "file": "photo_01.jpg",
+      "relative_path": "dataset/models/31063-1/real_world/photo_01.jpg",
+      "source_title": "File:DFC 2134 Shaded beachside cafe with tables and umbrellas set among trees patrons relaxing on the sandy shore as sunlight filters through the canopy.jpg",
+      "source_url": "https://upload.wikimedia.org/wikipedia/commons/d/d9/DFC_2134_Shaded_beachside_cafe_with_tables_and_umbrellas_set_among_trees_patrons_relaxing_on_the_sandy_shore_as_sunlight_filters_through_the_canopy.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "query": "Beachside Vacation"
+    }
+  ]
+}

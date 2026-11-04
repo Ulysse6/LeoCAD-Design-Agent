@@ -1,0 +1,14 @@
+{
+  "set_number": "30028-1",
+  "name": "Wreath",
+  "query": "Christmas wreath",
+  "photos": [
+    {
+      "file": "photo_01.jpg",
+      "relative_path": "dataset/models/30028-1/real_world/photo_01.jpg",
+      "source_title": "File:Christmas wreath on front door.jpg",
+      "source_url": "https://upload.wikimedia.org/wikipedia/commons/1/1c/Christmas_wreath_on_front_door.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "query": "Christmas wreath"
+    }
+  ]
+}

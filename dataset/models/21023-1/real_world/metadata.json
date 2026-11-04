@@ -1,0 +1,14 @@
+{
+  "set_number": "21023-1",
+  "name": "Flatiron Building",
+  "query": "Flatiron Building Manhattan",
+  "photos": [
+    {
+      "file": "photo_01.jpg",
+      "relative_path": "dataset/models/21023-1/real_world/photo_01.jpg",
+      "source_title": "File:Edificio Fuller (Flatiron) en 2010 desde el Empire State crop boxin.jpg",
+      "source_url": "https://upload.wikimedia.org/wikipedia/commons/c/c3/Edificio_Fuller_%28Flatiron%29_en_2010_desde_el_Empire_State_crop_boxin.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "query": "Flatiron Building Manhattan"
+    }
+  ]
+}

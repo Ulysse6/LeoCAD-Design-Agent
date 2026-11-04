@@ -1,0 +1,14 @@
+{
+  "set_number": "107-2",
+  "name": "Canada Post Mail Truck",
+  "query": "postal delivery mail truck",
+  "photos": [
+    {
+      "file": "photo_01.jpg",
+      "relative_path": "dataset/models/107-2/real_world/photo_01.jpg",
+      "source_title": "File:Mail truck delivering in cold snowy Lule\u00e5, Sweden in mid-February. (3276024299).jpg",
+      "source_url": "https://upload.wikimedia.org/wikipedia/commons/1/1a/Mail_truck_delivering_in_cold_snowy_Lule%C3%A5%2C_Sweden_in_mid-February._%283276024299%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "query": "postal delivery mail truck"
+    }
+  ]
+}

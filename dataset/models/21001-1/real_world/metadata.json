@@ -1,0 +1,14 @@
+{
+  "set_number": "21001-1",
+  "name": "John Hancock Center",
+  "query": "John Hancock Center Chicago",
+  "photos": [
+    {
+      "file": "photo_01.jpg",
+      "relative_path": "dataset/models/21001-1/real_world/photo_01.jpg",
+      "source_title": "File:John Hancock Center 2.jpg",
+      "source_url": "https://upload.wikimedia.org/wikipedia/commons/4/4d/John_Hancock_Center_2.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "query": "John Hancock Center Chicago"
+    }
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "set_number": "30033-1",
+  "name": "Racing Truck",
+  "query": "Racing Truck",
+  "photos": [
+    {
+      "file": "photo_01.jpg",
+      "relative_path": "dataset/models/30033-1/real_world/photo_01.jpg",
+      "source_title": "File:Norbert Kiss - GP Cami\u00f3n de Espa\u00f1a 2013 - 08.jpg",
+      "source_url": "https://upload.wikimedia.org/wikipedia/commons/f/f7/Norbert_Kiss_-_GP_Cami%C3%B3n_de_Espa%C3%B1a_2013_-_08.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "query": "Racing Truck"
+    }
+  ]
+}

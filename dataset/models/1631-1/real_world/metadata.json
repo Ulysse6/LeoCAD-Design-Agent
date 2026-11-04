@@ -1,0 +1,14 @@
+{
+  "set_number": "1631-1",
+  "name": "Black Racer",
+  "query": "Black Racer racing car",
+  "photos": [
+    {
+      "file": "photo_01.jpg",
+      "relative_path": "dataset/models/1631-1/real_world/photo_01.jpg",
+      "source_title": "File:Moscow car show 2026-07-31 black racer photo-op 01.jpg",
+      "source_url": "https://upload.wikimedia.org/wikipedia/commons/f/fc/Moscow_car_show_2026-07-31_black_racer_photo-op_01.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "query": "Black Racer racing car"
+    }
+  ]
+}

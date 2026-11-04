@@ -2,8 +2,10 @@
 
 #include <QString>
 #include <QByteArray>
+#include <QImage>
 #include <QMap>
 #include <vector>
+#include <cstdint>
 
 enum class lcAITheme
 {
@@ -13,7 +15,8 @@ enum class lcAITheme
 	Monochrome,
 	Neon,
 	Earth,
-	Pastel
+	Pastel,
+	Custom
 };
 
 enum class lcAISize
@@ -29,6 +32,9 @@ struct lcAIOptions
 	lcAISize Size = lcAISize::Standard;
 	bool StepByStep = true;
 	bool ReplaceCurrent = true;
+	int TargetPieceCount = 0; // 0 = Auto / Unconstrained
+	QString ImagePath;
+	QImage AttachedImage;
 	QString CustomApiKey;
 	QString ApiEndpoint;
 };
@@ -66,6 +72,12 @@ class lcAIGenerator
 {
 public:
 	static lcAIModelResult GenerateModel(const QString& Prompt, const lcAIOptions& Options);
+
+	// Multimodal image and piece analysis helpers
+	static uint64_t ComputeVisualHash(const QImage& Image);
+	static int ExtractDominantColor(const QImage& Image);
+	static int ExtractTargetPieces(const QString& Prompt, int OptionPieces = 0);
+	static lcAIModelResult ParseLDrawString(const QString& Title, const QString& LDrawCode, int StepCount = 1);
 
 private:
 	// Knowledge base builder

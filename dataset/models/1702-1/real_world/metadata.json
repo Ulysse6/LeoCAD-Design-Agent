@@ -1,0 +1,14 @@
+{
+  "set_number": "1702-1",
+  "name": "Fire Fighter 4 x 4",
+  "query": "Fire Fighter vehicle",
+  "photos": [
+    {
+      "file": "photo_01.jpg",
+      "relative_path": "dataset/models/1702-1/real_world/photo_01.jpg",
+      "source_title": "File:Fire fighter vehicle at ekushe boimela 2023.jpg",
+      "source_url": "https://upload.wikimedia.org/wikipedia/commons/b/b1/Fire_fighter_vehicle_at_ekushe_boimela_2023.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "query": "Fire Fighter vehicle"
+    }
+  ]
+}

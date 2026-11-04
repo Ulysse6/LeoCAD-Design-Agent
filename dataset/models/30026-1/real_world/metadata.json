@@ -1,0 +1,14 @@
+{
+  "set_number": "30026-1",
+  "name": "Panda",
+  "query": "giant panda bear",
+  "photos": [
+    {
+      "file": "photo_01.jpg",
+      "relative_path": "dataset/models/30026-1/real_world/photo_01.jpg",
+      "source_title": "File:Ailuropoda melanoleuca (Panda g\u00e9ant) - 445.jpg",
+      "source_url": "https://upload.wikimedia.org/wikipedia/commons/6/68/Ailuropoda_melanoleuca_%28Panda_g%C3%A9ant%29_-_445.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "query": "giant panda bear"
+    }
+  ]
+}

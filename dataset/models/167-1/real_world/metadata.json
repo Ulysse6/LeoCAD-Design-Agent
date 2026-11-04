@@ -1,0 +1,14 @@
+{
+  "set_number": "167-1",
+  "name": "Loading Ramp and Car Transport Wagon",
+  "query": "railroad freight car",
+  "photos": [
+    {
+      "file": "photo_01.jpg",
+      "relative_path": "dataset/models/167-1/real_world/photo_01.jpg",
+      "source_title": "File:SCL freight car being unloaded on Port Manatee Railroad, 1971.jpg",
+      "source_url": "https://upload.wikimedia.org/wikipedia/commons/4/4d/SCL_freight_car_being_unloaded_on_Port_Manatee_Railroad%2C_1971.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "query": "railroad freight car"
+    }
+  ]
+}

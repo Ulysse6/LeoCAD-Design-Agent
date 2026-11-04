@@ -1,0 +1,14 @@
+{
+  "set_number": "30034-1",
+  "name": "Racing Tow Truck",
+  "query": "tow truck wrecker",
+  "photos": [
+    {
+      "file": "photo_01.jpg",
+      "relative_path": "dataset/models/30034-1/real_world/photo_01.jpg",
+      "source_title": "File:DongFeng tow truck, Korle-Klottey (P1090871).jpg",
+      "source_url": "https://upload.wikimedia.org/wikipedia/commons/b/b6/DongFeng_tow_truck%2C_Korle-Klottey_%28P1090871%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "query": "tow truck wrecker"
+    }
+  ]
+}

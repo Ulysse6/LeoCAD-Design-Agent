@@ -1,0 +1,14 @@
+{
+  "set_number": "21012-1",
+  "name": "Sydney Opera House",
+  "query": "Sydney Opera House",
+  "photos": [
+    {
+      "file": "photo_01.jpg",
+      "relative_path": "dataset/models/21012-1/real_world/photo_01.jpg",
+      "source_title": "File:Sydney Opera House - Dec 2008.jpg",
+      "source_url": "https://upload.wikimedia.org/wikipedia/commons/7/7c/Sydney_Opera_House_-_Dec_2008.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "query": "Sydney Opera House"
+    }
+  ]
+}

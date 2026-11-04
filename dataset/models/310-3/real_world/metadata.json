@@ -1,0 +1,14 @@
+{
+  "set_number": "310-3",
+  "name": "Tug",
+  "query": "Tug boat",
+  "photos": [
+    {
+      "file": "photo_01.jpg",
+      "relative_path": "dataset/models/310-3/real_world/photo_01.jpg",
+      "source_title": "File:Tug Boat NY 1.jpg",
+      "source_url": "https://upload.wikimedia.org/wikipedia/commons/b/bd/Tug_Boat_NY_1.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "query": "Tug boat"
+    }
+  ]
+}

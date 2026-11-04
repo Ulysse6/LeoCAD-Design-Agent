@@ -1,0 +1,14 @@
+{
+  "set_number": "10020-1",
+  "name": "Santa Fe Super Chief",
+  "query": "Santa Fe Super Chief train",
+  "photos": [
+    {
+      "file": "photo_01.jpg",
+      "relative_path": "dataset/models/10020-1/real_world/photo_01.jpg",
+      "source_title": "File:Santa Fe Chief and Super Chief 1937.jpg",
+      "source_url": "https://upload.wikimedia.org/wikipedia/commons/0/05/Santa_Fe_Chief_and_Super_Chief_1937.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "query": "Santa Fe Super Chief train"
+    }
+  ]
+}

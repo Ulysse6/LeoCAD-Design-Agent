@@ -1,0 +1,14 @@
+{
+  "set_number": "30027-1",
+  "name": "Reindeer",
+  "query": "reindeer in snow",
+  "photos": [
+    {
+      "file": "photo_01.jpg",
+      "relative_path": "dataset/models/30027-1/real_world/photo_01.jpg",
+      "source_title": "File:Hietaliete forest in snow with reindeer sled.jpg",
+      "source_url": "https://upload.wikimedia.org/wikipedia/commons/4/4c/Hietaliete_forest_in_snow_with_reindeer_sled.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "query": "reindeer in snow"
+    }
+  ]
+}

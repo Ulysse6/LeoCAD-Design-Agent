@@ -1,0 +1,21 @@
+{
+  "set_number": "21002-1",
+  "name": "Empire State Building",
+  "query": "Empire State Building New York",
+  "photos": [
+    {
+      "file": "photo_01.jpg",
+      "relative_path": "dataset/models/21002-1/real_world/photo_01.jpg",
+      "source_title": "File:View of Empire State Building from Rockefeller Center New York City dllu.jpg",
+      "source_url": "https://upload.wikimedia.org/wikipedia/commons/0/05/View_of_Empire_State_Building_from_Rockefeller_Center_New_York_City_dllu.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "query": "Empire State Building New York"
+    },
+    {
+      "file": "photo_02.jpg",
+      "relative_path": "dataset/models/21002-1/real_world/photo_02.jpg",
+      "source_title": "File:Empire State Building (aerial view).jpg",
+      "source_url": "https://upload.wikimedia.org/wikipedia/commons/1/10/Empire_State_Building_%28aerial_view%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "query": "Empire State Building New York"
+    }
+  ]
+}

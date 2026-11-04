@@ -1,0 +1,14 @@
+{
+  "set_number": "30161-1",
+  "name": "Batmobile",
+  "query": "Batmobile vehicle",
+  "photos": [
+    {
+      "file": "photo_01.jpg",
+      "relative_path": "dataset/models/30161-1/real_world/photo_01.jpg",
+      "source_title": "File:APD Go-4 Interceptor -178 \"Batmobile\" (9940117306).jpg",
+      "source_url": "https://upload.wikimedia.org/wikipedia/commons/2/26/APD_Go-4_Interceptor_-178_%22Batmobile%22_%289940117306%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "query": "Batmobile vehicle"
+    }
+  ]
+}

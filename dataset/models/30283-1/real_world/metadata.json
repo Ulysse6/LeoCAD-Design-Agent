@@ -1,0 +1,14 @@
+{
+  "set_number": "30283-1",
+  "name": "Off-Road",
+  "query": "Off-Road",
+  "photos": [
+    {
+      "file": "photo_01.jpg",
+      "relative_path": "dataset/models/30283-1/real_world/photo_01.jpg",
+      "source_title": "File:Trilhas Off Road no Munic\u00edpio de S\u00e3o Sebasti\u00e3o do Alto-RJ.jpg",
+      "source_url": "https://upload.wikimedia.org/wikipedia/commons/8/87/Trilhas_Off_Road_no_Munic%C3%ADpio_de_S%C3%A3o_Sebasti%C3%A3o_do_Alto-RJ.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "query": "Off-Road"
+    }
+  ]
+}

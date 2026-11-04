@@ -1,0 +1,14 @@
+{
+  "set_number": "2584-1",
+  "name": "Biker Bob",
+  "query": "Biker Bob character",
+  "photos": [
+    {
+      "file": "photo_01.jpg",
+      "relative_path": "dataset/models/2584-1/real_world/photo_01.jpg",
+      "source_title": "File:Robert Richardson 2019 by Glenn Francis.jpg",
+      "source_url": "https://upload.wikimedia.org/wikipedia/commons/a/a2/Robert_Richardson_2019_by_Glenn_Francis.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "query": "Biker Bob character"
+    }
+  ]
+}

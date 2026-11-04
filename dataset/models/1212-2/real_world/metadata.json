@@ -1,0 +1,14 @@
+{
+  "set_number": "1212-2",
+  "name": "Small House - Left Set",
+  "query": "Small House - Left building",
+  "photos": [
+    {
+      "file": "photo_01.jpg",
+      "relative_path": "dataset/models/1212-2/real_world/photo_01.jpg",
+      "source_title": "File:Large House on Small Site - geograph.org.uk - 265625.jpg",
+      "source_url": "https://upload.wikimedia.org/wikipedia/commons/4/4d/Large_House_on_Small_Site_-_geograph.org.uk_-_265625.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "query": "Small House - Left building"
+    }
+  ]
+}

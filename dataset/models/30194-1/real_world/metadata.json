@@ -1,0 +1,14 @@
+{
+  "set_number": "30194-1",
+  "name": "458 Italia",
+  "query": "Ferrari 458 Italia",
+  "photos": [
+    {
+      "file": "photo_01.jpg",
+      "relative_path": "dataset/models/30194-1/real_world/photo_01.jpg",
+      "source_title": "File:Ferrari 458 Italia, Toulouse.jpg",
+      "source_url": "https://upload.wikimedia.org/wikipedia/commons/f/fe/Ferrari_458_Italia%2C_Toulouse.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "query": "Ferrari 458 Italia"
+    }
+  ]
+}

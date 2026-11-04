@@ -1,0 +1,14 @@
+{
+  "set_number": "2148-1",
+  "name": "LEGO Truck",
+  "query": "commercial transport truck",
+  "photos": [
+    {
+      "file": "photo_01.jpg",
+      "relative_path": "dataset/models/2148-1/real_world/photo_01.jpg",
+      "source_title": "File:PK Truck on N-5 near Thatta asv2020-02 img2.jpg",
+      "source_url": "https://upload.wikimedia.org/wikipedia/commons/0/04/PK_Truck_on_N-5_near_Thatta_asv2020-02_img2.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "query": "commercial transport truck"
+    }
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "set_number": "21000-1",
+  "name": "Sears Tower",
+  "query": "Sears Tower building",
+  "photos": [
+    {
+      "file": "photo_01.jpg",
+      "relative_path": "dataset/models/21000-1/real_world/photo_01.jpg",
+      "source_title": "File:Chicago Sears Tower.jpg",
+      "source_url": "https://upload.wikimedia.org/wikipedia/commons/b/b0/Chicago_Sears_Tower.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "query": "Sears Tower building"
+    }
+  ]
+}

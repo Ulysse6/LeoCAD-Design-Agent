@@ -160,6 +160,202 @@ QString lcAIGenerator::GetPartDescription(const QString& PartId)
 	return "Lego Part " + Clean;
 }
 
+struct LegoColorDef {
+	int Code;
+	int R, G, B;
+};
+
+static const LegoColorDef gStandardLegoColors[] = {
+	{ COLOR_RED, 201, 26, 9 },
+	{ COLOR_BLUE, 0, 85, 191 },
+	{ COLOR_YELLOW, 242, 205, 55 },
+	{ COLOR_GREEN, 35, 120, 65 },
+	{ COLOR_WHITE, 255, 255, 255 },
+	{ COLOR_BLACK, 27, 42, 52 },
+	{ COLOR_ORANGE, 254, 138, 24 },
+	{ COLOR_DARK_BLUISH_GRAY, 108, 110, 104 },
+	{ COLOR_LIGHT_BLUISH_GRAY, 160, 165, 169 },
+	{ COLOR_LIME, 166, 202, 85 },
+	{ COLOR_BRIGHT_GREEN, 75, 159, 74 },
+	{ COLOR_TAN, 228, 205, 158 },
+	{ COLOR_BROWN, 88, 57, 39 },
+	{ COLOR_DARK_RED, 114, 0, 18 },
+	{ COLOR_DARK_GREEN, 0, 69, 26 }
+};
+static const size_t gStandardLegoColorCount = sizeof(gStandardLegoColors) / sizeof(gStandardLegoColors[0]);
+
+int lcAIGenerator::ExtractDominantColor(const QImage& Image)
+{
+	if (Image.isNull())
+		return -1;
+
+	QImage scaled = Image.scaled(32, 32, Qt::IgnoreAspectRatio, Qt::SmoothTransformation).convertToFormat(QImage::Format_ARGB32);
+
+	QRgb cornerPixel = scaled.pixel(0, 0);
+	int bgR = qRed(cornerPixel), bgG = qGreen(cornerPixel), bgB = qBlue(cornerPixel);
+	bool hasUniformBg = true;
+	QRgb c2 = scaled.pixel(31, 0), c3 = scaled.pixel(0, 31), c4 = scaled.pixel(31, 31);
+	if (std::abs(qRed(c2) - bgR) > 20 || std::abs(qRed(c3) - bgR) > 20 || std::abs(qRed(c4) - bgR) > 20)
+		hasUniformBg = false;
+
+	QMap<int, int> ColorHistogram;
+
+	for (int y = 0; y < 32; ++y)
+	{
+		for (int x = 0; x < 32; ++x)
+		{
+			QRgb pixel = scaled.pixel(x, y);
+			if (qAlpha(pixel) < 50)
+				continue;
+
+			int r = qRed(pixel), g = qGreen(pixel), b = qBlue(pixel);
+
+			// Ignore plain white background
+			if (r > 245 && g > 245 && b > 245)
+				continue;
+
+			if (hasUniformBg && qAlpha(cornerPixel) > 50)
+			{
+				int diffBg = (r - bgR)*(r - bgR) + (g - bgG)*(g - bgG) + (b - bgB)*(b - bgB);
+				if (diffBg < 1200)
+					continue;
+			}
+
+			int bestColor = COLOR_RED;
+			int bestDist = 1000000;
+			for (size_t c = 0; c < gStandardLegoColorCount; ++c)
+			{
+				int dr = r - gStandardLegoColors[c].R;
+				int dg = g - gStandardLegoColors[c].G;
+				int db = b - gStandardLegoColors[c].B;
+				int dist = dr*dr + dg*dg + db*db;
+				if (dist < bestDist)
+				{
+					bestDist = dist;
+					bestColor = gStandardLegoColors[c].Code;
+				}
+			}
+			ColorHistogram[bestColor]++;
+		}
+	}
+
+	int dominantColor = -1;
+	int maxCount = 0;
+	for (auto it = ColorHistogram.begin(); it != ColorHistogram.end(); ++it)
+	{
+		int count = it.value();
+		if (it.key() == COLOR_BLACK || it.key() == COLOR_WHITE || it.key() == COLOR_LIGHT_BLUISH_GRAY)
+			count = count / 2;
+
+		if (count > maxCount)
+		{
+			maxCount = count;
+			dominantColor = it.key();
+		}
+	}
+
+	return dominantColor;
+}
+
+uint64_t lcAIGenerator::ComputeVisualHash(const QImage& Image)
+{
+	if (Image.isNull())
+		return 0;
+
+	QImage scaled = Image.scaled(9, 8, Qt::IgnoreAspectRatio, Qt::SmoothTransformation).convertToFormat(QImage::Format_Grayscale8);
+	uint64_t hash = 0;
+	for (int y = 0; y < 8; ++y)
+	{
+		const uchar* line = scaled.constScanLine(y);
+		for (int x = 0; x < 8; ++x)
+		{
+			bool bit = (line[x] > line[x + 1]);
+			hash = (hash << 1) | (bit ? 1 : 0);
+		}
+	}
+	return hash;
+}
+
+int lcAIGenerator::ExtractTargetPieces(const QString& Prompt, int OptionPieces)
+{
+	if (OptionPieces > 0)
+		return OptionPieces;
+
+	QRegExp rxHyphen("(\\d+)\\s*-\\s*(?:piece|pieces|part|parts|brick|bricks)", Qt::CaseInsensitive);
+	if (rxHyphen.indexIn(Prompt) != -1)
+		return rxHyphen.cap(1).toInt();
+
+	QRegExp rxPrep("(?:with|using|around|approx|approximately|under|about)\\s*(\\d+)\\s*(?:pieces|parts|bricks)", Qt::CaseInsensitive);
+	if (rxPrep.indexIn(Prompt) != -1)
+		return rxPrep.cap(1).toInt();
+
+	QRegExp rxSimple("(\\d+)\\s*(?:pieces|parts|bricks)", Qt::CaseInsensitive);
+	if (rxSimple.indexIn(Prompt) != -1)
+		return rxSimple.cap(1).toInt();
+
+	return 0;
+}
+
+lcAIModelResult lcAIGenerator::ParseLDrawString(const QString& Title, const QString& LDrawCode, int StepCount)
+{
+	lcAIModelResult Result;
+	Result.Title = Title;
+	Result.Success = false;
+
+	QStringList Lines = LDrawCode.split('\n');
+	int CurrentStep = 1;
+
+	for (const QString& RawLine : Lines)
+	{
+		QString Line = RawLine.trimmed();
+		if (Line.isEmpty()) continue;
+
+		if (Line.startsWith("0 STEP"))
+		{
+			CurrentStep++;
+			continue;
+		}
+
+		if (Line.startsWith("1 "))
+		{
+			QStringList Tokens = Line.split(QRegExp("\\s+"), QString::SkipEmptyParts);
+			if (Tokens.size() >= 15)
+			{
+				bool Ok = false;
+				int Color = Tokens[1].toInt(&Ok);
+				if (Ok)
+				{
+					float X = Tokens[2].toFloat();
+					float Y = Tokens[3].toFloat();
+					float Z = Tokens[4].toFloat();
+					float Rot[9];
+					for (int r = 0; r < 9; ++r)
+						Rot[r] = Tokens[5 + r].toFloat();
+
+					QString Part = Tokens.mid(14).join(" ");
+					AddPiece(Result.Pieces, Color, X, Y, Z, Rot, Part, CurrentStep);
+					Result.PartCounts[Part]++;
+				}
+			}
+		}
+	}
+
+	if (!Result.Pieces.empty())
+	{
+		Result.Success = true;
+		Result.BrickCount = static_cast<int>(Result.Pieces.size());
+		Result.StepCount = CurrentStep;
+		Result.LDrawContent = LDrawCode.toUtf8();
+		Result.Explanation = QString("Generated 3D LEGO model with %1 pieces across %2 steps.").arg(Result.BrickCount).arg(Result.StepCount);
+	}
+	else
+	{
+		Result.ErrorMessage = "No valid LDraw pieces parsed from output";
+	}
+
+	return Result;
+}
+
 lcAIModelResult lcAIGenerator::GenerateFromKnowledgeBase(const lcKBModelEntry* Entry, const QString& Prompt, const lcAIOptions& Options)
 {
 	lcAIModelResult Result;
@@ -172,6 +368,15 @@ lcAIModelResult lcAIGenerator::GenerateFromKnowledgeBase(const lcKBModelEntry* E
 
 	// Determine if user requested a custom color
 	int UserColor = ResolveColor(Prompt, -1);
+	if (UserColor == -1 && !Options.AttachedImage.isNull())
+		UserColor = ExtractDominantColor(Options.AttachedImage);
+	else if (UserColor == -1 && !Options.ImagePath.isEmpty())
+	{
+		QImage Img(Options.ImagePath);
+		if (!Img.isNull())
+			UserColor = ExtractDominantColor(Img);
+	}
+
 	int TargetOldColor = Entry->DominantColor;
 	bool RemapColor = (UserColor != -1 && UserColor != TargetOldColor && TargetOldColor != 16 && TargetOldColor != 0);
 
@@ -238,7 +443,7 @@ lcAIModelResult lcAIGenerator::GenerateFromKnowledgeBase(const lcKBModelEntry* E
 
 	Result.Success = true;
 	Result.Title = QString::fromUtf8(Entry->Name);
-	Result.Explanation = QString("Built authentic LEGO® set '%1' (#%2) from the LDraw Official Model Repository catalog, featuring %3 pieces.")
+	Result.Explanation = QString("Built authentic LEGO® set '%1' (#%2) from the LDraw catalog (%3 pieces).")
 	                     .arg(QString::fromUtf8(Entry->Name), QString::fromUtf8(Entry->SetNumber))
 	                     .arg(Result.Pieces.size());
 	Result.BrickCount = static_cast<int>(Result.Pieces.size());
@@ -250,85 +455,164 @@ lcAIModelResult lcAIGenerator::GenerateFromKnowledgeBase(const lcKBModelEntry* E
 
 lcAIModelResult lcAIGenerator::GenerateModel(const QString& Prompt, const lcAIOptions& Options)
 {
-	// 1. Check knowledge base catalog for best matching authentic LEGO set
-	int MatchScore = 0;
-	const lcKBModelEntry* KBEntry = lcKBCatalog::FindBestMatch(Prompt, &MatchScore);
-	if (KBEntry && MatchScore >= 25)
+	// 1. Prepare image if provided
+	QImage Img = Options.AttachedImage;
+	if (Img.isNull() && !Options.ImagePath.isEmpty())
+		Img.load(Options.ImagePath);
+
+	uint64_t VisualHash = 0;
+	int DetectedColor = -1;
+	float AspectRatio = 1.0f;
+	if (!Img.isNull())
 	{
-		return GenerateFromKnowledgeBase(KBEntry, Prompt, Options);
+		VisualHash = ComputeVisualHash(Img);
+		DetectedColor = ExtractDominantColor(Img);
+		if (Img.height() > 0)
+			AspectRatio = static_cast<float>(Img.width()) / static_cast<float>(Img.height());
 	}
 
-	// 2. Fall back to procedural procedural generators
+	// 2. Extract target piece count
+	int TargetPieces = ExtractTargetPieces(Prompt, Options.TargetPieceCount);
+
+	// 3. Multimodal Knowledge Base Matching
+	int TextScore = 0;
+	int VisualScore = 0;
+	const lcKBModelEntry* TextMatch = (!Prompt.trimmed().isEmpty()) ?
+		lcKBCatalog::FindBestMatch(Prompt, TargetPieces, &TextScore) : nullptr;
+	const lcKBModelEntry* VisualMatch = (!Img.isNull()) ?
+		lcKBCatalog::FindBestVisualMatch(VisualHash, DetectedColor, TargetPieces, &VisualScore) : nullptr;
+
+	const lcKBModelEntry* KBEntry = nullptr;
+
+	if (TextMatch && VisualMatch)
+	{
+		if (TextMatch == VisualMatch)
+		{
+			KBEntry = TextMatch;
+		}
+		else if (TextScore >= VisualScore)
+		{
+			KBEntry = TextMatch;
+		}
+		else
+		{
+			KBEntry = VisualMatch;
+		}
+	}
+	else if (TextMatch && TextScore >= 25)
+	{
+		KBEntry = TextMatch;
+	}
+	else if (VisualMatch && VisualScore >= 35)
+	{
+		KBEntry = VisualMatch;
+	}
+
+	if (KBEntry)
+	{
+		lcAIOptions AdjustedOpts = Options;
+		AdjustedOpts.TargetPieceCount = TargetPieces;
+		if (!Img.isNull())
+			AdjustedOpts.AttachedImage = Img;
+
+		lcAIModelResult Res = GenerateFromKnowledgeBase(KBEntry, Prompt, AdjustedOpts);
+		if (!Img.isNull())
+		{
+			Res.Explanation += QString(" Visual recognition identified matching reference features (palette code %1).")
+			                   .arg(DetectedColor >= 0 ? QString::number(DetectedColor) : "auto");
+		}
+		if (TargetPieces > 0)
+		{
+			Res.Explanation += QString(" Conditioned on target budget (%1 pieces requested, model uses %2 pieces).")
+			                   .arg(TargetPieces).arg(Res.BrickCount);
+		}
+		return Res;
+	}
+
+	// 4. Procedural generator fallback
 	QString Lower = Prompt.toLower().trimmed();
+	lcAIOptions ProceduralOpts = Options;
+	ProceduralOpts.TargetPieceCount = TargetPieces;
+	if (!Img.isNull())
+		ProceduralOpts.AttachedImage = Img;
+
+	if (Lower.isEmpty() || Lower == "build" || Lower == "build this" || Lower == "make this" || Lower == "generate")
+	{
+		if (AspectRatio > 1.6f)
+			return BuildCar(Prompt, ProceduralOpts);
+		else if (AspectRatio < 0.65f)
+			return BuildCastleTower(Prompt, ProceduralOpts);
+		else
+			return BuildHouse(Prompt, ProceduralOpts);
+	}
 
 	if (Lower.contains("house") || Lower.contains("cottage") || Lower.contains("cabin") ||
 	    Lower.contains("home") || Lower.contains("villa") || Lower.contains("mansion") ||
 	    Lower.contains("building") || Lower.contains("shed"))
 	{
-		return BuildHouse(Prompt, Options);
+		return BuildHouse(Prompt, ProceduralOpts);
 	}
 	if (Lower.contains("car") || Lower.contains("automobile") || Lower.contains("truck") ||
 	    Lower.contains("racer") || Lower.contains("vehicle") || Lower.contains("kart") ||
 	    Lower.contains("van") || Lower.contains("pickup") || Lower.contains("taxi"))
 	{
-		return BuildCar(Prompt, Options);
+		return BuildCar(Prompt, ProceduralOpts);
 	}
 	if (Lower.contains("rocket") || Lower.contains("missile") || Lower.contains("saturn"))
 	{
-		return BuildRocket(Prompt, Options);
+		return BuildRocket(Prompt, ProceduralOpts);
 	}
 	if (Lower.contains("space") || Lower.contains("ship") || Lower.contains("shuttle") ||
 	    Lower.contains("ufo") || Lower.contains("alien") || Lower.contains("starfighter") ||
 	    Lower.contains("fighter") || Lower.contains("interceptor"))
 	{
-		return BuildSpaceship(Prompt, Options);
+		return BuildSpaceship(Prompt, ProceduralOpts);
 	}
 	if (Lower.contains("castle") || Lower.contains("tower") || Lower.contains("fort") ||
 	    Lower.contains("fortress") || Lower.contains("bastion") || Lower.contains("dungeon"))
 	{
-		return BuildCastleTower(Prompt, Options);
+		return BuildCastleTower(Prompt, ProceduralOpts);
 	}
 	if (Lower.contains("pyramid") || Lower.contains("egypt") || Lower.contains("pharaoh") ||
 	    Lower.contains("monument") || Lower.contains("ziggurat"))
 	{
-		return BuildPyramid(Prompt, Options);
+		return BuildPyramid(Prompt, ProceduralOpts);
 	}
 	if (Lower.contains("tree") || Lower.contains("pine") || Lower.contains("plant") ||
 	    Lower.contains("flower") || Lower.contains("forest") || Lower.contains("bush"))
 	{
-		return BuildTree(Prompt, Options);
+		return BuildTree(Prompt, ProceduralOpts);
 	}
 	if (Lower.contains("boat") || Lower.contains("vessel") || Lower.contains("sail") ||
 	    Lower.contains("yacht") || Lower.contains("canoe"))
 	{
-		return BuildBoat(Prompt, Options);
+		return BuildBoat(Prompt, ProceduralOpts);
 	}
 	if (Lower.contains("robot") || Lower.contains("droid") || Lower.contains("mech") ||
 	    Lower.contains("android") || Lower.contains("cyborg"))
 	{
-		return BuildRobot(Prompt, Options);
+		return BuildRobot(Prompt, ProceduralOpts);
 	}
 	if (Lower.contains("plane") || Lower.contains("airplane") || Lower.contains("jet") ||
 	    Lower.contains("aircraft") || Lower.contains("biplane") || Lower.contains("fly"))
 	{
-		return BuildAirplane(Prompt, Options);
+		return BuildAirplane(Prompt, ProceduralOpts);
 	}
 	if (Lower.contains("chair") || Lower.contains("table") || Lower.contains("furniture") ||
 	    Lower.contains("sofa") || Lower.contains("desk") || Lower.contains("stool"))
 	{
-		return BuildFurniture(Prompt, Options);
+		return BuildFurniture(Prompt, ProceduralOpts);
 	}
 	if (Lower.contains("bridge") || Lower.contains("viaduct") || Lower.contains("overpass"))
 	{
-		return BuildBridge(Prompt, Options);
+		return BuildBridge(Prompt, ProceduralOpts);
 	}
 	if (Lower.contains("rainbow") || Lower.contains("arch") || Lower.contains("color"))
 	{
-		return BuildRainbowArch(Prompt, Options);
+		return BuildRainbowArch(Prompt, ProceduralOpts);
 	}
 
-	// Fallback to custom artistic sculpture matching prompt colors and concept
-	return BuildCustomSculpture(Prompt, Options);
+	return BuildCustomSculpture(Prompt, ProceduralOpts);
 }
 
 // -------------------------------------------------------------
@@ -339,7 +623,11 @@ lcAIModelResult lcAIGenerator::BuildHouse(const QString& Prompt, const lcAIOptio
 	lcAIModelResult Res;
 	Res.Title = "Cozy House with Gabled Roof";
 
-	int WallColor = ResolveColor(Prompt, COLOR_RED);
+	int WallColor = ResolveColor(Prompt, -1);
+	if (WallColor == -1 && !Options.AttachedImage.isNull())
+		WallColor = ExtractDominantColor(Options.AttachedImage);
+	if (WallColor == -1) WallColor = COLOR_RED;
+
 	int RoofColor = Prompt.toLower().contains("blue") ? COLOR_BLUE : (Prompt.toLower().contains("black") ? COLOR_BLACK : COLOR_BLUE);
 	if (WallColor == COLOR_BLUE) RoofColor = COLOR_RED;
 	int DoorColor = COLOR_YELLOW;
@@ -426,7 +714,11 @@ lcAIModelResult lcAIGenerator::BuildCar(const QString& Prompt, const lcAIOptions
 	lcAIModelResult Res;
 	Res.Title = "Sports Car with Aerodynamic Wing";
 
-	int BodyColor = ResolveColor(Prompt, COLOR_YELLOW);
+	int BodyColor = ResolveColor(Prompt, -1);
+	if (BodyColor == -1 && !Options.AttachedImage.isNull())
+		BodyColor = ExtractDominantColor(Options.AttachedImage);
+	if (BodyColor == -1) BodyColor = COLOR_YELLOW;
+
 	int ChassisColor = COLOR_BLACK;
 	int WindshieldColor = COLOR_TRANS_CLEAR;
 	int InteriorColor = COLOR_DARK_GRAY;

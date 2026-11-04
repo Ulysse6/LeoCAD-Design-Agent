@@ -1,0 +1,14 @@
+{
+  "set_number": "30542-1",
+  "name": "Cute Pug",
+  "query": "pug dog",
+  "photos": [
+    {
+      "file": "photo_01.jpg",
+      "relative_path": "dataset/models/30542-1/real_world/photo_01.jpg",
+      "source_title": "File:Pug in the stroller.jpg",
+      "source_url": "https://upload.wikimedia.org/wikipedia/commons/3/3d/Pug_in_the_stroller.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "query": "pug dog"
+    }
+  ]
+}

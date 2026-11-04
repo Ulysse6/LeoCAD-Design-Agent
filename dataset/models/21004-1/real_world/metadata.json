@@ -1,0 +1,14 @@
+{
+  "set_number": "21004-1",
+  "name": "Solomon R. Guggenheim Museum",
+  "query": "Guggenheim Museum New York",
+  "photos": [
+    {
+      "file": "photo_01.jpg",
+      "relative_path": "dataset/models/21004-1/real_world/photo_01.jpg",
+      "source_title": "File:Solomon R. Guggenheim Museum skylight.jpg",
+      "source_url": "https://upload.wikimedia.org/wikipedia/commons/5/5a/Solomon_R._Guggenheim_Museum_skylight.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "query": "Guggenheim Museum New York"
+    }
+  ]
+}

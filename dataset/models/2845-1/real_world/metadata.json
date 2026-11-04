@@ -1,0 +1,14 @@
+{
+  "set_number": "2845-1",
+  "name": "Indian Chief",
+  "query": "Indian Chief historical",
+  "photos": [
+    {
+      "file": "photo_01.jpg",
+      "relative_path": "dataset/models/2845-1/real_world/photo_01.jpg",
+      "source_title": "File:An Indian Chief, Cherokee Indian Reservation adjoining Great Smoky Mountains National Park (6886640019).jpg",
+      "source_url": "https://upload.wikimedia.org/wikipedia/commons/9/9a/An_Indian_Chief%2C_Cherokee_Indian_Reservation_adjoining_Great_Smoky_Mountains_National_Park_%286886640019%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "query": "Indian Chief historical"
+    }
+  ]
+}

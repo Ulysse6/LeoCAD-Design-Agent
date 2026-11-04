@@ -1,0 +1,14 @@
+{
+  "set_number": "10014-1",
+  "name": "Caboose",
+  "query": "Caboose train",
+  "photos": [
+    {
+      "file": "photo_01.jpg",
+      "relative_path": "dataset/models/10014-1/real_world/photo_01.jpg",
+      "source_title": "File:GM&O Caboose at Discovery Park of America.jpg",
+      "source_url": "https://upload.wikimedia.org/wikipedia/commons/1/11/GM%26O_Caboose_at_Discovery_Park_of_America.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "query": "Caboose train"
+    }
+  ]
+}

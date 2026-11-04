@@ -1,0 +1,14 @@
+{
+  "set_number": "30036-1",
+  "name": "Buggy Racer",
+  "query": "off road racing buggy",
+  "photos": [
+    {
+      "file": "photo_01.jpg",
+      "relative_path": "dataset/models/30036-1/real_world/photo_01.jpg",
+      "source_title": "File:1-8 4WD off-road racing buggy.jpg",
+      "source_url": "https://upload.wikimedia.org/wikipedia/commons/1/17/1-8_4WD_off-road_racing_buggy.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "query": "off road racing buggy"
+    }
+  ]
+}

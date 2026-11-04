@@ -1,0 +1,14 @@
+{
+  "set_number": "3056-1",
+  "name": "Go-Kart",
+  "query": "Go-Kart racing car",
+  "photos": [
+    {
+      "file": "photo_01.jpg",
+      "relative_path": "dataset/models/3056-1/real_world/photo_01.jpg",
+      "source_title": "File:Trago Mills - Go-Karts Racing Circuit - geograph.org.uk - 610158.jpg",
+      "source_url": "https://upload.wikimedia.org/wikipedia/commons/1/17/Trago_Mills_-_Go-Karts_Racing_Circuit_-_geograph.org.uk_-_610158.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "query": "Go-Kart racing car"
+    }
+  ]
+}

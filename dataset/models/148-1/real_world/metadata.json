@@ -1,0 +1,14 @@
+{
+  "set_number": "148-1",
+  "name": "Central Station",
+  "query": "Central Station building",
+  "photos": [
+    {
+      "file": "photo_01.jpg",
+      "relative_path": "dataset/models/148-1/real_world/photo_01.jpg",
+      "source_title": "File:Stockholm Central Station September 2013.jpg",
+      "source_url": "https://upload.wikimedia.org/wikipedia/commons/f/f9/Stockholm_Central_Station_September_2013.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "query": "Central Station building"
+    }
+  ]
+}

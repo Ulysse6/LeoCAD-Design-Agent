@@ -1,0 +1,14 @@
+{
+  "set_number": "30102-1",
+  "name": "Desk",
+  "query": "wooden study desk",
+  "photos": [
+    {
+      "file": "photo_01.jpg",
+      "relative_path": "dataset/models/30102-1/real_world/photo_01.jpg",
+      "source_title": "File:Vihorlat Museum in Humenn\u00e9 - History and art history permanent exhibition - Small study and bedroom - Smaller writing desk next to the canopy bed, with desk lamp, book and other items (September 2026).jpg",
+      "source_url": "https://upload.wikimedia.org/wikipedia/commons/b/ba/Vihorlat_Museum_in_Humenn%C3%A9_-_History_and_art_history_permanent_exhibition_-_Small_study_and_bedroom_-_Smaller_writing_desk_next_to_the_canopy_bed%2C_with_desk_lamp%2C_book_and_other_items_%28September_2026%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "query": "wooden study desk"
+    }
+  ]
+}

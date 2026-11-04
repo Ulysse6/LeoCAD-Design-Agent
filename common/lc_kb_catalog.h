@@ -3,6 +3,7 @@
 #include <QString>
 #include <QStringList>
 #include <vector>
+#include <cstdint>
 
 struct lcKBModelEntry
 {
@@ -14,6 +15,8 @@ struct lcKBModelEntry
 	const char* Categories; // Space-delimited
 	const char* Tags;       // Space-delimited
 	int DominantColor;
+	int SecondaryColor;
+	uint64_t VisualHash;
 	const char* LDrawData;
 };
 
@@ -22,6 +25,7 @@ class lcKBCatalog
 public:
 	static size_t GetModelCount();
 	static const lcKBModelEntry* GetModel(size_t Index);
-	static const lcKBModelEntry* FindBestMatch(const QString& Prompt, int* OutScore = nullptr);
+	static const lcKBModelEntry* FindBestMatch(const QString& Prompt, int TargetPieces = 0, int* OutScore = nullptr);
+	static const lcKBModelEntry* FindBestVisualMatch(uint64_t VisualHash, int DominantColor = -1, int TargetPieces = 0, int* OutScore = nullptr);
 	static std::vector<const lcKBModelEntry*> Search(const QString& Query, int MaxResults = 5);
 };

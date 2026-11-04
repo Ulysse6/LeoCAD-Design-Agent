@@ -1,0 +1,14 @@
+{
+  "set_number": "30195-1",
+  "name": "FXX",
+  "query": "FXX",
+  "photos": [
+    {
+      "file": "photo_01.jpg",
+      "relative_path": "dataset/models/30195-1/real_world/photo_01.jpg",
+      "source_title": "File:Ferrari FXX-K EVO 1.jpg",
+      "source_url": "https://upload.wikimedia.org/wikipedia/commons/c/c4/Ferrari_FXX-K_EVO_1.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "query": "FXX"
+    }
+  ]
+}

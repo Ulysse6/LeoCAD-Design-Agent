@@ -1,0 +1,14 @@
+{
+  "set_number": "30277-1",
+  "name": "First Order Star Destroyer",
+  "query": "Star Destroyer",
+  "photos": [
+    {
+      "file": "photo_01.jpg",
+      "relative_path": "dataset/models/30277-1/real_world/photo_01.jpg",
+      "source_title": "File:Star Wars Identities (8347789733).jpg",
+      "source_url": "https://upload.wikimedia.org/wikipedia/commons/1/12/Star_Wars_Identities_%288347789733%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "query": "Star Destroyer"
+    }
+  ]
+}

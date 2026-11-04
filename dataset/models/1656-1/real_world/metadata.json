@@ -1,0 +1,14 @@
+{
+  "set_number": "1656-1",
+  "name": "Evacuation Team",
+  "query": "Evacuation Team",
+  "photos": [
+    {
+      "file": "photo_01.jpg",
+      "relative_path": "dataset/models/1656-1/real_world/photo_01.jpg",
+      "source_title": "File:Evacuation Center in Bula CamSur.jpg",
+      "source_url": "https://upload.wikimedia.org/wikipedia/commons/d/da/Evacuation_Center_in_Bula_CamSur.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "query": "Evacuation Team"
+    }
+  ]
+}

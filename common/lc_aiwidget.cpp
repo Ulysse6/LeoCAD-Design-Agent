@@ -24,10 +24,19 @@
 #include <QScrollArea>
 #include <QBuffer>
 #include <QDateTime>
+#include <QSpinBox>
+#include <QFileDialog>
+#include <QFileInfo>
+#include <QDragEnterEvent>
+#include <QDropEvent>
+#include <QMimeData>
+#include <QUrl>
 
 lcAIAssistantWidget::lcAIAssistantWidget(QWidget* Parent)
 	: QWidget(Parent)
 {
+	setAcceptDrops(true);
+
 	QVBoxLayout* MainLayout = new QVBoxLayout(this);
 	MainLayout->setContentsMargins(8, 8, 8, 8);
 	MainLayout->setSpacing(6);
@@ -37,7 +46,7 @@ lcAIAssistantWidget::lcAIAssistantWidget(QWidget* Parent)
 	QHBoxLayout* HeaderLayout = new QHBoxLayout(HeaderWidget);
 	HeaderLayout->setContentsMargins(4, 4, 4, 4);
 
-	QLabel* TitleLabel = new QLabel(tr("🤖 <b>AI LEGO Builder</b>"), HeaderWidget);
+	QLabel* TitleLabel = new QLabel(tr("🤖 <b>Multimodal AI LEGO Builder</b>"), HeaderWidget);
 	TitleLabel->setStyleSheet("font-size: 14px; font-weight: bold; color: #4a90e2;");
 	HeaderLayout->addWidget(TitleLabel);
 	HeaderLayout->addStretch();
@@ -81,16 +90,16 @@ lcAIAssistantWidget::lcAIAssistantWidget(QWidget* Parent)
 	const PresetInfo Presets[] = {
 		{ "🛻", "Pickup", "Build a racing pickup truck" },
 		{ "🚜", "Tractor", "Build a loader tractor" },
-		{ "🏎️", "Racer", "Build a rally racer" },
+		{ "🏎️", "Ferrari", "Build a red Ferrari sports car" },
+		{ "🚂", "Santa Fe", "Build the Santa Fe Super Chief locomotive" },
 		{ "🚒", "Tow Truck", "Build a super tow truck" },
 		{ "🚁", "Helicopter", "Build a rescue helicopter" },
 		{ "🏁", "Dragster", "Build a racing dragster" },
 		{ "🛸", "X-Wing", "Build an x-wing starfighter" },
-		{ "🏠", "House", "Build a cozy house" },
+		{ "🏛️", "White House", "Build The White House landmark" },
+		{ "🗼", "Eiffel", "Build the Eiffel Tower" },
 		{ "🚤", "Speedboat", "Build a motor speedboat" },
-		{ "🚂", "Train", "Build a freight train wagon" },
-		{ "🤖", "Robot", "Build a mini robot" },
-		{ "🗼", "Skyscraper", "Build the Empire State Building" }
+		{ "🏠", "Beach House", "Build a beachside vacation house" }
 	};
 
 	int ColCount = 3;
@@ -134,6 +143,40 @@ lcAIAssistantWidget::lcAIAssistantWidget(QWidget* Parent)
 	OptRow2->addWidget(mSpeedSlider, 1);
 	OptionsLayout->addLayout(OptRow2);
 
+	// Piece Budget Conditioning
+	QHBoxLayout* OptRow3 = new QHBoxLayout();
+	OptRow3->addWidget(new QLabel(tr("Piece Budget:"), OptionsBox));
+
+	mPiecePresetCombo = new QComboBox(OptionsBox);
+	mPiecePresetCombo->addItem(tr("Auto (Natural)"), 0);
+	mPiecePresetCombo->addItem(tr("Mini (~50 pcs)"), 50);
+	mPiecePresetCombo->addItem(tr("Medium (~150 pcs)"), 150);
+	mPiecePresetCombo->addItem(tr("Detailed (~300 pcs)"), 300);
+	mPiecePresetCombo->addItem(tr("Complex (~500 pcs)"), 500);
+	mPiecePresetCombo->addItem(tr("Custom"), -1);
+	mPiecePresetCombo->setStyleSheet("font-size: 11px;");
+	OptRow3->addWidget(mPiecePresetCombo);
+
+	mPieceCountSpin = new QSpinBox(OptionsBox);
+	mPieceCountSpin->setRange(0, 1000);
+	mPieceCountSpin->setSpecialValueText(tr("Auto"));
+	mPieceCountSpin->setSuffix(tr(" pcs"));
+	mPieceCountSpin->setValue(0);
+	mPieceCountSpin->setStyleSheet("font-size: 11px;");
+	mPieceCountSpin->setToolTip(tr("Target number of pieces (0 for automatic model sizing)"));
+	OptRow3->addWidget(mPieceCountSpin, 1);
+
+	connect(mPiecePresetCombo, QOverload<int>::of(&QComboBox::currentIndexChanged), this, &lcAIAssistantWidget::OnPiecePresetChanged);
+	connect(mPieceCountSpin, QOverload<int>::of(&QSpinBox::valueChanged), [this](int val) {
+		if (val == 0) mPiecePresetCombo->setCurrentIndex(0);
+		else if (val == 50) mPiecePresetCombo->setCurrentIndex(1);
+		else if (val == 150) mPiecePresetCombo->setCurrentIndex(2);
+		else if (val == 300) mPiecePresetCombo->setCurrentIndex(3);
+		else if (val == 500) mPiecePresetCombo->setCurrentIndex(4);
+		else mPiecePresetCombo->setCurrentIndex(5);
+	});
+
+	OptionsLayout->addLayout(OptRow3);
 	MainLayout->addWidget(OptionsBox);
 
 	// Progress & Status Bar
@@ -144,14 +187,48 @@ lcAIAssistantWidget::lcAIAssistantWidget(QWidget* Parent)
 	mProgressBar->setStyleSheet("QProgressBar { height: 14px; font-size: 10px; }");
 	MainLayout->addWidget(mProgressBar);
 
-	mStatusLabel = new QLabel(tr("Ready for your LEGO building requests"), this);
+	mStatusLabel = new QLabel(tr("Ready for your LEGO building requests (text or attached photo)"), this);
 	mStatusLabel->setStyleSheet("font-size: 11px; color: #8899aa;");
 	MainLayout->addWidget(mStatusLabel);
 
+	// Image Attachment Preview Bar
+	mAttachmentBar = new QWidget(this);
+	mAttachmentBar->setVisible(false);
+	mAttachmentBar->setStyleSheet("background-color: #24283b; border: 1px dashed #4a90e2; border-radius: 6px; padding: 4px; margin: 2px 0;");
+	QHBoxLayout* AttachLayout = new QHBoxLayout(mAttachmentBar);
+	AttachLayout->setContentsMargins(6, 4, 6, 4);
+	AttachLayout->setSpacing(6);
+
+	mThumbLabel = new QLabel(mAttachmentBar);
+	mThumbLabel->setFixedSize(48, 48);
+	mThumbLabel->setStyleSheet("border: 1px solid #444; border-radius: 4px; background: #111;");
+	mThumbLabel->setScaledContents(true);
+	AttachLayout->addWidget(mThumbLabel);
+
+	mImageNameLabel = new QLabel(mAttachmentBar);
+	mImageNameLabel->setStyleSheet("font-size: 11px; color: #79b8ff; font-weight: bold;");
+	AttachLayout->addWidget(mImageNameLabel, 1);
+
+	mRemoveImageBtn = new QPushButton(tr("✕"), mAttachmentBar);
+	mRemoveImageBtn->setToolTip(tr("Remove reference image"));
+	mRemoveImageBtn->setFixedSize(22, 22);
+	mRemoveImageBtn->setStyleSheet("QPushButton { font-size: 11px; font-weight: bold; background: #442222; color: #ff8888; border: 1px solid #663333; border-radius: 11px; } QPushButton:hover { background: #662222; }");
+	connect(mRemoveImageBtn, &QPushButton::clicked, this, &lcAIAssistantWidget::OnRemoveImageClicked);
+	AttachLayout->addWidget(mRemoveImageBtn);
+
+	MainLayout->addWidget(mAttachmentBar);
+
 	// Input Row
 	QHBoxLayout* InputLayout = new QHBoxLayout();
+
+	mAttachBtn = new QPushButton(tr("📷"), this);
+	mAttachBtn->setToolTip(tr("Attach reference image or CAD render (or drag & drop anywhere)"));
+	mAttachBtn->setStyleSheet("font-size: 13px; padding: 6px 10px; background-color: #2a3342; color: #a5d6ff; border: 1px solid #3c495e; border-radius: 4px;");
+	connect(mAttachBtn, &QPushButton::clicked, this, &lcAIAssistantWidget::OnAttachImageClicked);
+	InputLayout->addWidget(mAttachBtn);
+
 	mPromptInput = new QLineEdit(this);
-	mPromptInput->setPlaceholderText(tr("Ask the agent to build any LEGO model..."));
+	mPromptInput->setPlaceholderText(tr("Describe model or attach reference photo..."));
 	mPromptInput->setStyleSheet("font-size: 12px; padding: 6px; border-radius: 4px;");
 	connect(mPromptInput, &QLineEdit::returnPressed, this, &lcAIAssistantWidget::OnSendClicked);
 	InputLayout->addWidget(mPromptInput, 1);
@@ -173,9 +250,103 @@ lcAIAssistantWidget::lcAIAssistantWidget(QWidget* Parent)
 	connect(&mAnimTimer, &QTimer::timeout, this, &lcAIAssistantWidget::OnAnimationTick);
 
 	// Initial welcome message
-	AppendSystemMessage(tr("<b>Welcome to the LeoCAD AI Assistant!</b><br>"
-	                       "I am your autonomous 3D LEGO builder agent, trained on over 100 authentic LEGO sets from the Official Model Repository (pickups, tractors, race cars, helicopters, tow trucks, spaceships, architecture) with procedural fallbacks. "
-	                       "Tell me what you'd like to build, or pick one of the quick suggestions above!"));
+	AppendSystemMessage(tr("<b>Welcome to the LeoCAD Multimodal AI Builder!</b><br>"
+	                       "I am your autonomous 3D LEGO builder agent, trained on 198 authentic LEGO sets up to 570 pieces (trains, architecture, supercars, spaceships, houses) paired with CAD renders and real-world photos.<br>"
+	                       "• <b>Multimodal input:</b> Click 📷 or drag & drop any reference photo into this panel.<br>"
+	                       "• <b>Piece Budget:</b> Choose a piece budget (e.g. 150 pcs, 300 pcs) or type 'using 250 pieces' in your prompt."));
+}
+
+void lcAIAssistantWidget::dragEnterEvent(QDragEnterEvent* Event)
+{
+	if (Event->mimeData()->hasUrls() || Event->mimeData()->hasImage())
+		Event->acceptProposedAction();
+}
+
+void lcAIAssistantWidget::dropEvent(QDropEvent* Event)
+{
+	const QMimeData* Mime = Event->mimeData();
+	if (Mime->hasUrls())
+	{
+		QList<QUrl> Urls = Mime->urls();
+		for (const QUrl& Url : Urls)
+		{
+			QString LocalPath = Url.toLocalFile();
+			if (!LocalPath.isEmpty())
+			{
+				QString Suffix = QFileInfo(LocalPath).suffix().toLower();
+				if (Suffix == "png" || Suffix == "jpg" || Suffix == "jpeg" || Suffix == "webp" || Suffix == "bmp")
+				{
+					SetAttachedImage(LocalPath);
+					Event->acceptProposedAction();
+					return;
+				}
+			}
+		}
+	}
+	else if (Mime->hasImage())
+	{
+		QImage Img = qvariant_cast<QImage>(Mime->imageData());
+		if (!Img.isNull())
+		{
+			mAttachedImage = Img;
+			mAttachedImagePath = "pasted_image.png";
+			mThumbLabel->setPixmap(QPixmap::fromImage(Img.scaled(48, 48, Qt::KeepAspectRatio, Qt::SmoothTransformation)));
+			mImageNameLabel->setText(QString("Pasted Image (%1x%2)").arg(Img.width()).arg(Img.height()));
+			mAttachmentBar->setVisible(true);
+			mStatusLabel->setText(tr("Reference image pasted."));
+			Event->acceptProposedAction();
+		}
+	}
+}
+
+void lcAIAssistantWidget::SetAttachedImage(const QString& Path)
+{
+	QImage Img(Path);
+	if (Img.isNull()) return;
+
+	mAttachedImagePath = Path;
+	mAttachedImage = Img;
+	QFileInfo Fi(Path);
+	mImageNameLabel->setText(QString("%1 (%2x%3)").arg(Fi.fileName()).arg(Img.width()).arg(Img.height()));
+	mThumbLabel->setPixmap(QPixmap::fromImage(Img.scaled(48, 48, Qt::KeepAspectRatio, Qt::SmoothTransformation)));
+	mAttachmentBar->setVisible(true);
+	mStatusLabel->setText(tr("Attached reference image: %1").arg(Fi.fileName()));
+}
+
+void lcAIAssistantWidget::ClearAttachedImage()
+{
+	mAttachedImagePath.clear();
+	mAttachedImage = QImage();
+	mAttachmentBar->setVisible(false);
+}
+
+void lcAIAssistantWidget::OnAttachImageClicked()
+{
+	QString FilePath = QFileDialog::getOpenFileName(
+		this,
+		tr("Attach Reference Image"),
+		QString(),
+		tr("Images (*.png *.jpg *.jpeg *.webp *.bmp)")
+	);
+	if (!FilePath.isEmpty())
+		SetAttachedImage(FilePath);
+}
+
+void lcAIAssistantWidget::OnRemoveImageClicked()
+{
+	ClearAttachedImage();
+	mStatusLabel->setText(tr("Reference image removed."));
+}
+
+void lcAIAssistantWidget::OnPiecePresetChanged(int Index)
+{
+	int Pieces = mPiecePresetCombo->itemData(Index).toInt();
+	if (Pieces >= 0)
+	{
+		mPieceCountSpin->blockSignals(true);
+		mPieceCountSpin->setValue(Pieces);
+		mPieceCountSpin->blockSignals(false);
+	}
 }
 
 void lcAIAssistantWidget::AppendSystemMessage(const QString& Text)
@@ -186,12 +357,31 @@ void lcAIAssistantWidget::AppendSystemMessage(const QString& Text)
 	);
 }
 
-void lcAIAssistantWidget::AppendUserMessage(const QString& Text)
+void lcAIAssistantWidget::AppendUserMessage(const QString& Text, const QString& ImagePath, int TargetPieces)
 {
-	mChatBrowser->append(
-		QString("<div style='background-color: #2b394d; border-left: 4px solid #357abd; padding: 8px; border-radius: 6px; margin: 6px 0; text-align: left;'>"
-		        "<span style='color: #79b8ff;'>👤 <b>You:</b></span> %1</div>").arg(Text.toHtmlEscaped())
-	);
+	QString Html = "<div style='background-color: #2b394d; border-left: 4px solid #357abd; padding: 8px; border-radius: 6px; margin: 6px 0; text-align: left;'>";
+	Html += "<div style='color: #79b8ff; font-weight: bold;'>👤 You:</div>";
+
+	if (!mAttachedImage.isNull())
+	{
+		QByteArray ByteArray;
+		QBuffer Buffer(&ByteArray);
+		Buffer.open(QIODevice::WriteOnly);
+		mAttachedImage.scaled(180, 180, Qt::KeepAspectRatio, Qt::SmoothTransformation).save(&Buffer, "PNG");
+		QString Base64 = QString::fromLatin1(ByteArray.toBase64().data());
+		Html += QString("<div style='margin: 6px 0;'><img src='data:image/png;base64,%1' style='border-radius: 6px; border: 1px solid #4a90e2; max-height: 120px;' /></div>").arg(Base64);
+	}
+
+	if (!Text.isEmpty())
+		Html += QString("<div style='color: #e0e0e0; margin-top: 4px;'>%1</div>").arg(Text.toHtmlEscaped());
+
+	if (TargetPieces > 0)
+	{
+		Html += QString("<div style='margin-top: 6px;'><span style='background-color: #1e3a5f; color: #a5d6ff; border: 1px solid #2f5a8a; padding: 2px 6px; border-radius: 4px; font-size: 10px; font-weight: bold;'>🎯 Budget: ~%1 pieces</span></div>").arg(TargetPieces);
+	}
+
+	Html += "</div>";
+	mChatBrowser->append(Html);
 }
 
 void lcAIAssistantWidget::AppendAgentMessage(const QString& Title, const QString& Explanation,
@@ -237,7 +427,10 @@ void lcAIAssistantWidget::OnClearChat()
 void lcAIAssistantWidget::OnSendClicked()
 {
 	QString Prompt = mPromptInput->text().trimmed();
-	if (Prompt.isEmpty()) return;
+	if (Prompt.isEmpty() && mAttachedImagePath.isEmpty() && mAttachedImage.isNull())
+		return;
+	if (Prompt.isEmpty() && (!mAttachedImagePath.isEmpty() || !mAttachedImage.isNull()))
+		Prompt = "Build this reference model";
 	BuildPrompt(Prompt);
 }
 
@@ -246,10 +439,11 @@ void lcAIAssistantWidget::BuildPrompt(const QString& Prompt)
 	if (Prompt.isEmpty()) return;
 
 	mAnimTimer.stop();
-	AppendUserMessage(Prompt);
-	mPromptInput->clear();
 
-	mStatusLabel->setText(tr("Analyzing request and synthesizing 3D LEGO model..."));
+	int TargetPieces = mPieceCountSpin->value();
+	AppendUserMessage(Prompt, mAttachedImagePath, TargetPieces);
+
+	mStatusLabel->setText(tr("Analyzing multimodal request and synthesizing 3D LEGO model..."));
 	mProgressBar->setValue(10);
 	mSendButton->setEnabled(false);
 	mStopButton->setEnabled(true);
@@ -257,6 +451,13 @@ void lcAIAssistantWidget::BuildPrompt(const QString& Prompt)
 	lcAIOptions Opts;
 	Opts.ReplaceCurrent = mModeCombo->currentData().toBool();
 	Opts.StepByStep = true;
+	Opts.TargetPieceCount = TargetPieces;
+	Opts.ImagePath = mAttachedImagePath;
+	Opts.AttachedImage = mAttachedImage;
+
+	// Reset input fields
+	mPromptInput->clear();
+	ClearAttachedImage();
 
 	lcAIModelResult Res = lcAIGenerator::GenerateModel(Prompt, Opts);
 

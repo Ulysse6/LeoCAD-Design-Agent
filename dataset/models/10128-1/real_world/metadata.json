@@ -1,0 +1,14 @@
+{
+  "set_number": "10128-1",
+  "name": "Train Level Crossing",
+  "query": "diesel electric locomotive",
+  "photos": [
+    {
+      "file": "photo_01.jpg",
+      "relative_path": "dataset/models/10128-1/real_world/photo_01.jpg",
+      "source_title": "File:\u0422\u0435\u043f\u043b\u043e\u0432\u043e\u0437 \u0422\u042d\u041c2-1592 (TEM2-1592 diesel locomotive).jpg",
+      "source_url": "https://upload.wikimedia.org/wikipedia/commons/e/e0/%D0%A2%D0%B5%D0%BF%D0%BB%D0%BE%D0%B2%D0%BE%D0%B7_%D0%A2%D0%AD%D0%9C2-1592_%28TEM2-1592_diesel_locomotive%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "query": "diesel electric locomotive"
+    }
+  ]
+}

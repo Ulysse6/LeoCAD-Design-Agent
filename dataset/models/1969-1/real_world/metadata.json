@@ -1,0 +1,14 @@
+{
+  "set_number": "1969-1",
+  "name": "Mini Robot",
+  "query": "Robot vehicle",
+  "photos": [
+    {
+      "file": "photo_01.jpg",
+      "relative_path": "dataset/models/1969-1/real_world/photo_01.jpg",
+      "source_title": "File:A robot competing in the Intelligent Ground Vehicle competition.png",
+      "source_url": "https://upload.wikimedia.org/wikipedia/commons/d/dd/A_robot_competing_in_the_Intelligent_Ground_Vehicle_competition.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "query": "Robot vehicle"
+    }
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "set_number": "1479-1",
+  "name": "2-Pilot Craft",
+  "query": "2-Pilot Craft spacecraft",
+  "photos": [
+    {
+      "file": "photo_01.jpg",
+      "relative_path": "dataset/models/1479-1/real_world/photo_01.jpg",
+      "source_title": "File:CRS OA-8E Cygnus Cargo Spacecraft at Sunrise (ISS053-E-311637).jpg",
+      "source_url": "https://upload.wikimedia.org/wikipedia/commons/c/ce/CRS_OA-8E_Cygnus_Cargo_Spacecraft_at_Sunrise_%28ISS053-E-311637%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "query": "2-Pilot Craft spacecraft"
+    }
+  ]
+}

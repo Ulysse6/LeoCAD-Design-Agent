@@ -1,0 +1,14 @@
+{
+  "set_number": "1972-1",
+  "name": "Go-Cart",
+  "query": "Go-Cart historical",
+  "photos": [
+    {
+      "file": "photo_01.jpg",
+      "relative_path": "dataset/models/1972-1/real_world/photo_01.jpg",
+      "source_title": "File:*An ox-cart piled with grass goes past the stately Victorian buildings a visitor's photo, 1910's.jpg",
+      "source_url": "https://upload.wikimedia.org/wikipedia/commons/2/2f/%2AAn_ox-cart_piled_with_grass_goes_past_the_stately_Victorian_buildings_a_visitor%27s_photo%2C_1910%27s.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "query": "Go-Cart historical"
+    }
+  ]
+}

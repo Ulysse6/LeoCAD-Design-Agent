@@ -1,0 +1,21 @@
+{
+  "set_number": "1528-1",
+  "name": "Dragster",
+  "query": "top fuel dragster racing",
+  "photos": [
+    {
+      "file": "photo_01.jpg",
+      "relative_path": "dataset/models/1528-1/real_world/photo_01.jpg",
+      "source_title": "File:Pleuel TopFuelDragster Ferrari458.jpg",
+      "source_url": "https://upload.wikimedia.org/wikipedia/commons/4/4c/Pleuel_TopFuelDragster_Ferrari458.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "query": "top fuel dragster racing"
+    },
+    {
+      "file": "photo_02.jpg",
+      "relative_path": "dataset/models/1528-1/real_world/photo_02.jpg",
+      "source_title": "File:EM Fram Top Fuel Dragster (2240626093).jpg",
+      "source_url": "https://upload.wikimedia.org/wikipedia/commons/4/42/EM_Fram_Top_Fuel_Dragster_%282240626093%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "query": "top fuel dragster racing"
+    }
+  ]
+}

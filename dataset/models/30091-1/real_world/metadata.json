@@ -1,0 +1,14 @@
+{
+  "set_number": "30091-1",
+  "name": "Desert Rover",
+  "query": "Desert Rover car",
+  "photos": [
+    {
+      "file": "photo_01.jpg",
+      "relative_path": "dataset/models/30091-1/real_world/photo_01.jpg",
+      "source_title": "File:Land Rover series IIa 'Pink Panther' SAS desert car 1968.jpg",
+      "source_url": "https://upload.wikimedia.org/wikipedia/commons/e/e4/Land_Rover_series_IIa_%27Pink_Panther%27_SAS_desert_car_1968.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "query": "Desert Rover car"
+    }
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "set_number": "10036-1",
+  "name": "Pizza To Go",
+  "query": "Pizza To Go",
+  "photos": [
+    {
+      "file": "photo_01.jpg",
+      "relative_path": "dataset/models/10036-1/real_world/photo_01.jpg",
+      "source_title": "File:Pizza Go Go - Corporation Street - geograph.org.uk - 1830168.jpg",
+      "source_url": "https://upload.wikimedia.org/wikipedia/commons/6/60/Pizza_Go_Go_-_Corporation_Street_-_geograph.org.uk_-_1830168.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "query": "Pizza To Go"
+    }
+  ]
+}
